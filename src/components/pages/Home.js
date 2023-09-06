@@ -1,10 +1,19 @@
 import React from 'react';
 import '../../App.css';
+import HeroSection from '../HeroSection';
+import Footer from '../Footer';
+import Testimonials from '../Testimonial';
+import PriceCard from '../PriceCard';
 
-export default function Home() {
+function Home() {
   return (
     <>
-      <h1 className='home'>EPIC</h1>
+      <HeroSection />
+      <PriceCard />
+      <Testimonials />
+      <Footer />
     </>
   );
 }
+
+export default Home;

@@ -1,0 +1,157 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f8fafe;
+}
+
+.container-1200 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.trainer__card__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trainer__card__item {
+  background-color: #fff;
+  flex: 1;
+  margin: 0 15px 30px;
+  max-width: 350px;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 10px;
+}
+
+.trainer__card__item--title {
+  padding: 20px;
+  border-radius: 2px;
+  color: #f8fafe;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 10px;
+}
+
+.trainer__card__item--pricing {
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.trainer__card__item--pricing h1 {
+  padding: 20px 0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.trainer__card__item--pricing p {
+  padding: 5px 0;
+  text-align: center;
+}
+
+.trainer__card__item--pricing p:nth-child(2) {
+  text-transform: uppercase;
+}
+
+.trainer__card__item--btn {
+  padding: 20px;
+  border-radius: 2px;
+  color: #f8fafe;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 10px;
+  width: 100%;
+}
+
+.trainer__card__item--btn-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  justify-content: left;
+}
+
+.trainer__card__item--btn-container > button {
+  align-self: stretch;
+  margin: 10px;
+  width: 100%;
+}
+
+.trainer__card__item--btn-container > ul {
+  display: flex; /* change padding to display */
+  align-items: left; /* add align-items */
+  text-align: left;
+  flex-direction: column;
+  padding: 15px 15px 15px 0px; /* adjust padding */
+}
+
+.trainer__card__item--btn-container > ul li {
+  padding: 7.5px 5px;
+  display: flex; /* add display */
+  align-items: center; /* add align-items */
+}
+
+.blueGradient {
+  background: linear-gradient(66deg, #caedff 0%, #6ec9fa 100%);
+}
+
+.purpleGradient {
+  background: linear-gradient(66deg, #daceff 0%, #9f94fe 100%);
+}
+
+.orangeGradient {
+  background: linear-gradient(66deg, #ffdcce 0%, #f79151 100%);
+}
+
+.trainer__card__item--picture {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 60px;
+}
+
+.trainer__card__item--picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-items: center;
+  justify-items: center;
+}
+
+.trainer__card__item--picture-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #fc7575, #ffb347);
+  opacity: 0.8;
+  border-radius: 50%;
+}

@@ -1,91 +1,108 @@
-import React, { useState } from 'react';
-import { Button } from './Button';
+//A Navbar component that will be used to navigate between pages
+//The Navbar component should be rendered in the App component
+//The Navbar component should have a link to the Home page
+//The Navbar component should have a link to the About page
+//The Navbar component should have a link to the Contact page
+//The Navbar component should have a link to the square booking site represented by the Book button
+
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import Dropdown from './Dropdown';
+import { Button } from './Button';
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
+  //this hides the sign up button on the navbar when the screen size is less than 960px
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
     } else {
-      setDropdown(true);
+      setButton(true);
     }
   };
 
-  const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
-  };
+  useEffect(() => {
+    showButton();
+  }, []);
 
+  //this is a hook that runs the showButton function when the window is resized
+  window.addEventListener('resize', showButton);
+
+  //this is a hook that runs the showButton function when the page is loaded
   return (
     <>
       <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          EPIC
-          <i class='fab fa-firstdraft' />
-        </Link>
-        <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-              Home
-            </Link>
-          </li>
-          <li
-            className='nav-item'
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
+        <div className='navbar-container'>
+          <Link
+            to='/'
+            className='navbar-logo'
+            onClick={closeMobileMenu}
           >
-            <Link
-              to='/services'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Services <i className='fas fa-caret-down' />
-            </Link>
-            {dropdown && <Dropdown />}
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/products'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Products
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/contact-us'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Contact Us
-            </Link>
-          </li>
-          <li>
-            <Link
-              to='/sign-up'
+            Natural
+            <i className='fa-solid fa-explosion' />
+            Apex
+          </Link>
+          <div
+            className='menu-icon'
+            onClick={handleClick}
+          >
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          </div>
+          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <li className='nav-item'>
+              <Link
+                to='/'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Home
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/about'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                About Us
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/plans'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Plans
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to='/book'
+                className='nav-links-mobile'
+                onClick={closeMobileMenu}
+              >
+                Book a Consultation
+              </Link>
+            </li>
+          </ul>
+          {button && (
+            <Button
               className='nav-links-mobile'
-              onClick={closeMobileMenu}
+              buttonStyle='btn--outline'
+              buttonSize='btn--medium'
+              href='https://squareup.com/appointments/book/xzrl5nmb5yjqcc/LM8RSZVXGX44K/start'
             >
-              Sign Up
-            </Link>
-          </li>
-        </ul>
-        <Button />
+              Book
+            </Button>
+          )}
+        </div>
       </nav>
     </>
   );
