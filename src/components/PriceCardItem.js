@@ -7,6 +7,7 @@ const PriceCardItem = (props) => {
   const {
     title,
     applyGradient,
+    type,
     prices,
     para1,
     para2,
@@ -35,9 +36,13 @@ const PriceCardItem = (props) => {
       <div className={`price__card__item--title ${applyGradient}`}>
         <h2>{title}</h2>
       </div>
+
       <div className='price__card__item--pricing'>
         <div>
           <h1>{price}</h1>
+          <div>
+            <h3>{type} </h3>
+          </div>
           <h2>{para1}</h2>
           <p>{para2}</p>
         </div>

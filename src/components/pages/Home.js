@@ -3,13 +3,13 @@ import '../../App.css';
 import HeroSection from '../HeroSection';
 import Footer from '../Footer';
 import Testimonials from '../Testimonial';
-import PriceCard from '../PriceCard';
+import Cards from '../Cards';
 
 function Home() {
   return (
     <>
       <HeroSection />
-      <PriceCard />
+      <Cards />
       <Testimonials />
       <Footer />
     </>

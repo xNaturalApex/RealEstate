@@ -8,7 +8,7 @@ const PriceCard = () => {
 
   const allCardsInfo = [
     {
-      title: 'STARTER',
+      title: 'Partner',
       applyGradient: 'blueGradient',
       prices: [
         ['$149/mo', '$899'],
@@ -16,34 +16,52 @@ const PriceCard = () => {
       ],
       para1:
         'For Anyone looking to get back to the gym or start a new fitness journey!',
+      para2: 'A',
+      workout_protocol: 'Beginner Workout Program',
+      nutrition_protocol: 'Entry level Nutrional Coaching',
+      sessions: 'Sessions per Week (30 min): ',
+      sessionChoiceLeft: '1x',
+      sessionChoiceRight: '2x',
+      feature_1: '$99 Start Up Fee',
+      feature_2: '3 Month Commitment then Month to Month',
+      feature_3: 'Availble Online - $99/mo',
+    },
+    {
+      title: 'BUDDY',
+      applyGradient: 'greenGradient',
+      prices: [
+        ['$75/mo', '$499'],
+        ['$149/mo', '$899'],
+      ],
+      para1:
+        'For 2 friends looking to get back to the gym or start a new fitness journey!',
       para2:
         "If you've never worked with a trainer before, this is a great place to start.",
       workout_protocol: 'Beginner Workout Program',
       nutrition_protocol: 'Entry level Nutrional Coaching',
-      sessions: 'Sessions per month (30 min): ',
-      sessionChoiceLeft: '4x',
-      sessionChoiceRight: '8x',
+      sessions: 'Sessions per Week (30 min): ',
+      sessionChoiceLeft: '1x',
+      sessionChoiceRight: '2x',
       feature_1: '$99 Start Up Fee',
       feature_2: '3 Month Commitment then Month to Month',
-      feature_3: 'Availble Online - $199/mo',
+      feature_3: 'Availble Online - $99/mo',
     },
-
     {
-      title: 'PREMIUM',
+      title: 'Most Popular',
       applyGradient: 'orangeGradient',
       prices: [
-        ['$249/mo', '$1399'],
-        ['$349/mo', '$1999'],
-        ['$599/mo', '$3299'],
+        ['$149/mo', '$1399'],
+        ['$249/mo', '$1999'],
+        ['399/mo', '$3299'],
       ],
       para1: 'Looking to take your fitness to the next level? ',
       para2: 'Enhance your workouts from the gym to the kitchen.',
       workout_protocol: 'Custom Made Workout',
       nutrition_protocol: 'Macro & Calorie Based Meal Plan',
-      sessions: 'Sessions per Month (60 min):',
-      sessionChoiceLeft: '4x',
-      sessionChoiceCenter: '8x',
-      sessionChoiceRight: '12x',
+      sessions: 'Sessions per Week (60 min):',
+      sessionChoiceLeft: '1x',
+      sessionChoiceCenter: '2x',
+      sessionChoiceRight: '3x',
       feature_1: '$99 Initiation Fee + 3 Month Commitment',
       feature_2: '3 Month Commitment then Month to Month',
       feature_3: 'Availble Online- $249/mo',
@@ -51,25 +69,24 @@ const PriceCard = () => {
 
     {
       title: 'ELITE',
+      type: 'Best Deal',
       applyGradient: 'purpleGradient',
       prices: [
         ['$399/mo', '$2250'],
         ['$499/mo', '$2999'],
         ['$720/mo', '$3999'],
       ],
-      para1:
-        'Designed for the individual who wants to be pushed to their limit.',
+      para1: 'Designed for the individual focued on thier Dream Phisique.',
       para2: 'Want to look like an athlete? This is the program for you.',
-
       workout_protocol: 'Fully Customized Workout Program',
       nutrition_protocol: 'Made to Measure Meal Plan',
-      sessions: 'Sessions per month (60 min)',
-      sessionChoiceLeft: '4x',
-      sessionChoiceCenter: '8x',
-      sessionChoiceRight: '12x',
+      sessions: 'Sessions per Week (60 min)',
+      sessionChoiceLeft: '1x',
+      sessionChoiceCenter: '2x',
+      sessionChoiceRight: '3x',
       feature_1: '$99 Initiation Fee + 3 Month Commitment',
       feature_2: '3 Month Commitment then Month to Month',
-      feature_3: 'Availble Online - $399/mo',
+      feature_3: 'Availble Online - $250/mo',
     },
 
     {
@@ -84,7 +101,7 @@ const PriceCard = () => {
         'A diet is temporary, a lifestyle is forever. Let us help you build a lifestyle around sustainable nutritonal guidance.',
       workout_protocol: 'Access to our Custom Workout App',
       nutrition_protocol: 'Calorie Tracking wih Trainerize',
-      sessions: 'A Sustainable 16 Week Program',
+      sessions: 'Program Style',
       sessionChoiceLeft: 'Macros Only',
       sessionChoiceRight: 'Meal Plan',
       feature_1: '$49 Initiation Fee + 16 week Commitment',

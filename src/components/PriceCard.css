@@ -8,6 +8,11 @@ body {
   background-color: #f8fafe;
 }
 
+#type {
+  text-align: center;
+  color: rgb(49, 113, 218);
+}
+
 .container-1200 {
   width: 100%;
   max-width: 1200px;
@@ -142,6 +147,12 @@ body {
 
 .orangeGradient {
   background: linear-gradient(66deg, #ffdcce 0%, #f79151 100%);
+}
+.greenGradient {
+  background: linear-gradient(66deg, #a7e98f 0%, #2ed573 100%);
+}
+.redGradient {
+  background: linear-gradient(66deg, #e08585 0%, #e43c3c 100%);
 }
 
 .price__card__item--slider-sessions {

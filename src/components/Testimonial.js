@@ -4,39 +4,59 @@ import './Testimonial.css';
 const testimonialsData = [
   {
     id: 1,
-    name: 'John Doe',
+    name: 'Adriana D. ',
     age: 32,
     stars: 5,
     review:
-      'Loved it! I just signed up for a 3 month plan and I am already seeing results! The app is easy to go through and the meal plans are delicious!',
-    image: './images/profile-image-1.jpg',
+      "Loved it! I signed up for the full nutrition plan and with Felipe's help I dropped 15 pounds in 16 weeks! The app is easy to go through and the meal plans are suprisingly realistic. Worth every penny",
+    image: './images/head-1.jpg',
   },
+
   {
     id: 2,
-    name: 'Jane Smith',
+    name: 'Aleks G.',
     age: 28,
     stars: 5,
     review:
-      'Just finished my 3 month plan and I am very happy with the results! I have lost 15 pounds and I am feeling great! I will definitely be signing up for another plan!',
-    image: './images/profile-image-2.jpg',
+      "If you've worked with other trainers before, I have to say Felipe is a different breed!. The workouts are actually challeging, make sense, and I can tell that alot of thought goes into it. 10/10 would recomend FELIPE",
+    image: './images/head-2.jpg',
   },
+
   {
     id: 3,
-    name: 'mike smith',
-    age: 28,
-    stars: 3,
+    name: 'Mike R.',
+    age: 31,
+    stars: 5,
     review:
-      'Just finished my 3 month plan and I am very happy with the results! I have lost 15 pounds and I am feeling great! I will definitely be signing up for another plan!',
-    image: './images/profile-image-2.jpg',
+      "In 2019 I suffered a miniscus tear in my right knee, I was overweight 30 pounds and I needed to make a lifestyle change, that's when I met Felipe. He started working with my PT clinic and devolped an exercise plan arround my mobiliy, He know's what he's doing and I would recommend Felipe to anyone looking to recover from an  injury!",
+    image: './images/head-3.jpg',
   },
+
   {
     id: 4,
-    name: 'Jane Smith',
-    age: 28,
-    stars: 4,
+    name: 'Yousef S.',
+    age: 19,
+    stars: 5,
     review:
-      'Just finished my 3 month plan and I am very happy with the results! I have lost 15 pounds and I am feeling great! I will definitely be signing up for another plan!',
-    image: './images/profile-image-2.jpg',
+      'I started training with Felipe 2 years ago to get into shape for soccer tryouts. He built me a program around everthinhg that I needed, agility, speed, and power. If you play a sport I can highly recommend working with a trainer like Felipe ',
+    image: './images/head-4.jpg',
+  },
+  {
+    id: 5,
+    name: 'Joe D.',
+    age: 32,
+    stars: 1,
+    review:
+      'Workouts were too well planned, The nutriton plan was good but I always undercooked the food',
+  },
+  {
+    id: 6,
+    name: '',
+    age: 19,
+    stars: 5,
+    review:
+      ' Treinar com o Felipe é sensacional! Ele é super apaixonado por saúde e deixa cada treino divertido e desafiador ao mesmo tempo. Felipe adapta os treinos de acordo com o que eu preciso e as metas que quero alcançar, e isso tem feito uma enorme diferença nos meus resultados. Ele não é só um treinador, é um parceiro de fitness incrível!',
+    image: './images/head-6.jpg',
   },
 ];
 
@@ -58,13 +78,13 @@ const TestimonialCarousel = ({ activeIndex, handlePrev, handleNext }) => {
           </div>
           <div className='carousel-arrows'>
             <span
-              className='arrow prev'
+              className='arrow-prev'
               onClick={handlePrev}
             >
               &lt;
             </span>
             <span
-              className='arrow next'
+              className='arrow-next'
               onClick={handleNext}
             >
               &gt;
