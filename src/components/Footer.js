@@ -7,6 +7,30 @@ function Footer() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Prepare the form data
+    const formData = {
+      email: email,
+    };
+
+    // Send the form data to the serverless function or API
+    try {
+      const response = await fetch('/functions/submissions.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Handle success (e.g., show a success message)
+      } else {
+        // Handle errors (e.g., show an error message)
+      }
+    } catch (error) {
+      // Handle network or other errors
+    }
   };
 
   return (
@@ -22,7 +46,7 @@ function Footer() {
         </p>
         <div className='input-areas'>
           <form
-            name='subscription'
+            name='emails'
             method='POST'
             data-netlify='true'
             onSubmit={handleSubmit}
@@ -30,7 +54,7 @@ function Footer() {
             <input
               type='hidden'
               name='form-name'
-              value='subscription'
+              value='emails'
             />
 
             <input
