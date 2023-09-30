@@ -1,38 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Footer.css';
 import { Button } from './Button';
 
 function Footer() {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // Prepare the form data
-    const formData = {
-      email: email,
-    };
-
-    // Send the form data to the serverless function or API
-    try {
-      const response = await fetch('/functions/submissions.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        // Handle success (e.g., show a success message)
-      } else {
-        // Handle errors (e.g., show an error message)
-      }
-    } catch (error) {
-      // Handle network or other errors
-    }
-  };
-
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
@@ -79,22 +49,13 @@ function Footer() {
               href='/'
               className='social-logo'
             >
-              Natural
-              <i
-                className='fa-solid fa-explosion'
-                style={{
-                  background: 'linear-gradient(#9c47fc, #356ad2)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              />
-              {'   '}Apex <sub>LLC</sub>
+              Natural Apex LLC
             </a>
           </div>
-          <small className='website-rights'>Natural Apex LLC © 2023</small>
+          <small className='website-rights'>© 2023</small>
           <div className='social-icons'>
             <a
-              className='social-icon-link facebook'
+              className='social-icon-link'
               href='/'
               target='_blank'
               aria-label='Facebook'
@@ -102,7 +63,7 @@ function Footer() {
               <i className='fab fa-facebook-f' />
             </a>
             <a
-              className='social-icon-link instagram'
+              className='social-icon-link'
               href='/'
               target='_blank'
               aria-label='Instagram'
@@ -110,7 +71,7 @@ function Footer() {
               <i className='fab fa-instagram' />
             </a>
             <a
-              className='social-icon-link youtube'
+              className='social-icon-link'
               href='/'
               target='_blank'
               aria-label='Youtube'
@@ -118,7 +79,7 @@ function Footer() {
               <i className='fab fa-youtube' />
             </a>
             <a
-              className='social-icon-link twitter'
+              className='social-icon-link'
               href='/'
               target='_blank'
               aria-label='Twitter'
@@ -126,7 +87,7 @@ function Footer() {
               <i className='fab fa-twitter' />
             </a>
             <a
-              className='social-icon-link twitter'
+              className='social-icon-link'
               href='/'
               target='_blank'
               aria-label='LinkedIn'
