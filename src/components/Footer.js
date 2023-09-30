@@ -46,15 +46,14 @@ function Footer() {
         </p>
         <div className='input-areas'>
           <form
-            name='emails'
+            name='contact'
             method='POST'
             data-netlify='true'
-            onSubmit={handleSubmit}
           >
             <input
               type='hidden'
               name='form-name'
-              value='emails'
+              value='contact'
             />
 
             <input
@@ -62,8 +61,6 @@ function Footer() {
               name='email'
               type='email'
               placeholder='Your Email'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               required
             />
             <Button
