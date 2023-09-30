@@ -16,17 +16,22 @@ function Footer() {
         </p>
         <div className='input-areas'>
           <form
-            name='contact'
-            method='POST'
+            name='contact v1'
+            method='post'
             data-netlify='true'
-            action=''
+            onSubmit='submit'
           >
             <input
               type='hidden'
               name='form-name'
-              value='contact'
+              value='contact v1'
             />
-
+            <input
+              className='footer-input'
+              name='name'
+              type='text'
+              placeholder='Name'
+            />
             <input
               className='footer-input'
               name='email'
@@ -34,6 +39,7 @@ function Footer() {
               placeholder='Your Email'
               required
             />
+
             <Button
               buttonStyle='btn--outline'
               type='submit'
