@@ -19,6 +19,7 @@ function Footer() {
             name='contact'
             method='POST'
             data-netlify='true'
+            action=''
           >
             <input
               type='hidden'
