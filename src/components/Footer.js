@@ -15,9 +15,10 @@ function Footer() {
 
     try {
       const response = await axios.post(
-        'netlify/functions/Functions/submitForm.js', // Adjust the path to your function
+        'https://naturalapex.com/.netlify/functions/submitForm', // Replace with the actual URL
         formData
       );
+
       if (response.status === 200) {
         setSubmissionMessage('Form submitted successfully!');
       } else {
@@ -52,6 +53,7 @@ function Footer() {
           <form
             onSubmit={handleSubmit}
             data-netlify='true'
+            name='contact'
           >
             <input
               type='text'
