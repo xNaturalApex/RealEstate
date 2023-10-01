@@ -15,7 +15,7 @@ function Footer() {
 
     try {
       const response = await axios.post(
-        '/Functions/submitForm', // Adjust the path to your function
+        'netlify/functions/Functions/submitForm.js', // Adjust the path to your function
         formData
       );
       if (response.status === 200) {
@@ -49,7 +49,10 @@ function Footer() {
           kickass deals.
         </p>
         <div className='input-areas'>
-          <form onSubmit={handleSubmit}>
+          <form
+            onSubmit={handleSubmit}
+            data-netlify='true'
+          >
             <input
               type='text'
               name='name'
