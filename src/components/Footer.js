@@ -15,7 +15,7 @@ function Footer() {
 
     try {
       const response = await axios.post(
-        'https://naturalapex.com/.netlify/functions/submitForm', // Replace with the actual URL
+        'https://naturalapex.com/.netlify/functions/submitForm.js', // Replace with the actual URL
         formData
       );
 
