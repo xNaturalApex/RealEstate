@@ -19,6 +19,7 @@ function Footer() {
             method='POST'
             data-netlify='true'
             data-netlify-honeypot='bot-field'
+            action='https://www.naturalapex.com/'
           >
             <input
               type='hidden'
