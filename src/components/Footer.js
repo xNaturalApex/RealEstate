@@ -15,7 +15,7 @@ function Footer() {
 
     try {
       const response = await axios.post(
-        '/.netlify/functions/Functions/submitForm', // Adjust the path to your function
+        '/Functions/submitForm', // Adjust the path to your function
         formData
       );
       if (response.status === 200) {
