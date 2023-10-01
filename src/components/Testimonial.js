@@ -43,19 +43,19 @@ const testimonialsData = [
   },
   {
     id: 5,
-    name: 'Joe D.',
-    age: 32,
+    name: 'Taiane F.',
+    age: 15,
     stars: 1,
     review:
-      'Workouts were too well planned, The nutriton plan was good but I always undercooked the food',
+      'O Felipe pega pesado, mas a gente se diverte demais. Ele tá sempre ligado nas minhas metas e monta os treinos sob medida. Top demais, ele é mais que um treinador, é um parceirão no fitness!"',
   },
   {
     id: 6,
-    name: '',
-    age: 19,
+    name: ' Gabi S.',
+    age: 24,
     stars: 5,
     review:
-      ' Treinar com o Felipe é sensacional! Ele é super apaixonado por saúde e deixa cada treino divertido e desafiador ao mesmo tempo. Felipe adapta os treinos de acordo com o que eu preciso e as metas que quero alcançar, e isso tem feito uma enorme diferença nos meus resultados. Ele não é só um treinador, é um parceiro de fitness incrível!',
+      ' Treinar com o Felipe é sensacional! Ele é super apaixonado por saúde e deixa cada treino divertido e desafiador. Felipe adapta os treinos de acordo com o que eu preciso e as metas que quero alcançar, e isso tem feito uma enorme diferença nos meus resultados. Ele não é só um treinador, é um parceiro de fitness incrível!',
     image: './images/head-6.jpg',
   },
 ];

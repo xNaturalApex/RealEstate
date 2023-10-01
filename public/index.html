@@ -48,6 +48,27 @@
     <title>Natural Apex</title>
   </head>
   <body>
+    <form
+      name="contact"
+      netlify
+      netlify-honeypot="bot-field"
+    >
+      <input
+        type="hidden"
+        name="form-name"
+        value="contact"
+      />
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+      />
+    </form>
     <div id="root"></div>
 
     <script src="./index.jsx"></script>
