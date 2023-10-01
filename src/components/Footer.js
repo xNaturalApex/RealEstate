@@ -1,43 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Footer.css';
-import axios from 'axios';
 
 function Footer() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-  });
-
-  const [submissionMessage, setSubmissionMessage] = useState('');
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await axios.post(
-        'https://naturalapex.com/.netlify/functions/submitForm.js', // Replace with the actual URL
-        formData
-      );
-
-      if (response.status === 200) {
-        setSubmissionMessage('Form submitted successfully!');
-      } else {
-        setSubmissionMessage('Form submission failed. Please try again.');
-      }
-    } catch (error) {
-      setSubmissionMessage(
-        'There was an error processing your request. Please try again later.'
-      );
-    }
-  };
-
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
@@ -51,29 +15,30 @@ function Footer() {
         </p>
         <div className='input-areas'>
           <form
-            onSubmit={handleSubmit}
-            data-netlify='true'
             name='contact'
+            method='POST'
+            data-netlify='true'
+            data-netlify-honeypot='bot-field'
           >
+            <input
+              type='hidden'
+              name='form-name'
+              value='contact'
+            />
             <input
               type='text'
               name='name'
               placeholder='Name'
-              value={formData.name}
-              onChange={handleInputChange}
               required
             />
             <input
               type='email'
               name='email'
               placeholder='Your Email'
-              value={formData.email}
-              onChange={handleInputChange}
               required
             />
             <button type='submit'>Subscribe</button>
           </form>
-          <div className='submission-message'>{submissionMessage}</div>
         </div>
       </section>
       <section className='social-media'>
