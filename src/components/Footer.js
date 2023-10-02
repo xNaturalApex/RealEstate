@@ -27,18 +27,25 @@ function Footer() {
               value='contact'
             />
             <input
+              className='footer-input'
               type='text'
               name='name'
               placeholder='Name'
               required
             />
             <input
+              className='footer-input'
               type='email'
               name='email'
               placeholder='Your Email'
               required
             />
-            <button type='submit'>Subscribe</button>
+            <button
+              className='footer-subscription'
+              type='submit'
+            >
+              Subscribe
+            </button>
           </form>
         </div>
       </section>
