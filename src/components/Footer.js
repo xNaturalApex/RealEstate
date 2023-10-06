@@ -1,18 +1,14 @@
 import React from 'react';
 import './Footer.css';
+import { Button } from './Button'; // Fixed import path
 
 function Footer() {
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
-          Join the APEX newsletter to receive our best deals on Training and
-          Nutritional Coaching!
-        </p>
-        <p className='footer-subscription-text'>
-          You can unsubscribe at any time. Or you can just keep getting our
-          kickass deals.
-        </p>
+        <h1 className='footer-heading'>
+          Get access to our Training App and a 14-day free trial!
+        </h1>
         <div className='input-areas'>
           <form
             name='contact'
@@ -40,12 +36,12 @@ function Footer() {
               placeholder='Your Email'
               required
             />
-            <button
-              className='footer-subscription'
+            <Button
               type='submit'
+              buttonStyle='btn--gradient-primary'
             >
-              Subscribe
-            </button>
+              Submit
+            </Button>
           </form>
         </div>
       </section>
@@ -56,10 +52,12 @@ function Footer() {
               href='/'
               className='social-logo'
             >
-              Natural Apex LLC
+              Natural
+              <i className='fa-solid fa-explosion' />
+              Apex
             </a>
           </div>
-          <small className='website-rights'>© 2023</small>
+          <small className='website-rights'>Natural Apex LLC © 2023</small>
           <div className='social-icons'>
             <a
               className='social-icon-link'
@@ -91,7 +89,7 @@ function Footer() {
               target='_blank'
               aria-label='Twitter'
             >
-              <i className='fab fa-twitter' />
+              <i className='fab fa-x-twitter' />
             </a>
             <a
               className='social-icon-link'
@@ -104,6 +102,10 @@ function Footer() {
           </div>
         </div>
       </section>
+      <small className='footer-banner'>
+        "I can do all things through Christ who gives me strength" Philippians
+        4:13
+      </small>
     </div>
   );
 }

@@ -23,13 +23,20 @@ a:active {
   text-decoration: none;
 }
 
+.btn-mobile {
+  align-items: center;
+  justify-content: center;
+}
+a {
+  display: flex;
+  justify-content: center;
+}
 .btn {
   padding: 8px 20px;
   border-radius: 10px;
   outline: none;
   border: none;
   display: block;
-  width: 100%;
 }
 
 .btn--primary {
@@ -44,6 +51,21 @@ a:active {
   padding: 8px 20px;
   border: 1px solid var(--primary);
   transition: all 0.3s ease-out;
+}
+
+.btn--gradient-primary {
+  color: var(--primary);
+  background-color: transparent;
+  width: 200px;
+
+  padding: 8px 20px;
+  align-items: center;
+}
+
+.btn--gradient-primary:hover {
+  background-image: linear-gradient(#ff67ff, #3fb3ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btn--outline-dark {
@@ -64,12 +86,4 @@ a:active {
   padding: 8px 26px;
   font-size: 2rem;
   text-decoration: none;
-}
-
-.btn--large:hover,
-.btn--medium:hover {
-  transition: all 0.3s ease-out;
-  background: var(--primary);
-  color: var(--secondary);
-  transition: 250ms;
 }

@@ -1,11 +1,23 @@
 import React from 'react';
 import './Button.css';
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--outline-dark'];
+const STYLES = [
+  'btn--primary',
+  'btn--outline',
+  'btn--outline-dark',
+  'btn--gradient-primary',
+];
 
 const SIZES = ['btn--medium', 'btn--large'];
 
-export function Button({ children, type, onClick, buttonStyle, buttonSize }) {
+export function Button({
+  children,
+  type,
+  onClick,
+  buttonStyle,
+  buttonSize,
+  link,
+}) {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
     : STYLES[0];
@@ -14,7 +26,7 @@ export function Button({ children, type, onClick, buttonStyle, buttonSize }) {
 
   return (
     <a
-      href='https://squareup.com/appointments/book/xzrl5nmb5yjqcc/LM8RSZVXGX44K/start'
+      href={link}
       className='btn-mobile'
     >
       <button
@@ -22,7 +34,7 @@ export function Button({ children, type, onClick, buttonStyle, buttonSize }) {
         onClick={onClick}
         type={type}
       >
-        {children}
+        <span>{children}</span>
       </button>
     </a>
   );

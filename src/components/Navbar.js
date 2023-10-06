@@ -88,7 +88,7 @@ function Navbar() {
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
-                Book a Consultation
+                Book an Assesment
               </Link>
             </li>
           </ul>
@@ -97,7 +97,7 @@ function Navbar() {
               className='nav-links-mobile'
               buttonStyle='btn--outline'
               buttonSize='btn--medium'
-              href='https://squareup.com/appointments/book/xzrl5nmb5yjqcc/LM8RSZVXGX44K/start'
+              link='https://squareup.com/appointments/book/g071068uw0fljq/L84SN4AG0R5YH/start'
             >
               Book
             </Button>

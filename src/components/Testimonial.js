@@ -4,32 +4,32 @@ import './Testimonial.css';
 const testimonialsData = [
   {
     id: 1,
-    name: 'Adriana D. ',
-    age: 32,
+    name: 'Fernando L. ',
+    age: 24,
     stars: 5,
     review:
-      "Loved it! I signed up for the full nutrition plan and with Felipe's help I dropped 15 pounds in 16 weeks! The app is easy to go through and the meal plans are suprisingly realistic. Worth every penny",
-    image: './images/head-1.jpg',
+      "I can recomend the full nutrition plan, with Felipe's help I dropped 14 pounds in 16 weeks! The app is easy to go through and the meal plans are suprisingly realistic. Worth every penny",
+    image: './images/head-11.jpeg',
   },
 
   {
     id: 2,
-    name: 'Aleks G.',
+    name: 'Matheus G.',
     age: 28,
     stars: 5,
     review:
-      "If you've worked with other trainers before, I have to say Felipe is a different breed!. The workouts are actually challeging, make sense, and I can tell that alot of thought goes into it. 10/10 would recomend FELIPE",
-    image: './images/head-2.jpg',
+      "Felipe is a different breed! The workouts are always challeging and well designed. Everthing he lays out has sceintific reasoning or a case study behind it so I know I'm doing what's best. I can tell that alot of thought goes into it. 10/10 would recomend Felipe only if you are serious!",
+    image: './images/head-7.jpg',
   },
 
   {
     id: 3,
-    name: 'Mike R.',
-    age: 31,
+    name: 'Joseph C.',
+    age: 39,
     stars: 5,
     review:
-      "In 2019 I suffered a miniscus tear in my right knee, I was overweight 30 pounds and I needed to make a lifestyle change, that's when I met Felipe. He started working with my PT clinic and devolped an exercise plan arround my mobiliy, He know's what he's doing and I would recommend Felipe to anyone looking to recover from an  injury!",
-    image: './images/head-3.jpg',
+      "In 2019 I suffered a miniscus tear in my right knee, I was overweight 30 pounds and I needed to make a lifestyle change, that's when I met Felipe. He started working with my PT clinic and devolped an exercise plan arround my mobiliy, He knows what he's doing and I would recommend Felipe to anyone looking to recover from an  injury!",
+    image: './images/head-12.jpeg',
   },
 
   {
@@ -43,16 +43,18 @@ const testimonialsData = [
   },
   {
     id: 5,
-    name: 'Taiane F.',
-    age: 15,
-    stars: 1,
+    name: 'Gabi B.',
+    age: 25,
+    stars: 5,
     review:
       'O Felipe pega pesado, mas a gente se diverte demais. Ele tá sempre ligado nas minhas metas e monta os treinos sob medida. Top demais, ele é mais que um treinador, é um parceirão no fitness!"',
+    image: './images/head-5.jpg',
   },
+
   {
     id: 6,
-    name: ' Gabi S.',
-    age: 24,
+    name: 'Katia S.',
+    age: 34,
     stars: 5,
     review:
       ' Treinar com o Felipe é sensacional! Ele é super apaixonado por saúde e deixa cada treino divertido e desafiador. Felipe adapta os treinos de acordo com o que eu preciso e as metas que quero alcançar, e isso tem feito uma enorme diferença nos meus resultados. Ele não é só um treinador, é um parceiro de fitness incrível!',
@@ -124,10 +126,9 @@ const Testimonials = () => {
       prevIndex === testimonialsData.length - 1 ? 0 : prevIndex + 1
     );
   };
-
   return (
     <div className='testimonial-page'>
-      <h1>Testimonials</h1>
+      <h1>Client Reviews</h1>
       <div className='testimonial-container'>
         <TestimonialCarousel
           activeIndex={activeIndex}

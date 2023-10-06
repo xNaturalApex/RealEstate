@@ -55,7 +55,7 @@ video {
     font-size: 4rem;
 
     .btn-mobile {
-      display: block;
+      display: flex;
       text-decoration: none;
     }
   }
@@ -69,7 +69,7 @@ video {
 
   .hero-container > p {
     font-size: 30px;
-    max-width: 300px;
+    max-width: 400px;
   }
 
   .btn {

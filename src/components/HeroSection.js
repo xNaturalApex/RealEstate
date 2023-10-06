@@ -68,10 +68,11 @@ function HeroSection() {
           className='btn'
           buttonStyle='btn--primary'
           buttonSize='btn--large btn--medium'
+          link='https://squareup.com/appointments/book/g071068uw0fljq/L84SN4AG0R5YH/start'
         >
-          Schedule a Call{' '}
+          Book an Assesment{' '}
           <i
-            className='fa-solid fa-phone'
+            className='fa-solid fa-clipboard'
             style={{
               background: 'linear-gradient(#9c47fc, #356ad2)',
               WebkitBackgroundClip: 'text',
@@ -83,6 +84,7 @@ function HeroSection() {
           className='btn'
           buttonStyle='btn--outline'
           buttonSize='btn--large btn--medium'
+          link='/about'
         >
           Learn More{' '}
           <i

@@ -8,18 +8,18 @@ const PriceCard = () => {
 
   const allCardsInfo = [
     {
-      title: 'Partner',
+      title: 'STARTER',
       applyGradient: 'blueGradient',
       prices: [
         ['$149/mo', '$899'],
         ['$299/mo', '$1699'],
       ],
       para1:
-        'For Anyone looking to get back to the gym or start a new fitness journey!',
+        'If you have never worked out with a trainer, this is a great place to start',
       para2: 'A',
-      workout_protocol: 'Beginner Workout Program',
-      nutrition_protocol: 'Entry level Nutrional Coaching',
-      sessions: 'Sessions per Week (30 min): ',
+      workout_protocol: '30 min Sessions',
+      nutrition_protocol: 'Diet Tracking',
+      sessions: 'Sessions per Week: ',
       sessionChoiceLeft: '1x',
       sessionChoiceRight: '2x',
       feature_1: '$99 Start Up Fee',
@@ -27,19 +27,17 @@ const PriceCard = () => {
       feature_3: 'Availble Online - $99/mo',
     },
     {
-      title: 'BUDDY',
+      title: 'STARTER + 1',
       applyGradient: 'greenGradient',
       prices: [
         ['$75/mo', '$499'],
         ['$149/mo', '$899'],
       ],
-      para1:
-        'For 2 friends looking to get back to the gym or start a new fitness journey!',
-      para2:
-        "If you've never worked with a trainer before, this is a great place to start.",
-      workout_protocol: 'Beginner Workout Program',
-      nutrition_protocol: 'Entry level Nutrional Coaching',
-      sessions: 'Sessions per Week (30 min): ',
+      para1: 'For 2 people who want to Share a personal training class.',
+      para2: 'Sign up together save big!',
+      workout_protocol: '60 min Sessions',
+      nutrition_protocol: 'Diet Tracking',
+      sessions: 'Sessions per Week: ',
       sessionChoiceLeft: '1x',
       sessionChoiceRight: '2x',
       feature_1: '$99 Start Up Fee',
@@ -47,7 +45,7 @@ const PriceCard = () => {
       feature_3: 'Availble Online - $99/mo',
     },
     {
-      title: 'Most Popular',
+      title: 'PREMIUM',
       applyGradient: 'orangeGradient',
       prices: [
         ['$149/mo', '$1399'],
@@ -56,15 +54,15 @@ const PriceCard = () => {
       ],
       para1: 'Looking to take your fitness to the next level? ',
       para2: 'Enhance your workouts from the gym to the kitchen.',
-      workout_protocol: 'Custom Made Workout',
-      nutrition_protocol: 'Macro & Calorie Based Meal Plan',
-      sessions: 'Sessions per Week (60 min):',
+      workout_protocol: '1 Hour Workouts',
+      nutrition_protocol: 'Full Nutrional Coaching',
+      sessions: 'Sessions per Week:',
       sessionChoiceLeft: '1x',
       sessionChoiceCenter: '2x',
       sessionChoiceRight: '3x',
       feature_1: '$99 Initiation Fee + 3 Month Commitment',
       feature_2: '3 Month Commitment then Month to Month',
-      feature_3: 'Availble Online- $249/mo',
+      feature_3: 'Availble Online- $149/mo',
     },
 
     {

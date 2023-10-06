@@ -62,7 +62,7 @@ function AboutSection() {
         </div>
 
         <div className='faq-section'>
-          <h2>FAQ</h2>
+          <h2>FAQs</h2>
           <div className='faq-toggle'>
             {faqData.map((item, index) => (
               <div
@@ -88,48 +88,30 @@ function AboutSection() {
 
 const faqData = [
   {
-    question: 'Q: What are the benefits of hiring a personal trainer?',
+    question: 'Why consider a personal trainer, anyway?',
     answer:
-      'A: Hiring a personal trainer can provide numerous benefits. They offer personalized workout programs tailored to your specific goals and fitness level. A personal trainer ensures proper form and technique, reducing the risk of injuries. They provide motivation, support, and accountability to help you stay on track. With their expertise and guidance, you can maximize your results and make consistent progress.',
+      "Thinking about hiring a personal trainer? They're like your fitness partner in crime, crafting workouts, ensuring you're on the right track, and keeping you motivated. Plus, they're real people, not just fitness apps! 🏋️‍♂️💪",
   },
   {
-    question: 'Q: How often should I work out with a personal trainer?',
+    question: 'How often should I work out with a personal trainer?',
     answer:
-      'A: The frequency of training sessions with a personal trainer depends on your individual goals, availability, and budget. Generally, most clients find success with 2-3 sessions per week. This allows for a balanced approach to training and recovery. However, your trainer will work with you to create a schedule that fits your needs and lifestyle.',
+      'So, how many times should you team up with your trainer? Most folks opt for 2-3 sessions per week. But your trainer will create a plan tailored to your needs.',
   },
   {
-    question:
-      'Q: What can I expect during my first session with a personal trainer?',
+    question: "What's the deal with my first session with a personal trainer?",
     answer:
-      'A: Your first session with a personal trainer is typically an assessment session. They will evaluate your current fitness level, discuss your goals, and any specific concerns or limitations you may have. This assessment helps the trainer design a customized program tailored to your needs. Additionally, you may be introduced to basic exercises and get a sense of their training style.',
+      "Your first session is like a fitness meet and greet. They'll learn about your fitness goals, vibe, and any workout preferences you have. You might even try out some new exercises and get a sense of their training style. 😉",
   },
   {
-    question: 'Q: How long will it take to see results from personal training?',
+    question: 'When can I start seeing results from personal training?',
     answer:
-      "A: The time it takes to see results from personal training varies from person to person. Factors such as your starting point, commitment, consistency, and adherence to the program all play a role. Typically, noticeable improvements can be seen within 4-6 weeks if you stay dedicated to your workouts and follow the trainer's recommendations.",
+      "Patience is key, my friend. Results vary, but in about 4-6 weeks, you could start noticing changes if you stay dedicated and follow your trainer's advice. Remember, it's a journey, not a sprint. 🏛️💪",
   },
   {
-    question: 'Q: Can personal training help with weight loss?',
+    question: 'Can personal training help me shed those extra pounds?',
     answer:
-      'A: Yes, personal training can be extremely effective for weight loss. A personal trainer will design a workout program that includes a combination of cardiovascular exercises, strength training, and high-intensity interval training (HIIT) to maximize calorie burn and fat loss. They will also provide guidance on nutrition and lifestyle modifications to support your weight loss journey.',
+      "Absolutely! Personal trainers are like weight-loss wizards. They mix cardio, strength, and HIIT to torch calories. Plus, they'll share nutrition tips to support your fitness goals. 👋🏋️‍♂️",
   },
-  {
-    question: 'Q: What qualifications should I look for in a personal trainer?',
-    answer:
-      "A: When selecting a personal trainer, it's important to consider their qualifications and expertise. Look for trainers who are certified by reputable organizations such as the National Academy of Sports Medicine (NASM), American Council on Exercise (ACE), or the International Sports Sciences Association (ISSA). Additionally, a trainer with experience, positive client testimonials, and ongoing professional development shows a commitment to their craft.",
-  },
-  {
-    question:
-      'Q: Can personal training benefit individuals with specific health conditions?',
-    answer:
-      "A: Yes, personal training can be beneficial for individuals with specific health conditions. Many personal trainers have experience working with clients who have conditions such as diabetes, hypertension, arthritis, or back pain. They can design safe and effective exercise programs that consider your specific needs, limitations, and medical history. However, it's important to consult with your healthcare provider before starting any exercise program.",
-  },
-  {
-    question: 'Q: What is the cost of personal training sessions?',
-    answer:
-      "A: The cost of personal training sessions can vary depending on factors such as location, trainer's experience, session duration, and package deals. Typically, personal training rates range from $50 to $150 per session. Some trainers offer discounted rates for purchasing multiple sessions upfront. It's best to inquire directly with the trainer about their pricing structure.",
-  },
-  // Add more FAQ entries following the same structure
 ];
 
 export default AboutSection;
