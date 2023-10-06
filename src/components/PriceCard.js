@@ -14,8 +14,7 @@ const PriceCard = () => {
         ['$149/mo', '$899'],
         ['$299/mo', '$1699'],
       ],
-      para1:
-        'If you have never worked out with a trainer, this is a great place to start',
+      para1: 'Get your goasls ',
       para2: 'A',
       workout_protocol: '30 min Sessions',
       nutrition_protocol: 'Diet Tracking',
@@ -78,7 +77,7 @@ const PriceCard = () => {
       para2: 'Want to look like an athlete? This is the program for you.',
       workout_protocol: 'Fully Customized Workout Program',
       nutrition_protocol: 'Made to Measure Meal Plan',
-      sessions: 'Sessions per Week (60 min)',
+      sessions: 'Sessions per Week: ',
       sessionChoiceLeft: '1x',
       sessionChoiceCenter: '2x',
       sessionChoiceRight: '3x',

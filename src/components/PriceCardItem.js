@@ -52,6 +52,7 @@ const PriceCardItem = (props) => {
           className='btn btn--outline-dark btn--medium'
           buttonSize='btn--large, btn--medium'
           buttonStyle='btn--outline-dark'
+          href=''
         >
           Get Started
         </button>
