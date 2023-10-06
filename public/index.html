@@ -49,14 +49,27 @@
   </head>
   <body>
     <form
+      hidden
       name="contact"
-      netlify
+      data-netlify="'true"
       netlify-honeypot="bot-field"
     >
       <input
         type="hidden"
         name="form-name"
         value="contact"
+      />
+      <input
+        type="text"
+        name="name"
+        readonly
+        value=""
+      />
+      <input
+        type="email"
+        name="email"
+        readonly
+        value=""
       />
     </form>
     <div id="root"></div>

@@ -7,13 +7,13 @@ function Footer() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         <h1 className='footer-heading'>
-          Get access to our Training App and a 14-day free trial!
+          Get access to our Custom App and a 14-day free trial!
         </h1>
         <div className='input-areas'>
           <form
             name='contact'
             method='POST'
-            data-netlify='true'
+            netlify
             data-netlify-honeypot='bot-field'
             action='https://www.naturalapex.com/'
           >
@@ -37,10 +37,10 @@ function Footer() {
               required
             />
             <Button
-              type='submit'
               buttonStyle='btn--gradient-primary'
+              type='submit'
             >
-              Submit
+              Get Started
             </Button>
           </form>
         </div>
