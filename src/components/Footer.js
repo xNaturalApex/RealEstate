@@ -43,6 +43,12 @@ function Footer() {
               Get Started Now
             </Button>
           </form>
+          <div
+            id='success-message'
+            style='display: none;'
+          >
+            Thank you for your submission. Your message was sent successfully!
+          </div>
         </div>
       </section>
       <section className='social-media'>
