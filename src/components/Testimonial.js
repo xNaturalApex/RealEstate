@@ -5,7 +5,7 @@ const testimonialsData = [
   {
     id: 1,
     name: 'Fernando L. ',
-    age: 24,
+    age: 44,
     stars: 5,
     review:
       "I can recomend the full nutrition plan, with Felipe's help I dropped 14 pounds in 16 weeks! The app is easy to go through and the meal plans are suprisingly realistic. Worth every penny",
@@ -14,7 +14,7 @@ const testimonialsData = [
 
   {
     id: 2,
-    name: 'Matheus G.',
+    name: 'Andy T.',
     age: 28,
     stars: 5,
     review:
@@ -48,7 +48,7 @@ const testimonialsData = [
     stars: 5,
     review:
       'O Felipe pega pesado, mas a gente se diverte demais. Ele tá sempre ligado nas minhas metas e monta os treinos sob medida. Top demais, ele é mais que um treinador, é um parceirão no fitness!"',
-    image: './images/head-5.jpg',
+    image: './images/head-9.jpeg',
   },
 
   {
