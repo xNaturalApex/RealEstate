@@ -40,7 +40,7 @@ function Footer() {
               buttonStyle='btn--gradient-primary'
               type='submit'
             >
-              Get Started
+              Get Started Now
             </Button>
           </form>
         </div>
