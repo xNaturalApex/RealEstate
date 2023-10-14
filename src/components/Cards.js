@@ -19,7 +19,7 @@ function Cards() {
               src='images/prep.jpg'
               text='Meal Plans & Diet Tracking'
               label='Online'
-              path='/services'
+              path='/plans'
             />
           </ul>
           <ul className='cards__items'>
@@ -27,19 +27,19 @@ function Cards() {
               src='images/planche.png'
               text='Calisthenics Bootcamp - Free Trial'
               label='Free 14 day Program'
-              path='/services'
+              path='/plans'
             />
             <CardItem
               src='images/man-phone-food.jpg'
               text='Dowload our App!'
               label='Online'
-              path='/services'
+              path='/plans'
             />
             <CardItem
               src='images/scale2.jpg'
               text='Get your Free Fitness Assessment Today!'
               label='Book Now'
-              path='/book'
+              path='https://squareup.com/appointments/book/g071068uw0fljq/L84SN4AG0R5YH/start'
             />
           </ul>
         </div>

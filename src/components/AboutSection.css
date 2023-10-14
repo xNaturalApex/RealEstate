@@ -1,3 +1,7 @@
+.about-section {
+  background-color: #fff;
+}
+
 .about-image {
   flex: 0 0 200px;
   position: relative;
@@ -15,26 +19,41 @@
 }
 
 .about-text p {
-  margin: 20px;
+  margin: 10px;
   text-align: left;
+  font-size: 1rem;
+}
+
+.about-text h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  align-items: center;
+  padding: 8px 20px;
 }
 
 .about-text h2 {
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  padding: 8px 20px;
+  margin-bottom: 0px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(0.25turn, #ff67ff, #3fb3ff);
+  border-image-slice: 1;
 }
 
 .image-border {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border: 5px solid #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   overflow: hidden;
   display: inline-block;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .circle-image {
@@ -54,7 +73,7 @@
 }
 
 .colored-section {
-  background-color: #f2f2f2;
+  background-color: #dbdbdb;
   width: 100%;
 }
 
@@ -64,22 +83,23 @@
 }
 
 .call-to-action h2 {
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: bold;
   margin-top: 20px;
 }
 
 .call-to-action p {
   margin-bottom: 20px;
+  font-size: 1.5rem;
 }
 
 .call-to-action button {
-  padding: 10px 20px;
+  padding: 8px 50px;
   background-color: #337ab7;
   color: #fff;
   border: none;
   border-radius: 10px;
-  font-size: 2rem;
+  font-size: 1.5em;
   cursor: pointer;
 }
 
@@ -96,12 +116,18 @@
   text-align: center;
   display: flex;
   justify-content: center;
+
+  font-size: 2.5rem;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(0.25turn, #ff67ff, #3fb3ff);
+  border-image-slice: 1;
+  margin: auto;
   margin-bottom: 20px;
-  font-size: 3rem;
+  padding: 8px 20px;
 }
 
 .faq-question {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 8px 20px;
 }
 
@@ -109,4 +135,5 @@
   margin-top: 15px;
   padding: 8px 20px;
   max-width: 480px;
+  font-size: 1.2rem;
 }

@@ -6,6 +6,7 @@ const STYLES = [
   'btn--outline',
   'btn--outline-dark',
   'btn--gradient-primary',
+  'btn--gradient-outline',
 ];
 
 const SIZES = ['btn--medium', 'btn--large'];
@@ -34,7 +35,7 @@ export function Button({
         onClick={onClick}
         type={type}
       >
-        <span>{children}</span>
+        {children}
       </button>
     </a>
   );

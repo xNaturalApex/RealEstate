@@ -16,6 +16,13 @@
   width: 350px;
   margin: auto;
   margin-bottom: 20px;
+  font-size: 1.5rem;
+  justify-items: center;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(0.25turn, #ff67ff, #3fb3ff);
+  border-image-slice: 1;
+  font-size: 2.5rem;
+  padding-bottom: 20px;
 }
 /* Center align the button text */
 .footer-button {
@@ -69,16 +76,12 @@
 
 /* Social Icons */
 
-i {
-  margin: 5px;
-  background-image: linear-gradient(#ff67ff, #3fb3ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .fa-explosion {
   font-size: 2rem;
   margin: 10px;
+  background-image: linear-gradient(#ff67ff, #3fb3ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .social-icons i {
@@ -87,6 +90,10 @@ i {
   padding: 10px;
   justify-content: center;
   align-items: center;
+  margin: 5px;
+  background-image: linear-gradient(#ff67ff, #3fb3ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 sub {

@@ -1,10 +1,20 @@
 .cards {
   padding: 4rem;
   background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
-h1 {
-  text-align: center;
+.cards h1 {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(0.25turn, #ff67ff, #3fb3ff);
+  border-image-slice: 1;
+  font-size: 2.5rem;
 }
 
 .cards__container {
@@ -28,7 +38,7 @@ h1 {
 .cards__item {
   display: flex;
   flex: 1;
-  margin: 0 1rem;
+  margin: 0 10px;
   border-radius: 10px;
 }
 
@@ -36,6 +46,8 @@ h1 {
   display: flex;
   flex-flow: column;
   width: 100%;
+  min-width: 300px;
+
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
   -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));

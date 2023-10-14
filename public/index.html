@@ -36,51 +36,6 @@
       src="https://kit.fontawesome.com/b3915b0f33.js"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const contactForm = document.getElementById('contact-form');
-        const submitButton = document.getElementById('submit-button');
-        const successMessage = document.getElementById('success-message');
-
-        contactForm.addEventListener('submit', async function (e) {
-          e.preventDefault();
-
-          const nameInput = document.querySelector('input[name="name"]');
-          const emailInput = document.querySelector('input[name="email"]');
-
-          // Disable the submit button while sending the email
-          submitButton.disabled = true;
-
-          try {
-            const response = await fetch('/.netlify/functions/sendEmail', {
-              method: 'POST',
-              body: JSON.stringify({
-                name: nameInput.value,
-                email: emailInput.value,
-              }),
-            });
-
-            if (response.status === 200) {
-              // Hide the form
-              contactForm.style.display = 'none';
-
-              // Display the success message
-              successMessage.style.display = 'block';
-            } else {
-              // Handle the error case
-              console.error('Failed to send email');
-            }
-          } catch (error) {
-            console.error('Error sending email:', error);
-          } finally {
-            // Re-enable the submit button
-            submitButton.disabled = false;
-          }
-        });
-      });
-    </script>
-
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/

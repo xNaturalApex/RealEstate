@@ -25,9 +25,8 @@ function AboutSection() {
             </div>
           </div>
           <div className='about-text'>
-            <h2>Meet Felipe</h2>
-            <h3>Master Trainer, Nutrition Coach, Founder</h3>
-
+            <h2>Felipe Franco</h2>
+            <h3>Master Trainer & Nutrition Coach</h3>
             <p>
               Hey there, it's Felipe – your certified personal trainer and
               nutrition coach, dedicated to helping men and women get shredded,
@@ -35,11 +34,11 @@ function AboutSection() {
               from, I'm here to turn your fitness aspirations into reality.
             </p>
             <p>
-              My specialty? Assisting folks in their journey to achieve that
-              shredded and lean physique while maximizing their performance. But
-              that's not all – I'm also experienced in guiding those managing
-              injuries, trauma, diabetes, heart conditions, and more. At Natural
-              Apex, we're all about adding some spice to your fitness adventure.
+              My specialty? Assisting people achieve that shredded and lean
+              physique while maximizing their performance. But that's not all –
+              I'm also experienced in guiding those managing injuries, trauma,
+              heart conditions, and more. At Natural Apex, we're all about
+              adding some spice to your fitness adventure.
             </p>
             <p>
               Our programs are far from ordinary, and most include personalized
@@ -56,7 +55,12 @@ function AboutSection() {
             <div className='call-to-action'>
               <h2>Let's Have a Chat! </h2>
               <p>Book a consultation today! </p>
-              <Button>Book</Button>
+              <Button
+                className='btn--gradient-primary'
+                link='https://squareup.com/appointments/book/g071068uw0fljq/L84SN4AG0R5YH/start'
+              >
+                Book
+              </Button>
             </div>
           </div>
         </div>

@@ -27,6 +27,7 @@ a:active {
   align-items: center;
   justify-content: center;
 }
+
 a {
   display: flex;
   justify-content: center;
@@ -49,8 +50,21 @@ a {
   background-color: transparent;
   color: var(--primary);
   padding: 8px 20px;
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
   transition: all 0.3s ease-out;
+}
+
+.btn--gradient-outline {
+  background-color: transparent;
+  border: 2px solid transparent; /* You can adjust the border width as needed */
+  border-image: linear-gradient(#ff67ff, #3fb3ff);
+  border-image-slice: 1; /* Ensures the whole border is filled with the gradient */
+  color: white;
+  padding: 10px 20px; /* Adjust padding as needed */
+  text-align: center;
+  text-decoration: none; /* Remove underlines for links */
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 .btn--gradient-primary {

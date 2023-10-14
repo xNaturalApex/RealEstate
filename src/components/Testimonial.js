@@ -57,7 +57,7 @@ const testimonialsData = [
     age: 34,
     stars: 5,
     review:
-      ' Treinar com o Felipe é sensacional! Ele é super apaixonado por saúde e deixa cada treino divertido e desafiador. Felipe adapta os treinos de acordo com o que eu preciso e as metas que quero alcançar, e isso tem feito uma enorme diferença nos meus resultados. Ele não é só um treinador, é um parceiro de fitness incrível!',
+      ' Treinar com o Felipe é sensacional! Ele é super apaixonado por saúde e deixa cada treino divertido e desafiador. Felipe adapta os treinos de acordo com o que eu preciso e as metas que quero alcançar, e isso tem feito uma enorme diferença nos meus resultados!',
     image: './images/head-6.jpg',
   },
 ];

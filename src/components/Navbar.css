@@ -27,7 +27,8 @@ nav_button:hover {
 .navbar-logo {
   color: #fff;
   justify-self: flex-start;
-  margin-left: 20px;
+  margin-left: 5x;
+  margin-top: -5px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -75,7 +76,7 @@ nav_button:hover {
 }
 
 .nav-links:hover {
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
   border-image: linear-gradient(0.25turn, #ff67ff, #3fb3ff);
   border-image-slice: 1;
   width: 100%;
@@ -118,6 +119,7 @@ nav_button:hover {
 
   .nav-links {
     text-align: center;
+    font-size: 1.75rem;
     padding: 2rem;
     width: 100%;
     display: table;
@@ -164,19 +166,27 @@ nav_button:hover {
     display: block;
     text-align: center;
     margin: 2rem auto;
-    border-radius: 4px;
     width: 80%;
     background-color: transparent;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: #fff;
     padding: 14px 20px;
-    border: 1px solid #fff;
     transition: all 0.3s ease-out;
+    background-color: transparent;
+    border: 2px solid transparent; /* You can adjust the border width as needed */
+    border-image: linear-gradient(#ff67ff, #3fb3ff);
+    border-image-slice: 1; /* Ensures the whole border is filled with the gradient */
+    color: white;
+    padding: 10px 20px; /* Adjust padding as needed */
+    text-align: center;
+    text-decoration: none; /* Remove underlines for links */
+    cursor: pointer;
+    border-radius: 10px;
   }
 
   .nav-links-mobile:hover {
-    background: #fff;
+    background: #ffffff;
     color: #242424;
     transition: 250ms;
   }

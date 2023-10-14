@@ -6,9 +6,7 @@ function Footer() {
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
-        <h1 className='footer-heading'>
-          Get access to our Custom App and a 14-day free trial!
-        </h1>
+        <h1 className='footer-heading'>Start Your 14-day Trial Today!</h1>
         <div className='input-areas'>
           <form
             name='contact'
@@ -40,15 +38,9 @@ function Footer() {
               buttonStyle='btn--gradient-primary'
               type='submit'
             >
-              Get Started Now
+              Get Started
             </Button>
           </form>
-          <div
-            id='success-message'
-            style='display: none;'
-          >
-            Thank you for your submission. Your message was sent successfully!
-          </div>
         </div>
       </section>
       <section className='social-media'>

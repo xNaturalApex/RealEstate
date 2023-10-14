@@ -12,7 +12,6 @@
     "i": "^0.3.7",
     "joi": "^17.9.2",
     "netlify-cli": "^16.4.2",
-    "nodemailer": "^6.9.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",

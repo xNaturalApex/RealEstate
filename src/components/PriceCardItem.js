@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './PriceCard.css';
 import './Button.css';
+import { Button } from './Button.js';
 
 const PriceCardItem = (props) => {
   const { objProp, optionIndex } = props;
@@ -40,22 +41,20 @@ const PriceCardItem = (props) => {
       <div className='price__card__item--pricing'>
         <div>
           <h1>{price}</h1>
-          <div>
-            <h3>{type} </h3>
-          </div>
+          <h3>{type} </h3>
           <h2>{para1}</h2>
           <p>{para2}</p>
         </div>
       </div>
       <div className='price__card__item--btn-container'>
-        <button
-          className='btn btn--outline-dark btn--medium'
-          buttonSize='btn--large, btn--medium'
+        <Button
+          className='price__card__item-button'
+          buttonSize='btn--medium'
           buttonStyle='btn--outline-dark'
-          href=''
+          link='https://www.trainerize.me/profile/naturalapex/?planGUID=0b41b5732a2641c994b16a6ab532f0b3&mode=checkout'
         >
           Get Started
-        </button>
+        </Button>
       </div>
       <div className='price__card__item--features'>
         <ul>

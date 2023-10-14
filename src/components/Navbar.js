@@ -84,7 +84,7 @@ function Navbar() {
 
             <li>
               <Link
-                to='/book'
+                to='https://squareup.com/appointments/book/g071068uw0fljq/L84SN4AG0R5YH/start'
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
@@ -95,7 +95,7 @@ function Navbar() {
           {button && (
             <Button
               className='nav-links-mobile'
-              buttonStyle='btn--outline'
+              buttonStyle='btn--gradient-outline'
               buttonSize='btn--medium'
               link='https://squareup.com/appointments/book/g071068uw0fljq/L84SN4AG0R5YH/start'
             >

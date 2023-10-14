@@ -44,6 +44,7 @@ video {
   margin: 6px;
   width: 100%;
   flex-direction: row;
+  font-size: 1.5rem;
 }
 
 .fa-arrow-right {
@@ -98,4 +99,14 @@ video::-webkit-media-controls-enclosure {
 
 .video-element::-webkit-media-controls-overlay-enclosure {
   display: none !important;
+}
+
+.fa-clipboard {
+  margin: 10px 10px;
+  font-size: 1.5rem;
+}
+
+.fa-arrow-right {
+  font-size: 1.5rem;
+  margin: 10px 10px;
 }

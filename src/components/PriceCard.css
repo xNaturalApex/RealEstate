@@ -80,6 +80,13 @@ body {
   text-align: left;
   padding-bottom: 0px;
 }
+.price__card__item--pricing h3 {
+  margin-top: -15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 0px;
+}
 
 .price__card__item--pricing p {
   text-align: left;
@@ -101,17 +108,8 @@ body {
   width: 100%;
 }
 
-.btn {
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  text-align: center;
-  width: 80%;
-  display: flex;
-}
-
-.price__card__item--btn-container {
-  display: flex;
+.price__card__item--btn-container button {
+  min-width: 300px;
 }
 
 .price-card__item--features {
@@ -167,7 +165,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  margin: 0 25px;
+  margin: 0 30px;
   transform: translate(4px, 0px);
 }
 
@@ -229,10 +227,10 @@ body {
 
 .price__card__toggle-button {
   display: inline-block;
-  padding: 10px 20px;
-  margin: 0 5px;
+  padding: 10px 40px;
+  margin: 5px 20px;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   border: 3px solid #333;
   border-radius: 10px;
   color: #333;
@@ -258,4 +256,24 @@ body {
   color: #fff;
   transition: all 0.3s ease-out;
   padding: 10px 10px;
+}
+
+.fa-check {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.fa-stopwatch {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.fa-bowl-rice {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.fa-dumbbell {
+  font-size: 1.1rem;
+  margin-right: 13px;
 }
