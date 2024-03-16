@@ -43,9 +43,9 @@ function Navbar() {
             className='navbar-logo'
             onClick={closeMobileMenu}
           >
-            Natural
+            Nail
             <i className='fa-solid fa-explosion' />
-            Apex
+            Me
           </Link>
           <div
             className='menu-icon'
