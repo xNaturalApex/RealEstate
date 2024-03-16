@@ -20,28 +20,30 @@ const PriceCard = () => {
       workout_protocol: '25 min Sessions + Workouts In-App',
       nutrition_protocol: 'Daily Diet Tracking In-App',
       sessions: 'Sessions per Week: ',
-      sessionChoiceLeft: '1x',
-      sessionChoiceRight: '2x',
+      sessionChoiceLeft: 'Online',
+      sessionChoiceRight: 'In-Person',
       feature_1: '$99 Activation + 3 Month Commitment',
       feature_2: 'Monthly Assesment + Bi-Weekly Measurements',
-      feature_3: 'Online Only - $99/mo',
+      feature_3: 'Better than Bootcamp',
     },
 
     {
-      title: 'DUO',
+      title: 'FAMILY',
       type: 'Per Person',
       applyGradient: 'blueGradient',
       prices: [
         ['$99/mo', '$599'],
         ['$199/mo', '$1099'],
+        ['$299/mo', '$1399'],
       ],
       para1: 'Workouts with a partner',
       para2: 'Join with a friend or spouse and save!',
       workout_protocol: '55 min Sessions',
       nutrition_protocol: 'Individualized Diet Tracking In-App',
-      sessions: 'Sessions per Week: ',
-      sessionChoiceLeft: '1x',
-      sessionChoiceRight: '2x',
+      sessions: 'Family Members: ',
+      sessionChoiceLeft: 'One',
+      sessionChoiceCenter: '+2',
+      sessionChoiceRight: '+3',
       feature_1: '$99 Activation + 3 Month Commitment',
       feature_2: 'Monthly Assesment + Bi-Weekly Measurements',
       feature_3: 'In-person Only',
@@ -60,12 +62,11 @@ const PriceCard = () => {
       workout_protocol: '55 min Sessions + Workouts In-App',
       nutrition_protocol: 'Itemized Meal Plan',
       sessions: 'Sessions per Week:',
-      sessionChoiceLeft: '1x',
-      sessionChoiceCenter: '2x',
-      sessionChoiceRight: '3x',
+      sessionChoiceLeft: 'Online',
+      sessionChoiceRight: 'In-Person',
       feature_1: '$99 Activation + 3 Month Commitment',
       feature_2: 'Monthly Assesment + Bi-Weekly Measurements',
-      feature_3: 'Availble Online- $149/mo',
+      feature_3: '',
     },
 
     {
@@ -77,14 +78,14 @@ const PriceCard = () => {
         ['$499/mo', '$2999'],
         ['$720/mo', '$3999'],
       ],
-      para1: 'An Intense Reesults-Driven Program',
-      para2: 'Get into the best shape of your life',
+      para1: 'An Intense Results-Driven Program',
+      para2:
+        'Get into the best shape of your life and let us take care of your entire protocol.',
       workout_protocol: '55 min Sessions + Workouts In-App',
       nutrition_protocol: 'Itemized Meal Plan',
       sessions: 'Sessions per Week: ',
-      sessionChoiceLeft: '1x',
-      sessionChoiceCenter: '2x',
-      sessionChoiceRight: '3x',
+      sessionChoiceLeft: 'Online',
+      sessionChoiceRight: 'In-Person',
       feature_1: '$99 Activation + 3 Month Commitment',
       feature_2: 'Monthly Assesment + Bi-Weekly Measurements',
       feature_3: 'Availble Online - $249/mo',
@@ -92,7 +93,7 @@ const PriceCard = () => {
 
     {
       title: 'NUTRITION',
-      applyGradient: 'redGradient',
+      applyGradient: 'blueGradient',
       prices: [
         ['$75/mo', '$449'],
         ['$149/mo', '$849'],
@@ -143,6 +144,7 @@ const PriceCard = () => {
           </button>
         </div>
       </div>
+
       <div className='price__card__container'>
         {allCardsInfo.map((singleCard, index) => (
           <PriceCardItem

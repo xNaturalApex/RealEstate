@@ -64,7 +64,6 @@ a {
   text-align: center;
   text-decoration: none; /* Remove underlines for links */
   cursor: pointer;
-  border-radius: 10px;
 }
 
 .btn--gradient-primary {

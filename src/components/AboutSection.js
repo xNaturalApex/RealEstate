@@ -48,6 +48,7 @@ function AboutSection() {
               fitness journey into an exhilarating ride!
             </p>
           </div>
+          <div></div>
         </div>
 
         <div className='colored-section'>

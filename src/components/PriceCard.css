@@ -163,7 +163,6 @@ body {
   font-size: 1.2rem;
 
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
   margin: 0 30px;
   transform: translate(4px, 0px);
@@ -231,7 +230,7 @@ body {
   margin: 5px 20px;
   font-size: 24px;
   font-weight: 400;
-  border: 3px solid #333;
+  border: 3px solid #242424;
   border-radius: 10px;
   color: #333;
   background-color: transparent;
@@ -242,20 +241,19 @@ body {
 }
 
 .price__card__toggle-button:hover {
-  border: 3px solid #333;
+  border: 3px solid #242424;
   font-weight: 400;
-  background-color: #333333;
+  background-color: #242424;
   color: #fff;
-  transition: all 0.3s ease-out;
   padding: 10px 10px;
 }
 .price__card__toggle-button.active {
-  border: 5px solid #333;
+  border: 3px solid #242424;
   font-weight: 400;
-  background-color: #333333;
+  background-color: #242424;
   color: #fff;
-  transition: all 0.3s ease-out;
   padding: 10px 10px;
+  border-radius: 10px;
 }
 
 .fa-check {

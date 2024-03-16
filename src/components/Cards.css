@@ -102,6 +102,11 @@
 
 .cards__item__info {
   padding: 20px 30px 30px;
+  border-top: 5px;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(0.25turn, #ff67ff, #3fb3ff);
+  border-image-slice: 1;
+  font-size: 2.5rem;
 }
 
 .cards__item__text {

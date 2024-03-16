@@ -11,7 +11,6 @@
     "@testing-library/user-event": "^14.4.3",
     "i": "^0.3.7",
     "joi": "^17.9.2",
-    "netlify-cli": "^16.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
@@ -21,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "netlify": "netlify"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +39,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.6",
+    "babel-preset-react-app": "^10.0.1",
+    "netlify-cli": "^16.7.0",
     "source-map-loader": "^4.0.1"
+    
   }
 }
