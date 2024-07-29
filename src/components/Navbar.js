@@ -43,9 +43,9 @@ function Navbar() {
             className='navbar-logo'
             onClick={closeMobileMenu}
           >
-            Nail
+            Felipe
             <i className='fa-solid fa-explosion' />
-            Me
+            Franco
           </Link>
           <div
             className='menu-icon'
@@ -78,7 +78,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Plans
+                Listings
               </Link>
             </li>
 
