@@ -2,7 +2,9 @@
   background: #ffffff;
   display: flex;
   justify-content: center;
-  padding: 1rem 0;
+  border: 1rem 0;
+  padding: #ffffff;
+
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -15,6 +17,7 @@
   width: 100%;
   max-width: 1200px;
   padding: 0 1rem;
+  border: #ffffff;
 }
 
 .navbar-logo {

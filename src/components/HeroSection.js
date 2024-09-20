@@ -18,7 +18,7 @@ function HeroSection() {
         <div className="hero-text">
           <h1>Find Your Perfect Boston Rental</h1>
           <p>Explore the best rental properties Boston has to offer.</p>
-          <button className="cta-button" onClick={() => navigate("/listings")}>
+          <button className="cta-button" onClick={() => navigate("/rentals")}>
             Start Your Search
           </button>
         </div>

@@ -5,7 +5,7 @@ import { useLocation, useParams } from "react-router-dom";
 import Lightbox from "react-awesome-lightbox";
 import "react-awesome-lightbox/build/style.css";
 import "./ListingDetailPage.css";
-import ListingCards from "./ListingCards";
+import ListingCards from "../components/ListingCards";
 
 // Importing data from three separate JSON files
 import CCdata from "../data/CCdata.json";

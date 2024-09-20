@@ -7,12 +7,12 @@ import ListingDetailPage from "./components/ListingDetailPage";
 import RentalDetailPage from "./components/RentalDetailPage";
 import Listings from "./components/pages/Listings";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import './App.css'
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <div className="container-1200">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -21,7 +21,6 @@ function App() {
         <Route path="/listings" element={<Listings />} />
         <Route path="/rentals" element={<Rentals />} />
       </Routes>
-      </div>
     </Router>
   );
 }

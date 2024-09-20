@@ -3,7 +3,7 @@ import { useLocation, useParams } from "react-router-dom";
 import Lightbox from "react-awesome-lightbox";
 import "react-awesome-lightbox/build/style.css";
 import "./RentalDetailPage.css";
-import RentalCards from "./RentalCards"; // Adjust the path as needed
+import RentalCards from "../components/RentalCards"; // Adjust the path as needed
 import rentalListings from "../data/RentalData.json"; // Adjust the path as needed
 
 function RentalDetailPage() {
