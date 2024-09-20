@@ -1,37 +1,23 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import './App.css';
-import Home from './components/pages/Home';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Plans from './components/pages/Plans';
-import About from './components/pages/About';
-import Book from './components/pages/Book';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import DetailPage from "./components/DetailPage";
+import Listings from "./components/pages/Listings";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import SearchForm from "./components/SearchForm"; // Importing SearchForm if needed on Home or other pages
 
 function App() {
   return (
-    <>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route
-            path='/'
-            element={<Home />}
-          />
-          <Route
-            path='/about'
-            element={<About />}
-          />
-          <Route
-            path='/plans'
-            element={<Plans />}
-          />
-          <Route
-            path='/book'
-            element={<Book />}
-          />
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/rentals/:listingNo" element={<DetailPage />} />
+        <Route path="/listings" element={<Listings />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,112 +1,85 @@
-video {
-  object-fit: cover;
-  height: 100vh;
-  position: fixed;
-  z-index: -1;
-}
-
 .hero-container {
-  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-  object-fit: contain;
-}
-
-.hero-container > h1 {
+  justify-content: center;
+  position: relative;
+  background: url('/public/images/Boston.jpg') no-repeat center center/cover;
   color: #fff;
-  font-size: 4rem;
-  margin-top: 400px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-  text-align: center;
 }
 
-.hero-container > p {
-  margin-top: 8px;
-  color: #fff;
-  font-size: 32px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-  text-align: center;
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background for readability */
+  border-radius: 10px;
 }
 
-.hero-btns {
-  margin: 32px;
-  flex-direction: column;
+.hero-text {
+  flex: 1;
+  max-width: 500px;
 }
 
-.hero-btns .btn {
-  margin: 6px;
-  width: 100%;
-  flex-direction: row;
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hero-text p {
   font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.fa-arrow-right {
-  margin-left: 4px;
+.cta-button {
+  background-color: #ff6f61;
+  /* Example color, adjust as needed */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 960px) {
-  .hero-container > h1 {
-    font-size: 4rem;
-
-    .btn-mobile {
-      display: flex;
-      text-decoration: none;
-    }
-  }
+.hero-search {
+  flex: 1;
+  max-width: 400px;
 }
 
 @media screen and (max-width: 768px) {
-  .hero-container > h1 {
-    font-size: 50px;
-    margin-top: 300px;
+  .hero-container {
+    height: auto;
+    background-size: cover;
   }
 
-  .hero-container > p {
-    font-size: 30px;
-    max-width: 400px;
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .btn {
-    width: 100%;
+  .hero-text,
+  .hero-search {
+    max-width: 100%;
+    text-align: center;
   }
-}
 
-/* Hide the default video controls */
-video::-webkit-media-controls-start-playback-button {
-  display: none !important;
-}
-video::-webkit-media-controls-play-button {
-  display: none !important;
-}
-video::-webkit-media-controls-enclosure {
-  overflow: hidden !important;
-}
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
 
-.video-element::-webkit-media-controls {
-  display: none !important;
-}
+  .hero-text p {
+    font-size: 1.2rem;
+  }
 
-.video-element::-webkit-media-controls-enclosure {
-  display: none !important;
-}
-
-.video-element::-webkit-media-controls-overlay-enclosure {
-  display: none !important;
-}
-
-.fa-clipboard {
-  margin: 10px 10px;
-  font-size: 1.5rem;
-}
-
-.fa-arrow-right {
-  font-size: 1.5rem;
-  margin: 10px 10px;
+  .cta-button {
+    font-size: 1rem;
+  }
 }

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button } from './Button';
+import React, { useState } from "react";
+import { Button } from "./Button";
 
 function AboutSection() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -9,76 +9,76 @@ function AboutSection() {
   };
 
   return (
-    <section className='about-section'>
-      <div className='background-image'>
+    <section className="about-section">
+      <div className="background-image">
         {/* Add your background image here */}
       </div>
-      <div className='container'>
-        <div className='about-content'>
-          <div className='about-image'>
-            <div className='image-border'>
+      <div className="container">
+        <div className="about-content">
+          <div className="about-image">
+            <div className="image-border">
               <img
-                src='images/Felipe-Headshot.jpg'
-                alt='Your Favorite Trainer'
-                className='circle-image'
+                src="images/007-Edited.jpg"
+                alt="Felipe Franco"
+                className="circle-image"
               />
             </div>
           </div>
-          <div className='about-text'>
+          <div className="about-text">
             <h2>Felipe Franco</h2>
-            <h3>Master Trainer & Nutrition Coach</h3>
+            <h3>Real Estate Agent & Investment Specialist</h3>
             <p>
-              Hey there, it's Felipe – your certified personal trainer and
-              nutrition coach, dedicated to helping men and women get shredded,
-              lean, and perform at their peak! No matter where you're starting
-              from, I'm here to turn your fitness aspirations into reality.
+              Hello! I'm Felipe, your dedicated real estate agent here in
+              Greater Boston. With a passion for helping first-time homebuyers
+              and those seeking rental properties, I'm committed to guiding you
+              through every step of your real estate journey. Whether you're
+              buying your first home or searching for the perfect rental, I'm
+              here to turn your dreams into reality.
             </p>
             <p>
-              My specialty? Assisting people achieve that shredded and lean
-              physique while maximizing their performance. But that's not all –
-              I'm also experienced in guiding those managing injuries, trauma,
-              heart conditions, and more. At Natural Apex, we're all about
-              adding some spice to your fitness adventure.
+              Specializing in both local and international markets, I also help
+              clients purchase investment properties in some of the most
+              promising locations in Brazil. From Itapema to other prime areas,
+              I can assist you in making savvy investments that yield excellent
+              returns.
             </p>
             <p>
-              Our programs are far from ordinary, and most include personalized
-              nutritional guidance. We're all about achieving the perfect
-              synergy between your mind, body, and spirit to help you conquer
-              your 'Natural Apex' with style and excitement. Let's turn your
-              fitness journey into an exhilarating ride!
+              My approach goes beyond traditional real estate services. I offer
+              personalized advice, market insights, and a dedicated commitment
+              to finding the right property for you. Whether you're navigating
+              the competitive Boston market or exploring investment
+              opportunities abroad, I’m here to provide you with expert guidance
+              and support.
             </p>
           </div>
           <div></div>
         </div>
 
-        <div className='colored-section'>
-          <div className='container'>
-            <div className='call-to-action'>
-              <h2>Let's Have a Chat! </h2>
-              <p>Book a consultation today! </p>
+        <div className="colored-section">
+          <div className="container">
+            <div className="call-to-action">
+              <h2>Ready to Find Your Dream Property?</h2>
+              <p>Let's connect and start your real estate journey today!</p>
               <Button
-                className='btn--gradient-primary'
-                link='https://squareup.com/appointments/book/g071068uw0fljq/L84SN4AG0R5YH/start'
+                className="btn--gradient-primary"
+                link="https://squareup.com/appointments/book/g071068uw0fljq/L84SN4AG0R5YH/start"
               >
-                Book
+                Book a Consultation
               </Button>
             </div>
           </div>
         </div>
 
-        <div className='faq-section'>
+        <div className="faq-section">
           <h2>FAQs</h2>
-          <div className='faq-toggle'>
+          <div className="faq-toggle">
             {faqData.map((item, index) => (
-              <div
-                className='faq-question'
-                key={index}
-              >
+              <div className="faq-question" key={index}>
                 <h3 onClick={() => handleAccordionClick(index)}>
                   {item.question}
                 </h3>
                 {activeIndex === index && (
-                  <div className='faq-answer'>
+                  <div className="faq-answer">
                     <p>{item.answer}</p>
                   </div>
                 )}
@@ -93,29 +93,29 @@ function AboutSection() {
 
 const faqData = [
   {
-    question: 'Why consider a personal trainer, anyway?',
+    question: "Why should I work with a real estate agent?",
     answer:
-      "Thinking about hiring a personal trainer? They're like your fitness partner in crime, crafting workouts, ensuring you're on the right track, and keeping you motivated. Plus, they're real people, not just fitness apps! 🏋️‍♂️💪",
+      "Partnering with a real estate agent can make all the difference. We provide expert market knowledge, negotiate on your behalf, and guide you through the buying or renting process to ensure you make informed decisions and get the best deal possible.",
   },
   {
-    question: 'How often should I work out with a personal trainer?',
+    question: "How can you help me find my first home?",
     answer:
-      'So, how many times should you team up with your trainer? Most folks opt for 2-3 sessions per week. But your trainer will create a plan tailored to your needs.',
+      "I specialize in working with first-time homebuyers, offering personalized support and advice. I'll help you navigate the market, understand your options, and find a home that meets your needs and budget. My goal is to make your first home purchase as smooth and stress-free as possible.",
   },
   {
-    question: "What's the deal with my first session with a personal trainer?",
+    question: "What should I know about renting in Greater Boston?",
     answer:
-      "Your first session is like a fitness meet and greet. They'll learn about your fitness goals, vibe, and any workout preferences you have. You might even try out some new exercises and get a sense of their training style. 😉",
+      "Renting in Boston can be competitive, but with my local expertise, I'll help you find the right rental property and negotiate favorable terms. I’ll assist you with understanding lease agreements and navigating the rental market to ensure you find a home that fits your lifestyle.",
   },
   {
-    question: 'When can I start seeing results from personal training?',
+    question: "How can you assist with real estate investments in Brazil?",
     answer:
-      "Patience is key, my friend. Results vary, but in about 4-6 weeks, you could start noticing changes if you stay dedicated and follow your trainer's advice. Remember, it's a journey, not a sprint. 🏛️💪",
+      "I offer specialized services for clients interested in investing in Brazilian real estate. With insights into the best markets and investment opportunities, I can guide you through the purchasing process, helping you make informed decisions and achieve your investment goals.",
   },
   {
-    question: 'Can personal training help me shed those extra pounds?',
+    question: "What is the typical process for buying a property?",
     answer:
-      "Absolutely! Personal trainers are like weight-loss wizards. They mix cardio, strength, and HIIT to torch calories. Plus, they'll share nutrition tips to support your fitness goals. 👋🏋️‍♂️",
+      "The buying process involves several steps: determining your budget, finding the right property, making an offer, securing financing, and completing the closing process. I’ll be with you every step of the way, ensuring that each phase is handled efficiently and effectively.",
   },
 ];
 

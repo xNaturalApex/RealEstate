@@ -2,26 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link
-      rel="icon"
-      href="public/favicon.ico"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
-    <meta
-      name="theme-color"
-      content="#000000"
-    />
-    <meta
-      name="description"
-      content="Holistic Health and Wellness"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="./public/logo192.png"
-    />
+    <link rel="icon" href="public/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Belive In Realty" />
+    <link rel="apple-touch-icon" href="./public/BIR-Logo-simple.png" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
@@ -40,36 +25,27 @@
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link
-      rel="manifest"
-      href="./manifest.json"
-    />
+    <link rel="manifest" href="./manifest.json" />
     <title>Natural Apex</title>
   </head>
   <body>
     <form
       hidden
-      name="contact"
+      name="contact-v3"
       data-netlify="true"
       netlify-honeypot="bot-field"
+      action="https//www.felipemfranco.com/"
     >
-      <input
-        type="hidden"
-        name="form-name"
-        value="contact"
-      />
-      <input
-        type="text"
-        name="name"
-        readonly
-        value=""
-      />
-      <input
-        type="email"
-        name="email"
-        readonly
-        value=""
-      />
+      <input type="hidden" name="form-name" value="contact-v3" />
+      <input type="text" name="name" readonly value="" />
+      <input type="email" name="email" readonly value="" />
+      <input type="tel" name="phone" readonly value="" />
+      <select name="contact-method">
+        <option value="" disabled selected>Preferred Contact Method</option>
+        <option value="E-mail">E-mail</option>
+        <option value="Text">Text Message</option>
+        <option value="Whatsapp">WhatsApp Messenger</option>
+      </select>
     </form>
     <div id="root"></div>
 

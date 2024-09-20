@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import './PriceCard.css';
-import './Button.css';
-import { Button } from './Button.js';
+import React, { useState } from "react";
+import "./PriceCard.css";
+import "./Button.css";
+import { Button } from "./Button.js";
 
 const PriceCardItem = (props) => {
   const { objProp, optionIndex } = props;
@@ -26,19 +26,19 @@ const PriceCardItem = (props) => {
   const [priceIndex, setPriceIndex] = useState(0); // Maintain the state locally
 
   const selectedPriceList = prices[priceIndex] || [];
-  const price = selectedPriceList[optionIndex] || '';
+  const price = selectedPriceList[optionIndex] || "";
 
   const handlePriceIndexChange = (e) => {
     setPriceIndex(parseInt(e.target.value));
   };
 
   return (
-    <div className='price__card__item'>
+    <div className="price__card__item">
       <div className={`price__card__item--title ${applyGradient}`}>
         <h2>{title}</h2>
       </div>
 
-      <div className='price__card__item--pricing'>
+      <div className="price__card__item--pricing">
         <div>
           <h1>{price}</h1>
           <h3>{type} </h3>
@@ -46,46 +46,37 @@ const PriceCardItem = (props) => {
           <p>{para2}</p>
         </div>
       </div>
-      <div className='price__card__item--btn-container'>
+      <div className="price__card__item--btn-container">
         <Button
-          className='price__card__item-button'
-          buttonSize='btn--medium'
-          buttonStyle='btn--outline-dark'
-          link='https://www.trainerize.me/profile/naturalapex/?planGUID=0b41b5732a2641c994b16a6ab532f0b3&mode=checkout'
+          className="price__card__item-button"
+          buttonSize="btn--medium"
+          buttonStyle="btn--outline-dark"
+          link="https://www.trainerize.me/profile/naturalapex/?planGUID=0b41b5732a2641c994b16a6ab532f0b3&mode=checkout"
         >
           Get Started
         </Button>
       </div>
-      <div className='price__card__item--features'>
+      <div className="price__card__item--features">
         <ul>
           <li>
             <b>Includes:</b>
           </li>
           <li>
-            <i
-              className='fa-solid fa-dumbbell'
-              style={{ color: 'black' }}
-            />
+            <i className="fa-solid fa-dumbbell" style={{ color: "black" }} />
             {workout_protocol}
           </li>
           <li>
-            <i
-              className='fa-solid fa-bowl-rice'
-              style={{ color: 'black' }}
-            />
+            <i className="fa-solid fa-bowl-rice" style={{ color: "black" }} />
             {nutrition_protocol}
           </li>
           <li>
-            <i
-              className='fa-solid fa-stopwatch'
-              style={{ color: 'black' }}
-            />
+            <i className="fa-solid fa-stopwatch" style={{ color: "black" }} />
             {sessions}
           </li>
           <li>
             <input
-              className='price__card__item--slider-sessions'
-              type='range'
+              className="price__card__item--slider-sessions"
+              type="range"
               min={0}
               max={prices.length - 1}
               value={priceIndex}
@@ -93,32 +84,23 @@ const PriceCardItem = (props) => {
             />
           </li>
           <li
-            className='price__card__item--slider-labels'
-            style={{ justifyContent: 'space-between' }}
+            className="price__card__item--slider-labels"
+            style={{ justifyContent: "space-between" }}
           >
             <p>{sessionChoiceLeft}</p>
             <p>{sessionChoiceCenter}</p>
             <p>{sessionChoiceRight}</p>
           </li>
           <li>
-            <i
-              className='fa-solid fa-check'
-              style={{ color: 'green' }}
-            />
+            <i className="fa-solid fa-check" style={{ color: "green" }} />
             {feature_1}
           </li>
           <li>
-            <i
-              className='fa-solid fa-check'
-              style={{ color: 'green' }}
-            />
+            <i className="fa-solid fa-check" style={{ color: "green" }} />
             {feature_2}
           </li>
           <li>
-            <i
-              className='fa-solid fa-check'
-              style={{ color: 'green' }}
-            />
+            <i className="fa-solid fa-check" style={{ color: "green" }} />
             {feature_3}
           </li>
         </ul>

@@ -1,0 +1,64 @@
+[
+  {
+    "src": "/images/GRowley1.jpg",
+    "title": "Modern Farmhouse",
+    "address": "83 Glen Ave Rowley",
+    "bedrooms": "5",
+    "bathrooms": "3",
+    "description": "A beautiful modern farmhouse with open concept living...",
+    "gallery": [
+      "/images/GRowley1.jpg",
+      "/images/GRowley2.jpg",
+      "/images/GRowley3.jpg",
+      "/images/GRowley4.jpg",
+      "/images/GRowley5.jpg",
+      "/images/GRowley6.jpg",
+      "/images/GRowley7.jpg",
+      "/images/GRowley8.jpg",
+      "/images/GRowley9.jpg",
+      "/images/GRowley10.jpg",
+      "/images/GRowley1.jpg",
+      "/images/GRowley1.jpg"
+    ],
+    "path": "modern-farmhouse-rowley"
+  },
+  {
+    "src": "/images/GRowley1.jpg",
+    "title": "Modern Family Home",
+    "address": "123 Maple Street, City",
+    "bedrooms": "4",
+    "bathrooms": "3",
+    "description": "A spacious modern family home in a quiet neighborhood...",
+    "gallery": [
+      "images/GRowley1.jpg",
+      "images/GRowley2.jpg"
+    ],
+    "path": "modern-family-home-maple"
+  },
+  {
+    "src": "/images/GRowley1.jpg",
+    "title": "Modern Family Home",
+    "address": "123 Maple Street, City",
+    "bedrooms": "4",
+    "bathrooms": "3",
+    "description": "A spacious modern family home in a quiet neighborhood...",
+    "gallery": [
+      "images/GRowley1.jpg",
+      "images/GRowley2.jpg"
+    ],
+    "path": "modern-family-home-maple"
+  },
+  {
+    "src": "images/GRowley1.jpg",
+    "title": "Modern Family Home",
+    "address": "123 Maple Street, City",
+    "bedrooms": "4",
+    "bathrooms": "3",
+    "description": "A spacious modern family home in a quiet neighborhood...",
+    "gallery": [
+      "images/GRowley1.jpg",
+      "images/GRowley2.jpg"
+    ],
+    "path": "modern-family-home-maple"
+  }
+]

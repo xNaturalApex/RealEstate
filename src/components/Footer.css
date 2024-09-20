@@ -1,152 +1,174 @@
-/* Add this CSS to your Footer.css file */
+/* Footer Container */
 .footer-container {
-  background-color: #242424;
+  background-color: #1c1c1c;
   color: #fff;
   padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center; /* Center-align text content */
+  text-align: center;
 }
 
+/* Footer Heading */
 .footer-heading {
   display: flex;
   justify-content: center;
-  width: 350px;
-  margin: auto;
   margin-bottom: 20px;
-  font-size: 1.5rem;
-  justify-items: center;
-  border-bottom: 3px solid transparent;
-  border-image: linear-gradient(0.25turn, #ff67ff, #3fb3ff);
-  border-image-slice: 1;
   font-size: 2.5rem;
+  background-image: linear-gradient(90deg, #ffd700, #daa520);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
   padding-bottom: 20px;
-}
-/* Center align the button text */
-.footer-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 40px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Center the button with the inputs */
-.input-areas {
+/* Form Container */
+.form-container {
+  background-color: #2c2c2c;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+/* Form Styling */
+.contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 15px;
 }
 
-/* Center the inputs */
+/* Input Areas */
 .footer-input {
-  padding: 8px 20px;
-  border-radius: 2px;
-  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
   outline: none;
+  border: 1px solid #444;
+  font-size: 16px;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+
+.footer-input::placeholder {
+  color: #888;
+}
+
+.footer-button {
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(90deg, #ffd700, #daa520);
   border: none;
-  font-size: 18px;
-  margin-bottom: 16px;
-  border: 1px solid #fff;
-  width: 100%; /* Make the inputs responsive */
-  max-width: 350px; /* Limit the maximum width for larger screens */
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease;
 }
 
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Add responsive styling for smaller screens */
-@media screen and (max-width: 820px) {
-  .footer-input {
-    width: 100%;
-    width: 350px; /* Remove the maximum width for smaller screens */
-  }
-
-  .social-media-wrap {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 5px;
-  }
+.footer-button:hover {
+  background: linear-gradient(90deg, #daa520, #ffd700);
 }
 
 /* Social Icons */
-
-.fa-explosion {
-  font-size: 2rem;
-  margin: 10px;
-  background-image: linear-gradient(#ff67ff, #3fb3ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.social-icons i {
-  display: flex;
-  font-size: 4;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  margin: 5px;
-  background-image: linear-gradient(#ff67ff, #3fb3ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-sub {
-  display: flex;
-  align-content: baseline;
-}
-
-.social-icon-link {
-  color: #fff;
-  font-size: 24px;
-}
-
+/* Social Media Section */
 .social-media {
   max-width: 1000px;
   width: 100%;
 }
 
+/* Social Media Wrap */
 .social-media-wrap {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   width: 90%;
-  max-width: 1000x;
+  max-width: 1000px;
   margin: 40px auto 0 auto;
 }
 
+/* Social Icons Container */
 .social-icons {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   justify-content: center;
-  width: 240px;
+  align-items: center;
+  gap: 15px;
+  /* Space between icons */
+  margin-top: 20px;
 }
 
-.social-logo {
+/* Social Icon Link */
+.social-icon-link {
+  color: #ffd700;
+  /* Gold color for icons */
+  font-size: 24px;
+  /* Set font size for icons */
+  transition: color 0.3s ease;
+  /* Smooth color transition */
+}
+
+.social-icon-link:hover {
   color: #fff;
-  justify-self: start;
-  cursor: pointer;
-  text-decoration: none;
+  /* Change color on hover */
+}
+
+/* Social Logo */
+.social-logo {
+  color: #ffd700;
   font-size: 2rem;
+  text-decoration: none;
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+/* Font Awesome Icon Styling */
+.social-icon-link i {
+  font-size: 24px;
+  /* Consistent size for icons */
+  background: linear-gradient(90deg, #ffd700, #daa520);
+  /* Gold gradient background */
+  -webkit-background-clip: text;
+  /* Clip background to text */
+  -webkit-text-fill-color: transparent;
+  /* Text fill color to transparent */
+  transition: color 0.3s ease;
+}
+
+.social-icon-link i:hover {
+  color: #fff;
+  /* Icon color change on hover */
 }
 
 .website-rights {
-  color: #fff;
-  opacity: 70%;
+  color: #ffd700;
   margin: 10px;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
 .footer-banner {
   margin-top: 20px;
   font-size: 1.2rem;
-  max-width: 490px;
+  color: #ffd700;
 }
-/* Additional styles for other elements can be added here */
+
+/* Responsive Styling */
+@media screen and (max-width: 820px) {
+  .footer-input {
+    width: 100%;
+  }
+
+  .form-container {
+    padding: 1rem;
+  }
+
+  .social-media-wrap {
+    flex-direction: row;
+    padding: 10px 5px;
+  }
+}

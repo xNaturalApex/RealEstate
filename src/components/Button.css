@@ -32,6 +32,7 @@ a {
   display: flex;
   justify-content: center;
 }
+
 .btn {
   padding: 8px 20px;
   border-radius: 10px;
@@ -56,13 +57,17 @@ a {
 
 .btn--gradient-outline {
   background-color: transparent;
-  border: 2px solid transparent; /* You can adjust the border width as needed */
-  border-image: linear-gradient(#ff67ff, #3fb3ff);
-  border-image-slice: 1; /* Ensures the whole border is filled with the gradient */
-  color: white;
-  padding: 10px 20px; /* Adjust padding as needed */
+  border: 2px solid transparent;
+  /* You can adjust the border width as needed */
+  border-image: radial-gradient(circle, #ffcc00, #242424);
+  border-image-slice: 1;
+  /* Ensures the whole border is filled with the gradient */
+  color: #242424;
+  padding: 10px 20px;
+  /* Adjust padding as needed */
   text-align: center;
-  text-decoration: none; /* Remove underlines for links */
+  text-decoration: none;
+  /* Remove underlines for links */
   cursor: pointer;
 }
 
@@ -76,7 +81,7 @@ a {
 }
 
 .btn--gradient-primary:hover {
-  background-image: linear-gradient(#ff67ff, #3fb3ff);
+  background-image: radial-gradient(circle, #ffcc00, #242424);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

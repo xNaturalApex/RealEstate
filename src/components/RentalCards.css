@@ -1,0 +1,193 @@
+.rental-cards {
+  padding: 2rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rental-cards h1 {
+  margin: auto;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid transparent;
+  border-image: radial-gradient(circle, #ffcc00, #242424);
+  border-image-slice: 1;
+  font-size: 2.5rem;
+}
+
+.rental-cards__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1120px;
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+.rental-cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.rental-cards__item {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+  border-radius: 10px;
+  list-style: none;
+  /* Remove list dot */
+}
+
+.rental-cards__item__link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+
+.rental-cards__pagination {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.rental-cards__item__link:hover {
+  transform: translateY(-10px);
+}
+
+.rental-cards__item__pic-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 67%;
+  overflow: hidden;
+}
+
+.rental-cards__item__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: all 0.2s linear;
+}
+
+.rental-cards__item__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #1f98f4;
+  box-sizing: border-box;
+  border-radius: 3px;
+  /* Optional: Rounded corners for the label */
+}
+
+.rental-cards__item__img:hover {
+  transform: scale(1.1);
+}
+
+.rental-cards__item__img:hover {
+  transform: scale(1.1);
+}
+
+.rental-cards__item__info {
+  padding: 20px 30px 30px;
+  border-top: 3px solid transparent;
+  border-image: radial-gradient(circle, #ffcc00, #242424);
+  border-image-slice: 1;
+  font-size: 1.2rem;
+  /* Reduced font size for info section */
+  background-color: #f7f7f7;
+  min-height: 300x;
+}
+
+.rental-cards__item__title {
+  color: #252e48;
+  font-size: 1.4rem;
+  /* Adjusted title size */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.rental-cards__item__address {
+  color: #252e48;
+  font-size: 1rem;
+  /* Adjusted title size */
+  font-weight: italic;
+  margin-bottom: 10px;
+}
+
+.rental-cards__item__list_price {
+  color: #252e48;
+  font-size: 1rem;
+  /* Adjusted title size */
+  font-weight: italic;
+  margin-bottom: 10px;
+  color: green;
+}
+
+.rental-cards__item__city-zip {
+  color: #656565;
+  font-size: 1rem;
+  /* Smaller font size for city and zip */
+  margin-bottom: 15px;
+}
+
+.rental-cards__item__details {
+  display: flex;
+  justify-content: space-between;
+  color: #252e48;
+  font-size: 1.2rem;
+}
+
+.rental-cards__item__bedrooms,
+.rental-cards__item__bathrooms,
+.rental-cards__item__parking {
+  display: flex;
+  align-items: center;
+}
+
+.rental-cards__item__bedrooms i,
+.rental-cards__item__bathrooms i,
+.rental-cards__item__parking i {
+  margin-right: 5px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .rental-cards__container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .rental-cards__items {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .rental-cards__item {
+    margin-bottom: 1rem;
+  }
+}
