@@ -7,7 +7,6 @@ import ListingCards from "./ListingCards";
 
 function DetailPage() {
   const location = useLocation();
-  const { listingNo } = useParams();
   const { listing } = location.state || {};
   const [openLightbox, setOpenLightbox] = useState({
     open: false,

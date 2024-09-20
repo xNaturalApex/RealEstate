@@ -5,7 +5,6 @@ import About from "./components/pages/About";
 import DetailPage from "./components/DetailPage";
 import Listings from "./components/pages/Listings";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import SearchForm from "./components/SearchForm"; // Importing SearchForm if needed on Home or other pages
 
 function App() {
   return (
