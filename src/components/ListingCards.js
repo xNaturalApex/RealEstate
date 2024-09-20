@@ -11,6 +11,9 @@ import CCdata from "../data/CCdata.json";
 import SFdata from "../data/SFdata.json";
 import MFdata from "../data/MFdata.json";
 
+// Import the utility function
+import { filterAndSortListings } from "../utils/filterAndSortListings.js";
+
 function ListingCards({
   title = "Listings",
   searchParams = {},
@@ -26,41 +29,12 @@ function ListingCards({
   const listings = [...CCdata, ...SFdata, ...MFdata];
 
   useEffect(() => {
-    // Filtering listings based on searchParams
-    const filtered = listings.filter((listing) => {
-      const firstUnit = listing.units[0];
-      const listingBedrooms = parseInt(firstUnit.NO_BEDROOMS, 10);
-      const listingBathrooms = parseInt(firstUnit.NO_FULL_BATHS, 10);
-
-      const matchesTown =
-        searchParams.town && firstUnit.TOWN_NAME
-          ? firstUnit.TOWN_NAME.toLowerCase().includes(
-              searchParams.town.toLowerCase()
-            )
-          : true;
-      const matchesBedrooms =
-        searchParams.bedrooms && !isNaN(listingBedrooms)
-          ? listingBedrooms === parseInt(searchParams.bedrooms, 10)
-          : true;
-      const matchesBathrooms =
-        searchParams.bathrooms && !isNaN(listingBathrooms)
-          ? listingBathrooms === parseInt(searchParams.bathrooms, 10)
-          : true;
-      const matchesZipCode =
-        searchParams.zipCode && firstUnit.ZIP_CODE
-          ? firstUnit.ZIP_CODE === searchParams.zipCode
-          : true;
-
-      return (
-        matchesTown && matchesBedrooms && matchesBathrooms && matchesZipCode
-      );
-    });
-
-    // Sort listings if a sortFunction is provided
-    const sortedListings = sortFunction
-      ? [...filtered].sort(sortFunction)
-      : filtered;
-
+    // Use the utility function to filter and sort listings
+    const sortedListings = filterAndSortListings(
+      listings,
+      searchParams,
+      sortFunction
+    );
     setFilteredListings(sortedListings);
     setCurrentPage(0); // Reset to the first page when searchParams change
   }, [searchParams, sortFunction, listings]);

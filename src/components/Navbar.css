@@ -1,11 +1,12 @@
+/* src/components/Navbar.css */
+
 .navbar {
   background: #ffffff;
   display: flex;
   justify-content: center;
-  border: 1rem 0;
-  padding: #ffffff;
-
+  padding: 1rem 0;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 1000;
 }
@@ -17,7 +18,6 @@
   width: 100%;
   max-width: 1200px;
   padding: 0 1rem;
-  border: #ffffff;
 }
 
 .navbar-logo {
@@ -70,6 +70,7 @@
   text-decoration: none;
   color: #333;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .nav-links:hover {
@@ -80,12 +81,11 @@
   display: none;
 }
 
-.dropdown {
-  cursor: pointer;
+.nav-links-button {
+  /* Styles are handled by the Button component */
 }
 
 .dropdown-menu {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -94,6 +94,8 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  min-width: 150px;
+  z-index: 1000;
 }
 
 .dropdown-menu li {
@@ -111,10 +113,7 @@
   background-color: #f0f0f0;
 }
 
-.nav-menu.active .dropdown-menu {
-  display: block;
-}
-
+/* Mobile View */
 @media screen and (max-width: 960px) {
   .menu-icon {
     display: block;
@@ -127,6 +126,7 @@
     background: #ffffff;
     position: absolute;
     top: 60px;
+    /* Adjust based on Navbar height */
     left: 0;
     transition: all 0.3s ease;
     height: calc(100vh - 60px);
@@ -140,10 +140,17 @@
 
   .nav-links-mobile {
     display: block;
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
   }
 
   .dropdown-menu {
     position: static;
+    display: none;
+  }
+
+  .dropdown-menu.active {
     display: block;
   }
 

@@ -63,6 +63,7 @@ function SearchForm({ formType, onSearch, initialSearchParams = {} }) {
   const categories = ["SF", "MF", "CC", "Rentals"];
 
   return (
+    <div className='search-form-container'>
     <form
       className={`search-form ${formType === "Advanced" ? "advanced" : "basic"}`}
       onSubmit={handleSubmit}
@@ -149,6 +150,7 @@ function SearchForm({ formType, onSearch, initialSearchParams = {} }) {
         Search
       </button>
     </form>
+    </div>
   );
 }
 
