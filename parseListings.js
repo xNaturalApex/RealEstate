@@ -1,25 +1,32 @@
 const fs = require("fs");
 const path = require("path");
 
-// File paths
-const dataFilePath = path.join(__dirname, "src/data/ListingData.txt"); // Path to your data file
+// Define listing types and their corresponding file names
+const listingTypes = [
+  {
+    type: "SD", // Single Family
+    inputFile: "SFdata.txt",
+    outputFile: "SDdata.json",
+    incompleteFile: "incompleteListings_SD.txt",
+  },
+  {
+    type: "MF", // Multi-Family
+    inputFile: "MFdata.txt",
+    outputFile: "MFdata.json",
+    incompleteFile: "incompleteListings_MF.txt",
+  },
+  {
+    type: "CC", // Condos
+    inputFile: "CCdata.txt",
+    outputFile: "CCdata.json",
+    incompleteFile: "incompleteListings_CC.txt",
+  },
+];
+
+// Path to zip codes and other shared resources
 const zipCodesFilePath = path.join(__dirname, "src/data/ZipCodesMA.txt"); // Path to your zip codes file
-const outputFilePath = path.join(__dirname, "src/data/RentalData.json"); // Path to output JSON file
-const incompleteListingsPath = path.join(
-  __dirname,
-  "src/data/incompleteListings.txt"
-); // Path to incomplete listings file
 
-let existingListingsMap = new Map();
-if (fs.existsSync(outputFilePath)) {
-  const existingData = JSON.parse(fs.readFileSync(outputFilePath, "utf8"));
-  existingData.forEach((property) => {
-    const firstUnit = property.units[0];
-    existingListingsMap.set(firstUnit["LIST_NO"], property);
-  });
-}
-
-// Zip code categories based on proximity to Boston
+// Zip code categories based on proximity to Boston (as defined in your original script)
 const zipCodeCategories = {
   "Close to Boston (0-15 miles)": [
     "02108",
@@ -302,7 +309,7 @@ const zipCodeCategories = {
   ],
 };
 
-// Read the zip codes file
+// Read the zip codes file and create a map
 const zipCodesContent = fs.readFileSync(zipCodesFilePath, "utf8");
 const zipCodeMap = new Map();
 
@@ -312,34 +319,6 @@ zipCodesContent.split("\n").forEach((line) => {
     zipCodeMap.set(zipCode.trim(), townName.trim());
   }
 });
-
-// Read the listings file
-const fileContent = fs.readFileSync(dataFilePath, "utf8");
-const lines = fileContent.split("\n");
-
-// Extract headers
-const headers = lines[0].split("|");
-
-// Define relevant headers
-const relevantHeaders = [
-  "STREET_NO",
-  "STREET_NAME",
-  "UNIT_NO",
-  "ZIP_CODE",
-  "STATE",
-  "LIST_PRICE",
-  "NO_ROOMS",
-  "NO_BEDROOMS",
-  "NO_FULL_BATHS",
-  "NO_HALF_BATHS",
-  "PARKING_SPACES",
-  "SQUARE_FEET",
-  "LOT_SIZE",
-  "LIST_NO",
-  "PHOTO_COUNT",
-  "DATE_AVAILABLE",
-  "REMARKS",
-];
 
 // Function to generate photo URLs
 const generatePhotoUrls = (mlsNumber, photoCount) => {
@@ -368,9 +347,7 @@ const cleanStreetName = (streetName) => {
 
   const unwantedCodePattern = /[,\s]*(?:[A-Z]{2}\d{3})$/;
   let cleanedStreetName = streetName.replace(unwantedCodePattern, "").trim();
-  const lastValidMatch = cleanedStreetName.match(
-    /.*(?=[,\s]*(?:[A-Z]{2}\d{3})?$)/
-  );
+  const lastValidMatch = cleanedStreetName.match(/.*(?=[,\s]*(?:[A-Z]{2}\d{3})?$)/);
 
   if (lastValidMatch) {
     cleanedStreetName = lastValidMatch[0].trim();
@@ -379,150 +356,217 @@ const cleanStreetName = (streetName) => {
   return cleanedStreetName;
 };
 
-// Map the data
-let propertyMap = new Map();
-let incompleteListings = []; // To store incomplete listings
+// Function to process listings for a specific type
+const processListings = (listingType) => {
+  const { type, inputFile, outputFile, incompleteFile } = listingType;
 
-lines.slice(1).forEach((line) => {
-  const values = line.split("|");
-  let listing = {};
+  const dataFilePath = path.join(__dirname, "src/data", inputFile); // Correctly join the path
 
-  relevantHeaders.forEach((header) => {
-    const headerIndex = headers.indexOf(header);
-    if (headerIndex !== -1) {
-      listing[header] = cleanValue(values[headerIndex] || "");
+  // Check if input file exists
+  if (!fs.existsSync(dataFilePath)) {
+    console.error(`Input file not found: ${dataFilePath}`);
+    return;
+  }
+
+  // Define paths for output and incomplete listings
+  const outputFilePath = path.join(__dirname, "src/data", outputFile);
+  const incompleteListingsPath = path.join(__dirname, "src/data", incompleteFile);
+
+  // Initialize existing listings map
+  let existingListingsMap = new Map();
+  if (fs.existsSync(outputFilePath)) {
+    const existingData = JSON.parse(fs.readFileSync(outputFilePath, "utf8"));
+    existingData.forEach((property) => {
+      const firstUnit = property.units[0];
+      existingListingsMap.set(firstUnit["LIST_NO"], property);
+    });
+  }
+
+  // Read the listings file
+  const fileContent = fs.readFileSync(dataFilePath, "utf8");
+  const lines = fileContent.split("\n");
+
+  if (lines.length === 0) {
+    console.warn(`No data found in file: ${dataFilePath}`);
+    return;
+  }
+
+  // Extract headers
+  const headers = lines[0].split("|");
+
+  // Define relevant headers
+  const relevantHeaders = [
+    "STREET_NO",
+    "STREET_NAME",
+    "UNIT_NO",
+    "ZIP_CODE",
+    "STATE",
+    "LIST_PRICE",
+    "NO_ROOMS",
+    "NO_BEDROOMS",
+    "NO_FULL_BATHS",
+    "NO_HALF_BATHS",
+    "PARKING_SPACES",
+    "SQUARE_FEET",
+    "LOT_SIZE",
+    "LIST_NO",
+    "PHOTO_COUNT",
+    "DATE_AVAILABLE",
+    "REMARKS",
+  ];
+
+  // Map the data
+  let propertyMap = new Map();
+  let incompleteListings = []; // To store incomplete listings
+
+  lines.slice(1).forEach((line, lineNumber) => {
+    // Skip empty lines
+    if (!line.trim()) return;
+
+    const values = line.split("|");
+    let listing = {};
+
+    relevantHeaders.forEach((header) => {
+      const headerIndex = headers.indexOf(header);
+      if (headerIndex !== -1 && headerIndex < values.length) {
+        listing[header] = cleanValue(values[headerIndex] || "");
+      }
+    });
+
+    if (listing["STREET_NAME"]) {
+      listing["STREET_NAME"] = cleanStreetName(listing["STREET_NAME"]);
+    }
+
+    if (listing["LIST_NO"] && listing["PHOTO_COUNT"]) {
+      const photoCount = parseInt(listing["PHOTO_COUNT"], 10);
+      if (!isNaN(photoCount)) {
+        listing["PHOTO_URLS"] = generatePhotoUrls(listing["LIST_NO"], photoCount);
+      } else {
+        console.warn(`Invalid PHOTO_COUNT at line ${lineNumber + 1} in ${inputFile}`);
+      }
+    }
+
+    if (listing["ZIP_CODE"]) {
+      const townName = zipCodeMap.get(listing["ZIP_CODE"]);
+      listing["TOWN_NAME"] = townName || "Unknown";
+    }
+
+    const propertyKey = `${listing["STREET_NO"]} ${listing["STREET_NAME"]} ${listing["ZIP_CODE"]}`;
+
+    // Check if the listing is incomplete (you can adjust the condition as needed)
+    const emptyFieldsCount = Object.values(listing).filter((val) => val === "").length;
+    if (emptyFieldsCount > 5) {
+      // Adjust this threshold as needed
+      incompleteListings.push(listing);
+      return; // Skip adding this listing to the main property map
+    }
+
+    if (propertyMap.has(propertyKey)) {
+      propertyMap.get(propertyKey).units.push(listing);
+    } else {
+      propertyMap.set(propertyKey, {
+        postType: "single", // Default to single
+        units: [listing],
+        propertyKey,
+      });
     }
   });
 
-  if (listing["STREET_NAME"]) {
-    listing["STREET_NAME"] = cleanStreetName(listing["STREET_NAME"]);
-  }
+  // Determine post type and sort listings
+  let sortedListings = [];
 
-  if (listing["LIST_NO"] && listing["PHOTO_COUNT"]) {
-    listing["PHOTO_URLS"] = generatePhotoUrls(
-      listing["LIST_NO"],
-      parseInt(listing["PHOTO_COUNT"])
+  propertyMap.forEach((property) => {
+    if (property.units.length > 1) {
+      property.postType = "multiple";
+    }
+    sortedListings.push(property);
+  });
+
+  // Sort listings by proximity categories and other
+  let categorizedListings = [];
+
+  Object.keys(zipCodeCategories).forEach((category) => {
+    const categoryZipCodes = zipCodeCategories[category];
+    const categoryListings = sortedListings.filter((property) =>
+      categoryZipCodes.includes(property.units[0]["ZIP_CODE"])
     );
-  }
+    categoryListings.forEach((listing) => (listing["CATEGORY"] = category));
+    categorizedListings = categorizedListings.concat(categoryListings);
+  });
 
-  if (listing["ZIP_CODE"]) {
-    const townName = zipCodeMap.get(listing["ZIP_CODE"]);
-    listing["TOWN_NAME"] = townName || "Unknown";
-  }
-
-  const propertyKey = `${listing["STREET_NO"]} ${listing["STREET_NAME"]} ${listing["ZIP_CODE"]}`;
-
-  // Check if the listing is incomplete (you can adjust the condition as needed)
-  const emptyFieldsCount = Object.values(listing).filter(
-    (val) => val === ""
-  ).length;
-  if (emptyFieldsCount > 5) {
-    // Adjust this threshold as needed
-    incompleteListings.push(listing);
-    return; // Skip adding this listing to the main property map
-  }
-
-  if (propertyMap.has(propertyKey)) {
-    propertyMap.get(propertyKey).units.push(listing);
-  } else {
-    propertyMap.set(propertyKey, {
-      postType: "single", // Default to single
-      units: [listing],
-      propertyKey,
-    });
-  }
-});
-
-// Determine post type and sort listings
-let sortedListings = [];
-
-propertyMap.forEach((property) => {
-  if (property.units.length > 1) {
-    property.postType = "multiple";
-  }
-  sortedListings.push(property);
-});
-
-// Sort listings by proximity categories and other
-let categorizedListings = [];
-
-Object.keys(zipCodeCategories).forEach((category) => {
-  const categoryZipCodes = zipCodeCategories[category];
-  const categoryListings = sortedListings.filter((property) =>
-    categoryZipCodes.includes(property.units[0]["ZIP_CODE"])
+  // Include other listings that don't fall into specified categories
+  const otherListings = sortedListings.filter(
+    (property) =>
+      !Object.values(zipCodeCategories)
+        .flat()
+        .includes(property.units[0]["ZIP_CODE"])
   );
-  categoryListings.forEach((listing) => (listing["CATEGORY"] = category));
-  categorizedListings = categorizedListings.concat(categoryListings);
+  otherListings.forEach((listing) => (listing["CATEGORY"] = "Other"));
+
+  categorizedListings = categorizedListings.concat(otherListings);
+
+  // Add tags based on existing listings
+  categorizedListings.forEach((newProperty) => {
+    const firstUnit = newProperty.units[0];
+    const existingProperty = existingListingsMap.get(firstUnit["LIST_NO"]);
+
+    // Initialize tags
+    newProperty.tags = [];
+
+    if (existingProperty) {
+      // Check for price drop
+      const existingPrice = parseFloat(existingProperty.units[0]["LIST_PRICE"]);
+      const newPrice = parseFloat(firstUnit["LIST_PRICE"]);
+      if (!isNaN(existingPrice) && !isNaN(newPrice) && newPrice < existingPrice) {
+        newProperty.tags.push("Price Dropped");
+      }
+
+      // Check for new photos
+      const existingPhotoCount = parseInt(existingProperty.units[0]["PHOTO_COUNT"], 10);
+      const newPhotoCount = parseInt(firstUnit["PHOTO_COUNT"], 10);
+      if (!isNaN(existingPhotoCount) && !isNaN(newPhotoCount) && newPhotoCount > existingPhotoCount) {
+        newProperty.tags.push("Photos Added");
+      }
+
+      // Check for changes in remarks
+      const existingRemarks = existingProperty.units[0]["REMARKS"];
+      const newRemarks = firstUnit["REMARKS"];
+      if (existingRemarks !== newRemarks) {
+        newProperty.tags.push("Remarks Changed");
+      }
+
+      // Check for changes in available date
+      const existingAvailableDate = existingProperty.units[0]["DATE_AVAILABLE"];
+      const newAvailableDate = firstUnit["DATE_AVAILABLE"];
+      if (existingAvailableDate !== newAvailableDate) {
+        newProperty.tags.push("Available Now");
+      }
+    } else {
+      // New listing
+      newProperty.tags.push("New Listing");
+    }
+  });
+
+  // Write to JSON file
+  fs.writeFileSync(
+    outputFilePath,
+    JSON.stringify(categorizedListings, null, 2),
+    "utf8"
+  );
+
+  // Write incomplete listings to file
+  fs.writeFileSync(
+    incompleteListingsPath,
+    incompleteListings.map((listing) => JSON.stringify(listing)).join("\n"),
+    "utf8"
+  );
+
+  console.log(`Processed ${type} listings:`);
+  console.log(`- Data saved to ${outputFilePath}`);
+  console.log(`- Incomplete listings saved to ${incompleteListingsPath}\n`);
+};
+
+// Process each listing type
+listingTypes.forEach((listingType) => {
+  processListings(listingType);
 });
-
-// Include other listings that don't fall into specified categories
-const otherListings = sortedListings.filter(
-  (property) =>
-    !Object.values(zipCodeCategories)
-      .flat()
-      .includes(property.units[0]["ZIP_CODE"])
-);
-otherListings.forEach((listing) => (listing["CATEGORY"] = "Other"));
-
-categorizedListings = categorizedListings.concat(otherListings);
-
-sortedListings.forEach((newProperty) => {
-  const firstUnit = newProperty.units[0];
-  const existingProperty = existingListingsMap.get(firstUnit["LIST_NO"]);
-
-  // Initialize tags
-  newProperty.tags = [];
-
-  if (existingProperty) {
-    // Check for price drop
-    const existingPrice = parseFloat(existingProperty.units[0]["LIST_PRICE"]);
-    const newPrice = parseFloat(firstUnit["LIST_PRICE"]);
-    if (newPrice < existingPrice) {
-      newProperty.tags.push("Price Dropped");
-    }
-
-    // Check for new photos
-    const existingPhotoCount = parseInt(
-      existingProperty.units[0]["PHOTO_COUNT"],
-      10
-    );
-    const newPhotoCount = parseInt(firstUnit["PHOTO_COUNT"], 10);
-    if (newPhotoCount > existingPhotoCount) {
-      newProperty.tags.push("Photos Added");
-    }
-
-    // Check for changes in remarks
-    const existingRemarks = existingProperty.units[0]["REMARKS"];
-    const newRemarks = firstUnit["REMARKS"];
-    if (existingRemarks !== newRemarks) {
-      newProperty.tags.push("Remarks Changed");
-    }
-
-    // Check for changes in available date
-    const existingAvailableDate = existingProperty.units[0]["DATE_AVAILABLE"];
-    const newAvailableDate = firstUnit["DATE_AVAILABLE"];
-    if (existingAvailableDate !== newAvailableDate) {
-      newProperty.tags.push("Available Now");
-    }
-  } else {
-    // New listing
-    newProperty.tags.push("New Listing");
-  }
-});
-
-// Write to JSON file
-fs.writeFileSync(
-  outputFilePath,
-  JSON.stringify(categorizedListings, null, 2),
-  "utf8"
-);
-
-// Write incomplete listings to file
-fs.writeFileSync(
-  incompleteListingsPath,
-  incompleteListings.map((listing) => JSON.stringify(listing)).join("\n"),
-  "utf8"
-);
-
-console.log(`Data parsed and saved to ${outputFilePath}`);
-console.log(`Incomplete listings saved to ${incompleteListingsPath}`);

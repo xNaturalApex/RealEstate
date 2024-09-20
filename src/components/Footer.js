@@ -8,12 +8,13 @@ function Footer() {
         <h1 className='footer-heading'>Get in Contact with an Agent Today!</h1>
         <div className='form-container'>
           <form
-            name="contact-agent"
+            name="contact-v3"
             method="POST"
             data-netlify="true"
             className="contact-form"
+            action="https//www.felipemfranco.com/"
           >
-            <input type="hidden" name="form-name" value="contact-agent" />
+            <input type="hidden" name="form-name" value="contact-v3" />
             <input type="text" name="name" placeholder="Your Name" required className='footer-input' />
             <input type="email" name="email" placeholder="Your Email" required className='footer-input' />
             <input type="tel" name="phone" placeholder="Your Phone" required className='footer-input' />

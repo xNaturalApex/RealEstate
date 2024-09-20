@@ -5,10 +5,15 @@
   font-family: 'PT Sans', sans-serif;
 }
 
+.main-content {
+  padding-top: 60px;
+  /* Adjust based on your navbar's actual height */
+}
+
 .home,
-.trainers,
-.plans,
-.book {
+.rentals,
+.listings,
+.about {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -16,7 +21,7 @@
   font-size: 3rem;
 }
 
-.trainers {
+.rentals {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,7 +29,7 @@
   font-size: 100px;
 }
 
-.plans {
+.listings {
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
@@ -32,10 +37,15 @@
   font-size: 100px;
 }
 
-.book {
+.about {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
+}
+
+.main-content {
+  padding-top: 60px;
+  /* Adjust based on your navbar's actual height */
 }

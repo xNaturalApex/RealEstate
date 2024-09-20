@@ -14,7 +14,7 @@ function RentalCardItem({
   tag,
 }) {
   // Define a default image to use when no photos are available
-  const defaultImage = "path_to_placeholder_image.jpg"; // Replace this with your actual placeholder image path
+  const defaultImage = "images/BIR-Logo-simple"; // Replace this with your actual placeholder image path
 
   // Safely access the first photo or use the default image if photos are undefined or empty
   const mainPhoto = photos && photos.length > 0 ? photos[0] : defaultImage;

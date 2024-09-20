@@ -1,21 +1,20 @@
+/* Updated Listing Cards Styling */
 .listing-cards {
   padding: 2rem;
-  background: #fff;
+  background: #f7f7f7;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .listing-cards h1 {
-  margin: auto;
-  margin-bottom: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #252e48;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  text-align: center;
   border-bottom: 3px solid transparent;
   border-image: linear-gradient(90deg, #ffd700, #daa520);
   border-image-slice: 1;
-  font-size: 2.5rem;
 }
 
 .listing-cards__container {
@@ -25,7 +24,6 @@
   max-width: 1120px;
   width: 90%;
   margin: 0 auto;
-
 }
 
 .listing-cards__wrapper {
@@ -39,31 +37,23 @@
   flex: 1 1 calc(33.333% - 20px);
   box-sizing: border-box;
   border-radius: 10px;
+  background: #fff;
   list-style: none;
-  /* Remove list dot */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.listing-cards__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .listing-cards__item__link {
   display: flex;
   flex-direction: column;
   width: 100%;
-  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-
-.listing-cards__pagination {
-  display: flex;
-  flex-direction: row;
-
-}
-
-.listing-cards__item__link:hover {
-  transform: translateY(-10px);
 }
 
 .listing-cards__item__pic-wrap {
@@ -79,13 +69,14 @@
   right: 0;
   bottom: 0;
   left: 0;
-  display: flex;
   width: 100%;
-  max-width: 100%;
   height: 100%;
-  max-height: 100%;
   object-fit: cover;
   transition: all 0.2s linear;
+}
+
+.listing-cards__item__img:hover {
+  transform: scale(1.05);
 }
 
 .listing-cards__item__label {
@@ -97,68 +88,42 @@
   font-size: 12px;
   font-weight: 700;
   color: #fff;
-  background-color: #1f98f4;
-  box-sizing: border-box;
+  background-color: #daa520;
   border-radius: 3px;
-  /* Optional: Rounded corners for the label */
-}
-
-.listing-cards__item__img:hover {
-  transform: scale(1.1);
-}
-
-.listing-cards__item__img:hover {
-  transform: scale(1.1);
 }
 
 .listing-cards__item__info {
-  padding: 20px 30px 30px;
-  border-top: 3px solid transparent;
-  border-image: radial-gradient(#ffd700, #daa520);
-  border-image-slice: 1;
-  font-size: 1.2rem;
-  /* Reduced font size for info section */
-  background-color: #f7f7f7;
-  min-height: 300x;
+  padding: 20px;
+  font-size: 1rem;
+  background-color: #fff;
+  border-top: 3px solid #f7f7f7;
 }
 
 .listing-cards__item__title {
   color: #252e48;
-  font-size: 1.4rem;
-  /* Adjusted title size */
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.listing-cards__item__address {
-  color: #252e48;
+.listing-cards__item__address,
+.listing-cards__item__list_price,
+.listing-cards__item__city-zip {
+  color: #656565;
   font-size: 1rem;
-  /* Adjusted title size */
-  font-weight: italic;
   margin-bottom: 10px;
 }
 
 .listing-cards__item__list_price {
-  color: #252e48;
-  font-size: 1rem;
-  /* Adjusted title size */
-  font-weight: italic;
-  margin-bottom: 10px;
+  font-weight: bold;
   color: green;
-}
-
-.listing-cards__item__city-zip {
-  color: #656565;
-  font-size: 1rem;
-  /* Smaller font size for city and zip */
-  margin-bottom: 15px;
 }
 
 .listing-cards__item__details {
   display: flex;
   justify-content: space-between;
   color: #252e48;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .listing-cards__item__bedrooms,
@@ -174,20 +139,22 @@
   margin-right: 5px;
 }
 
-@media only screen and (min-width: 1200px) {
-  .listing-cards__container {
-    width: 100%;
-  }
+/* Pagination Styling */
+.listing-cards__pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-@media only screen and (min-width: 1024px) {
-  .listing-cards__items {
-    display: flex;
-  }
-}
-
+/* Responsive Styling */
 @media only screen and (max-width: 1024px) {
   .listing-cards__item {
     margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .listing-cards__container {
+    width: 100%;
   }
 }

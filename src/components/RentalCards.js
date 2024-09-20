@@ -6,20 +6,20 @@ import rentalListings from "../data/RentalData.json";
 import { Button } from "./Button.js";
 
 function RentalCards({
-  title = "Listings",
+  title = "Rentals",
   searchParams = {},
   itemsPerPage = 6,
   sortFunction,
   children,
 }) {
   const [currentPage, setCurrentPage] = useState(0);
-  const [filteredListings, setFilteredListings] = useState([]);
+  const [filteredRentals, setFilteredRentals] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Filtering listings based on searchParams
-    const filtered = rentalListings.filter((rentalListings) => {
-      const firstUnit = rentalListings.units[0];
+    // Filtering rentals based on searchParams
+    const filtered = rentalListings.filter((rental) => {
+      const firstUnit = rental.units[0];
       const rentalBedrooms = parseInt(firstUnit.NO_BEDROOMS, 10);
       const rentalBathrooms = parseInt(firstUnit.NO_FULL_BATHS, 10);
 
@@ -31,7 +31,7 @@ function RentalCards({
           : true;
       const matchesBedrooms =
         searchParams.bedrooms && !isNaN(rentalBedrooms)
-          ? listingBedrooms === parseInt(searchParams.bedrooms, 10)
+          ? rentalBedrooms === parseInt(searchParams.bedrooms, 10)
           : true;
       const matchesBathrooms =
         searchParams.bathrooms && !isNaN(rentalBathrooms)
@@ -47,21 +47,21 @@ function RentalCards({
       );
     });
 
-    // Sort listings if a sortFunction is provided
+    // Sort rentals if a sortFunction is provided
     const sortedRentals = sortFunction
       ? [...filtered].sort(sortFunction)
       : filtered;
 
-    setFilteredListings(sortedRentals);
+    setFilteredRentals(sortedRentals);
     setCurrentPage(0); // Reset to the first page when searchParams change
   }, [searchParams, sortFunction]);
 
-  const handleClick = (listing) => {
-    navigate(`/rentals/${listing.units[0].LIST_NO}`, { state: { listing } });
+  const handleClick = (rental) => {
+    navigate(`/rentals/${rental.units[0].LIST_NO}`, { state: { rental } });
   };
 
   const handleNext = () => {
-    if ((currentPage + 1) * itemsPerPage < filteredListings.length) {
+    if ((currentPage + 1) * itemsPerPage < filteredRentals.length) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -72,7 +72,7 @@ function RentalCards({
     }
   };
 
-  const currentListings = filteredListings.slice(
+  const currentRentals = filteredRentals.slice(
     currentPage * itemsPerPage,
     (currentPage + 1) * itemsPerPage
   );
@@ -83,27 +83,8 @@ function RentalCards({
       <div className="rental-cards__container">
         <div className="rental-cards__wrapper">
           {currentRentals.length > 0 ? (
-            currentRentals.map((listing) => {
-              const firstUnit = listing.units[0];
-
-              let displayPrice;
-              if (listing.postType === "multiple") {
-                const minPrice = Math.min(
-                  ...rental.units.map((unit) => parseFloat(unit.LIST_PRICE))
-                );
-                const unitCount = listing.units.length;
-                displayPrice = `${unitCount} Units Starting at $${minPrice}`;
-              } else {
-                displayPrice = `$${parseFloat(firstUnit.LIST_PRICE)}`;
-              }
-
-              // Determine the tag value
-              const tag =
-                rentalListing.tags && listing.tags.length > 0
-                  ? rentalListing.tags
-                  : firstUnit.DATE_AVAILABLE
-                    ? `Available: ${firstUnit.DATE_AVAILABLE}`
-                    : "Available Now";
+            currentRentals.map((rental) => {
+              const firstUnit = rental.units[0];
 
               return (
                 <RentalCardItem
@@ -118,15 +99,16 @@ function RentalCards({
                   bathrooms={firstUnit.NO_FULL_BATHS}
                   parking={firstUnit.PARKING_SPACES}
                   photos={firstUnit.PHOTO_URLS}
-                  listPrice={displayPrice}
-                  onClick={() => handleClick(rentalListings)}
-                  postType={rentalListings.postType}
-                  tag={tag}
+                  listPrice={`$${parseFloat(firstUnit.LIST_PRICE)}`}
+                  onClick={() => handleClick(rental)}
+                  tag={firstUnit.DATE_AVAILABLE
+                    ? `Available: ${firstUnit.DATE_AVAILABLE}`
+                    : "Available Now"}
                 />
               );
             })
           ) : (
-            <p>No listings found</p>
+            <p>No rentals found</p>
           )}
         </div>
       </div>
@@ -141,7 +123,7 @@ function RentalCards({
         <Button
           className="rental-cards__button"
           onClick={handleNext}
-          disabled={(currentPage + 1) * itemsPerPage >= filteredListings.length}
+          disabled={(currentPage + 1) * itemsPerPage >= filteredRentals.length}
         >
           Next
         </Button>

@@ -1,0 +1,227 @@
+/* Global Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Container for the Listing Detail Page */
+.listing-detail-page {
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f4f4f4;
+}
+
+/* Header Section for the Listing Page */
+.listing-detail-page__header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.listing-detail-page__header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, #ffd700, #daa520);
+  border-image-slice: 1;
+}
+
+.listing-detail-page__address {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Content Layout for Main Image and Gallery */
+.listing-detail-page__content {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.listing-detail-page__main-img-wrap {
+  flex: 2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 8px;
+  height: 500px;
+}
+
+.listing-detail-page__main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.listing-detail-page__gallery {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.listing-detail-page__gallery-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.listing-detail-page__gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Description and Features Section */
+.listing-detail-page__details {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.listing-detail-page__description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.listing-detail-page__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.listing-detail-page__features div {
+  flex: 1 1 150px;
+  font-size: 0.875rem;
+  color: #333;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.listing-detail-page__extra-img {
+  position: relative;
+  background-color: #f0f0f0;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.listing-detail-page__extra-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent overlay */
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.listing-detail-page__extra-img span {
+  position: relative;
+  z-index: 2;
+  /* Ensure text is above the overlay */
+}
+
+/* Other styles */
+.listing-detail-page__gallery-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.listing-detail-page__gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Styles for the description and features section */
+.listing-detail-page__details {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.listing-detail-page__description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.listing-detail-page__unit {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.listing-detail-page__unit h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.listing-detail-page__unit p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .listing-detail-page__content {
+    flex-direction: column;
+  }
+
+  .listing-detail-page__gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listing-detail-page__main-img-wrap {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .listing-detail-page__header h1 {
+    font-size: 1.75rem;
+  }
+
+  .listing-detail-page__address {
+    font-size: 1rem;
+  }
+
+  .listing-detail-page__gallery-img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .listing-detail-page__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listing-detail-page__main-img-wrap {
+    height: 200px;
+  }
+}

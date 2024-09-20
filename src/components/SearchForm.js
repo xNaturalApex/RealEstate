@@ -1,8 +1,11 @@
+// src/components/SearchForm.js
+
 import React, { useState } from "react";
 import townsData from "../data/cityData.json";
 import "./SearchForm.css";
 
 function SearchForm({ formType, onSearch, initialSearchParams = {} }) {
+  const [category, setCategory] = useState(initialSearchParams.category || "SF"); // New state for category
   const [town, setTown] = useState(initialSearchParams.town || "");
   const [bedrooms, setBedrooms] = useState(initialSearchParams.bedrooms || "");
   const [bathrooms, setBathrooms] = useState(
@@ -45,6 +48,7 @@ function SearchForm({ formType, onSearch, initialSearchParams = {} }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const searchParams = {
+      category, // Include category in search parameters
       town,
       zipCodes: selectedZipCodes,
       bedrooms,
@@ -55,14 +59,32 @@ function SearchForm({ formType, onSearch, initialSearchParams = {} }) {
     onSearch(searchParams);
   };
 
+  // Define categories
+  const categories = ["SF", "MF", "CC", "Rentals"];
+
   return (
     <form
       className={`search-form ${formType === "Advanced" ? "advanced" : "basic"}`}
       onSubmit={handleSubmit}
     >
+      {/* Tabs for category selection */}
+      <div className="search-form__tabs">
+        {categories.map((cat) => (
+          <button
+            type="button"
+            key={cat}
+            className={`tab-button ${category === cat ? "active" : ""}`}
+            onClick={() => setCategory(cat)}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      {/* Rest of the search inputs */}
       <input
         type="text"
-        placeholder={town || "City"}
+        placeholder="City"
         value={town}
         onChange={handleTownChange}
         className="search-input"
@@ -79,14 +101,14 @@ function SearchForm({ formType, onSearch, initialSearchParams = {} }) {
       </datalist>
       <input
         type="number"
-        placeholder={bedrooms || "Bedrooms"}
+        placeholder="Bedrooms"
         value={bedrooms}
         onChange={(e) => setBedrooms(e.target.value)}
         className="search-input"
       />
       <input
         type="number"
-        placeholder={bathrooms || "Bathrooms"}
+        placeholder="Bathrooms"
         value={bathrooms}
         onChange={(e) => setBathrooms(e.target.value)}
         className="search-input"

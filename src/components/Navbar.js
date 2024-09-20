@@ -31,7 +31,7 @@ function Navbar() {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <img
-            src={"images/BIR-logo-simple.png"}
+            src={"images/BIR-Logo-simple.png"}
             alt="BIR Logo"
             className="navbar-logo-img"
           />
@@ -62,7 +62,7 @@ function Navbar() {
             <ul className="dropdown-menu">
               <li>
                 <Link
-                  to="/residential-sales"
+                  to="/listings"
                   className="dropdown-link"
                   onClick={closeMobileMenu}
                 >
@@ -71,7 +71,7 @@ function Navbar() {
               </li>
               <li>
                 <Link
-                  to="/leasing"
+                  to="/rentals"
                   className="dropdown-link"
                   onClick={closeMobileMenu}
                 >

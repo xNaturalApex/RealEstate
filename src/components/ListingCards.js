@@ -1,9 +1,15 @@
+// src/components/ListingCards.js
+
 import React, { useState, useEffect } from "react";
 import "./ListingCards.css";
-import ListingCardItem from "./ListingCardItem";
+import ListingCardItem from "./ListingCardItem.js";
 import { useNavigate } from "react-router-dom";
-import listings from "../data/ListingData.json";
 import { Button } from "./Button.js";
+
+// Importing data from three separate JSON files
+import CCdata from "../data/CCdata.json";
+import SFdata from "../data/SFdata.json";
+import MFdata from "../data/MFdata.json";
 
 function ListingCards({
   title = "Listings",
@@ -15,6 +21,9 @@ function ListingCards({
   const [currentPage, setCurrentPage] = useState(0);
   const [filteredListings, setFilteredListings] = useState([]);
   const navigate = useNavigate();
+
+  // Combine data from three files into a single array called 'listings'
+  const listings = [...CCdata, ...SFdata, ...MFdata];
 
   useEffect(() => {
     // Filtering listings based on searchParams
@@ -54,10 +63,10 @@ function ListingCards({
 
     setFilteredListings(sortedListings);
     setCurrentPage(0); // Reset to the first page when searchParams change
-  }, [searchParams, sortFunction]);
+  }, [searchParams, sortFunction, listings]);
 
   const handleClick = (listing) => {
-    navigate(`/rentals/${listing.units[0].LIST_NO}`, { state: { listing } });
+    navigate(`/listings/${listing.units[0].LIST_NO}`, { state: { listing } });
   };
 
   const handleNext = () => {
@@ -86,24 +95,11 @@ function ListingCards({
             currentListings.map((listing) => {
               const firstUnit = listing.units[0];
 
-              let displayPrice;
-              if (listing.postType === "multiple") {
-                const minPrice = Math.min(
-                  ...listing.units.map((unit) => parseFloat(unit.LIST_PRICE))
-                );
-                const unitCount = listing.units.length;
-                displayPrice = `${unitCount} Units Starting at $${minPrice}`;
-              } else {
-                displayPrice = `$${parseFloat(firstUnit.LIST_PRICE)}`;
-              }
-
-              // Determine the tag value
-              const tag =
-                listing.tags && listing.tags.length > 0
-                  ? listing.tags
-                  : firstUnit.DATE_AVAILABLE
-                    ? `Available: ${firstUnit.DATE_AVAILABLE}`
-                    : "Available Now";
+              // Convert LIST_PRICE to a number and format with commas
+              const listPriceNumber = Number(firstUnit.LIST_PRICE);
+              const formattedListPrice = isNaN(listPriceNumber)
+                ? "N/A"
+                : `$${listPriceNumber.toLocaleString()}`;
 
               return (
                 <ListingCardItem
@@ -118,10 +114,13 @@ function ListingCards({
                   bathrooms={firstUnit.NO_FULL_BATHS}
                   parking={firstUnit.PARKING_SPACES}
                   photos={firstUnit.PHOTO_URLS}
-                  listPrice={displayPrice}
+                  listPrice={formattedListPrice}
                   onClick={() => handleClick(listing)}
-                  postType={listing.postType}
-                  tag={tag}
+                  tag={
+                    firstUnit.DATE_AVAILABLE
+                      ? `Available: ${firstUnit.DATE_AVAILABLE}`
+                      : "Available Now"
+                  }
                 />
               );
             })

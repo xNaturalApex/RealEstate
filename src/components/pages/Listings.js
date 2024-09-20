@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import "../../App.css";
 import Footer from "../Footer";
 import ListingCards from "../ListingCards";
-import Testimonials from "../Testimonial";
 import SearchForm from "../SearchForm.js";
 
 function Listings() {
@@ -39,15 +38,12 @@ function Listings() {
 
   return (
     <>
-      <div className="container-1200">
         <SearchForm
           formType="Advanced"
           onSearch={handleSearch}
           initialSearchParams={searchParams}
         />
-        <ListingCards searchParams={searchParams} title="Search Results" />
-      </div>
-      <Testimonials />
+        <div><ListingCards searchParams={searchParams} title="Search Results" /></div> 
       <Footer />
     </>
   );

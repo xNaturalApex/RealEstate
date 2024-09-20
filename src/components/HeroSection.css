@@ -1,26 +1,43 @@
+/* Hero Container */
 .hero-container {
-  height: 80vh;
+  min-height: 900px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  background: url('/public/images/Boston.jpg') no-repeat center center/cover;
+  background: url('assets/images/Boston.jpg') no-repeat center center/cover;
   color: #fff;
+  overflow: hidden;
 }
 
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(5, 28, 28, 0.4);
+  z-index: 1;
+}
+
+/* Hero Content */
 .hero-content {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 80%;
   max-width: 1200px;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.5);
-  /* Semi-transparent background for readability */
+  padding: 40px;
+  background: rgba(28, 28, 28, 0.8);
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
+/* Hero Text */
 .hero-text {
   flex: 1;
   max-width: 500px;
@@ -30,39 +47,53 @@
   font-size: 3rem;
   margin-bottom: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #fff
 }
 
 .hero-text p {
   font-size: 1.5rem;
   margin-bottom: 20px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
+/* Call-To-Action Button */
 .cta-button {
-  background-color: #ff6f61;
-  /* Example color, adjust as needed */
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
+  background: linear-gradient(90deg, #fff, #aaa);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  border: 2px solid #aaa;
+  padding: 12px 24px;
   font-size: 1.2rem;
   border-radius: 5px;
   cursor: pointer;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+.cta-button:hover {
+  background: linear-gradient(90deg, #aaa, #fff);
+  color: #fff;
+}
+
+/* Hero Search Form */
 .hero-search {
   flex: 1;
   max-width: 400px;
 }
 
+/* Responsive Styling */
 @media screen and (max-width: 768px) {
   .hero-container {
     height: auto;
-    background-size: cover;
+    padding: 40px 0;
   }
 
   .hero-content {
     flex-direction: column;
     align-items: center;
+    width: 90%;
   }
 
   .hero-text,
@@ -81,5 +112,6 @@
 
   .cta-button {
     font-size: 1rem;
+    padding: 10px 20px;
   }
 }
