@@ -1,18 +1,11 @@
-// src/components/ListingCards.js
-
 import React, { useState, useEffect } from "react";
 import "./ListingCards.css";
-import ListingCardItem from "./ListingCardItem.js";
+import ListingCardItem from "./RentalCardItem.js"; // Consider renaming if necessary
 import { useNavigate } from "react-router-dom";
+import singleFamilyListings from "../data/SFdata.json";
+import multiFamilyListings from "../data/MFdata.json";
+import condoListings from "../data/CCdata.json";
 import { Button } from "./Button.js";
-
-// Importing data from three separate JSON files
-import CCdata from "../data/CCdata.json";
-import SFdata from "../data/SFdata.json";
-import MFdata from "../data/MFdata.json";
-
-// Import the utility function
-import { filterAndSortListings } from "../utils/filterAndSortListings.js";
 
 function ListingCards({
   title = "Listings",
@@ -23,21 +16,48 @@ function ListingCards({
 }) {
   const [currentPage, setCurrentPage] = useState(0);
   const [filteredListings, setFilteredListings] = useState([]);
+  const [listingsData, setListingsData] = useState(singleFamilyListings);
   const navigate = useNavigate();
 
-  // Combine data from three files into a single array called 'listings'
-  const listings = [...CCdata, ...SFdata, ...MFdata];
-
   useEffect(() => {
-    // Use the utility function to filter and sort listings
-    const sortedListings = filterAndSortListings(
-      listings,
-      searchParams,
-      sortFunction
-    );
+    // Filtering listings based on searchParams
+    const filtered = listingsData.filter((listing) => {
+      const firstUnit = listing.units[0];
+      const listingBedrooms = parseInt(firstUnit.NO_BEDROOMS, 10);
+      const listingBathrooms = parseInt(firstUnit.NO_FULL_BATHS, 10);
+
+      const matchesTown =
+        searchParams.town && firstUnit.TOWN_NAME
+          ? firstUnit.TOWN_NAME.toLowerCase().includes(
+              searchParams.town.toLowerCase()
+            )
+          : true;
+      const matchesBedrooms =
+        searchParams.bedrooms && !isNaN(listingBedrooms)
+          ? listingBedrooms === parseInt(searchParams.bedrooms, 10)
+          : true;
+      const matchesBathrooms =
+        searchParams.bathrooms && !isNaN(listingBathrooms)
+          ? listingBathrooms === parseInt(searchParams.bathrooms, 10)
+          : true;
+      const matchesZipCode =
+        searchParams.zipCode && firstUnit.ZIP_CODE
+          ? firstUnit.ZIP_CODE === searchParams.zipCode
+          : true;
+
+      return (
+        matchesTown && matchesBedrooms && matchesBathrooms && matchesZipCode
+      );
+    });
+
+    // Sort listings if a sortFunction is provided
+    const sortedListings = sortFunction
+      ? [...filtered].sort(sortFunction)
+      : filtered;
+
     setFilteredListings(sortedListings);
     setCurrentPage(0); // Reset to the first page when searchParams change
-  }, [searchParams, sortFunction, listings]);
+  }, [searchParams, sortFunction, listingsData]);
 
   const handleClick = (listing) => {
     navigate(`/listings/${listing.units[0].LIST_NO}`, { state: { listing } });
@@ -60,20 +80,76 @@ function ListingCards({
     (currentPage + 1) * itemsPerPage
   );
 
+  const handleDataChange = (dataType) => {
+    switch (dataType) {
+      case "single":
+        setListingsData(singleFamilyListings);
+        break;
+      case "multi":
+        setListingsData(multiFamilyListings);
+        break;
+      case "condo":
+        setListingsData(condoListings);
+        break;
+      default:
+        setListingsData(singleFamilyListings);
+    }
+    setCurrentPage(0); // Reset to the first page when data changes
+  };
+
   return (
     <div className="listing-cards">
       <h1>{title}</h1>
+      <div className="listing-cards__data-selector">
+        <Button
+          onClick={() => handleDataChange("single")}
+          className="data-selector__button"
+        >
+          Single Family
+        </Button>
+        <Button
+          onClick={() => handleDataChange("multi")}
+          className="data-selector__button"
+        >
+          Multi Family
+        </Button>
+        <Button
+          onClick={() => handleDataChange("condo")}
+          className="data-selector__button"
+        >
+          Condo
+        </Button>
+      </div>
       <div className="listing-cards__container">
         <div className="listing-cards__wrapper">
           {currentListings.length > 0 ? (
             currentListings.map((listing) => {
               const firstUnit = listing.units[0];
 
-              // Convert LIST_PRICE to a number and format with commas
-              const listPriceNumber = Number(firstUnit.LIST_PRICE);
-              const formattedListPrice = isNaN(listPriceNumber)
-                ? "N/A"
-                : `$${listPriceNumber.toLocaleString()}`;
+              // Format the price with commas
+              let displayPrice;
+              if (listing.postType === "multiple") {
+                const minPrice = Math.min(
+                  ...listing.units.map((unit) => parseFloat(unit.LIST_PRICE))
+                );
+                const unitCount = listing.units.length;
+                displayPrice = `${unitCount} Units Starting at ${new Intl.NumberFormat(
+                  "en-US",
+                  { style: "currency", currency: "USD" }
+                ).format(minPrice)}`;
+              } else {
+                displayPrice = new Intl.NumberFormat("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                }).format(parseFloat(firstUnit.LIST_PRICE));
+              }
+
+              const tag =
+                listing.tags && listing.tags.length > 0
+                  ? listing.tags.join(", ")
+                  : firstUnit.DATE_AVAILABLE
+                  ? `Available: ${firstUnit.DATE_AVAILABLE}`
+                  : "Available Now";
 
               return (
                 <ListingCardItem
@@ -88,13 +164,10 @@ function ListingCards({
                   bathrooms={firstUnit.NO_FULL_BATHS}
                   parking={firstUnit.PARKING_SPACES}
                   photos={firstUnit.PHOTO_URLS}
-                  listPrice={formattedListPrice}
+                  listPrice={displayPrice}
                   onClick={() => handleClick(listing)}
-                  tag={
-                    firstUnit.DATE_AVAILABLE
-                      ? `Available: ${firstUnit.DATE_AVAILABLE}`
-                      : "Available Now"
-                  }
+                  postType={listing.postType}
+                  tag={tag}
                 />
               );
             })

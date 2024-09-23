@@ -17,6 +17,7 @@
   border-image-slice: 1;
 }
 
+/* Container and Wrapper */
 .listing-cards__container {
   display: flex;
   flex-direction: column;
@@ -33,6 +34,7 @@
   justify-content: center;
 }
 
+/* Listing Card Item */
 .listing-cards__item {
   flex: 1 1 calc(33.333% - 20px);
   box-sizing: border-box;
@@ -72,7 +74,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.2s linear;
+  transition: transform 0.2s ease-in-out;
 }
 
 .listing-cards__item__img:hover {
@@ -146,10 +148,53 @@
   margin-top: 20px;
 }
 
+.listing-cards__button {
+  background-color: #daa520;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.listing-cards__button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.listing-cards__button:hover:not(:disabled) {
+  background-color: #ffdd57;
+  transform: translateY(-2px);
+}
+
+.listing-cards__button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px #666;
+}
+
 /* Responsive Styling */
 @media only screen and (max-width: 1024px) {
   .listing-cards__item {
-    margin-bottom: 1rem;
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .data-selector__button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .listing-cards__item {
+    flex: 1 1 100%;
+  }
+
+  .data-selector__button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
   }
 }
 
@@ -157,4 +202,51 @@
   .listing-cards__container {
     width: 100%;
   }
+}
+
+/* New Styles from Second CSS File */
+
+/* Data Selector Styling */
+.listing-cards__data-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.data-selector__button {
+  background-color: #fff;
+  color: #252e48;
+  border: 2px solid #daa520;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.data-selector__button:hover {
+  background-color: #daa520;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.data-selector__button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px #666;
+}
+
+.data-selector__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.5);
+}
+
+/* Active Button Styling */
+.data-selector__button.active {
+  background-color: #daa520;
+  color: #fff;
+}
+
+.data-selector__button.active:hover {
+  background-color: #ffdd57;
+  color: #fff;
 }

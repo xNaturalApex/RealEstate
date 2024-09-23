@@ -6,8 +6,11 @@
 }
 
 .main-content {
-  padding-top: 90px;
   /* Adjust based on your navbar's actual height */
+}
+
+.top-container {
+  margin-top: 50px;
 }
 
 .home,

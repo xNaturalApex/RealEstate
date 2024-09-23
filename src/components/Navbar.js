@@ -1,6 +1,6 @@
 // src/components/Navbar.js
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { Button } from "./Button";
@@ -10,7 +10,10 @@ function Navbar() {
   const [button, setButton] = useState(true);
   const [dropdown, setDropdown] = useState(false); // State for dropdown menu
 
+  const dropdownRef = useRef(null);
+
   const handleClick = () => setClick(!click);
+  
   const closeMobileMenu = () => {
     setClick(false);
     closeDropdown();
@@ -21,11 +24,23 @@ function Navbar() {
       setButton(false);
     } else {
       setButton(true);
+      setClick(false); // Ensure menu is closed when resizing to desktop
     }
   };
 
   const handleDropdown = () => setDropdown(!dropdown);
+  
   const closeDropdown = () => setDropdown(false);
+
+  // Close dropdown when clicking outside
+  const handleClickOutside = (event) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target)
+    ) {
+      closeDropdown();
+    }
+  };
 
   useEffect(() => {
     // Initial check
@@ -33,10 +48,14 @@ function Navbar() {
 
     // Add resize event listener
     window.addEventListener("resize", showButton);
+    
+    // Add click event listener for closing dropdown
+    document.addEventListener("mousedown", handleClickOutside);
 
     // Cleanup on unmount
     return () => {
       window.removeEventListener("resize", showButton);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -61,7 +80,7 @@ function Navbar() {
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
+        <ul className={`nav-menu ${click ? "active" : ""}`}>
           <li className="nav-item">
             <Link
               to="/"
@@ -80,36 +99,36 @@ function Navbar() {
               About Me
             </Link>
           </li>
-          <li className="nav-item dropdown">
-            <span
-              className="nav-links"
+          <li className="nav-item dropdown" ref={dropdownRef}>
+            <button
+              type="button"
+              className="nav-links dropdown-toggle"
+              aria-haspopup="true"
+              aria-expanded={dropdown ? "true" : "false"}
               onClick={handleDropdown}
             >
-              Listings
-              <i className="fas fa-caret-down" />
-            </span>
-            {dropdown && (
-              <ul className="dropdown-menu">
-                <li>
-                  <Link
-                    to="/listings"
-                    className="dropdown-link"
-                    onClick={closeMobileMenu}
-                  >
-                    Residential Sales
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/rentals"
-                    className="dropdown-link"
-                    onClick={closeMobileMenu}
-                  >
-                    Leasing
-                  </Link>
-                </li>
-              </ul>
-            )}
+              Listings <i className="fas fa-caret-down" />
+            </button>
+            <ul className={`dropdown-menu ${dropdown ? "active" : ""}`}>
+              <li>
+                <Link
+                  to="/listings"
+                  className="dropdown-link"
+                  onClick={closeMobileMenu}
+                >
+                  Residential Sales
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/rentals"
+                  className="dropdown-link"
+                  onClick={closeMobileMenu}
+                >
+                  Leasing
+                </Link>
+              </li>
+            </ul>
           </li>
           <li className="nav-item">
             <Link
