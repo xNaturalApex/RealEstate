@@ -100,7 +100,7 @@
   justify-content: center;
   justify-items: center;
   align-items: center;
-  width: 300px;
+  max-width: 500px;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -111,4 +111,11 @@
 
 .star {
   color: gold;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    max-width: 300px;
+  }
+
 }

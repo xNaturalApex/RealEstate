@@ -145,7 +145,7 @@ function Navbar() {
               className="nav-links-mobile"
               onClick={closeMobileMenu}
             >
-              Book an Assessment
+
             </Link>
           </li>
         </ul>

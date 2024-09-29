@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.2723ae36.css",
-    "main.js": "/static/js/main.83bccd1d.js",
+    "main.css": "/static/css/main.e9d788dc.css",
+    "main.js": "/static/js/main.6d2be7f8.js",
     "static/media/Boston.jpg": "/static/media/Boston.01b194c5de59a52179c1.jpg",
     "index.html": "/index.html",
-    "main.2723ae36.css.map": "/static/css/main.2723ae36.css.map",
-    "main.83bccd1d.js.map": "/static/js/main.83bccd1d.js.map"
+    "main.e9d788dc.css.map": "/static/css/main.e9d788dc.css.map",
+    "main.6d2be7f8.js.map": "/static/js/main.6d2be7f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.2723ae36.css",
-    "static/js/main.83bccd1d.js"
+    "static/css/main.e9d788dc.css",
+    "static/js/main.6d2be7f8.js"
   ]
 }
