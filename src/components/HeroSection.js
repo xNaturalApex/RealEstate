@@ -8,8 +8,18 @@ function HeroSection() {
   const navigate = useNavigate();
 
   const handleSearch = (searchParams) => {
-    const searchQuery = new URLSearchParams(searchParams).toString();
-    navigate(`/listings?${searchQuery}`);
+    const query = new URLSearchParams();
+
+    if (searchParams.town && Array.isArray(searchParams.town)) {
+      searchParams.town.forEach((t) => query.append("town", t.value));
+    }
+
+    if (searchParams.bedrooms) query.set("bedrooms", searchParams.bedrooms);
+    if (searchParams.bathrooms) query.set("bathrooms", searchParams.bathrooms);
+    if (searchParams.priceMin) query.set("priceMin", searchParams.priceMin);
+    if (searchParams.priceMax) query.set("priceMax", searchParams.priceMax);
+
+    navigate(`/listings?${query.toString()}`);
   };
 
   return (
@@ -23,7 +33,7 @@ function HeroSection() {
           </button>
         </div>
         <div className="hero-search">
-          <SearchForm onSearch={handleSearch} formType="Advanced" />
+          <SearchForm mode="compact" onSearch={handleSearch} />
         </div>
       </div>
     </div>

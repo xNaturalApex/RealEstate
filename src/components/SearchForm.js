@@ -1,160 +1,370 @@
-// src/components/SearchForm.js
-
-import React, { useState } from "react";
-import townsData from "../data/cityData.json";
+import React, { useState, useEffect } from "react";
+import Select from "react-select";
+import ReactSlider from "react-slider";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import ListingsData from "../data/ListingsData.json";
+import RentalsData from "../data/RentalsData.json";
+import cityData from "../data/cityData.json";
+import tagOptions from "../data/inferredTags.json";
 import "./SearchForm.css";
 
-function SearchForm({ formType, onSearch, initialSearchParams = {} }) {
-  const [category, setCategory] = useState(initialSearchParams.category || "SF");
-  const [town, setTown] = useState(initialSearchParams.town || "");
-  const [bedrooms, setBedrooms] = useState(initialSearchParams.bedrooms || "");
-  const [bathrooms, setBathrooms] = useState(initialSearchParams.bathrooms || "");
-  const [minPrice, setMinPrice] = useState(initialSearchParams.priceMin || 0);
-  const [maxPrice, setMaxPrice] = useState(initialSearchParams.priceMax || 5000);
-  const [suggestions, setSuggestions] = useState([]);
-  const [selectedZipCodes, setSelectedZipCodes] = useState(initialSearchParams.zipCodes || []);
+// ZIP → City map
+const zipToCityMap = {};
+cityData.forEach(({ cityName, zipCodes }) => {
+  zipCodes.forEach((zip) => {
+    zipToCityMap[zip] = cityName;
+  });
+});
 
-  // Handle town input changes and suggestions
-  const handleTownChange = (e) => {
-    setTown(e.target.value);
-    const filteredTowns = townsData.filter((townItem) =>
-      townItem.cityName.toLowerCase().includes(e.target.value.toLowerCase())
-    );
-    setSuggestions(filteredTowns);
+const bostonNeighborhoodsList = [
+  "Allston",
+  "Back Bay",
+  "Bay Village",
+  "Beacon Hill",
+  "Brighton",
+  "Charlestown",
+  "Chinatown–Leather District",
+  "Dorchester",
+  "East Boston",
+  "Fenway–Kenmore",
+  "Hyde Park",
+  "Jamaica Plain",
+  "Mattapan",
+  "Mission Hill",
+  "North End",
+  "Roslindale",
+  "Roxbury",
+  "South Boston",
+  "South End",
+  "West End",
+  "West Roxbury",
+];
+
+const extractLocation = (unit) => {
+  const neighborhood = unit.NEIGHBORHOOD?.trim();
+  if (neighborhood) return neighborhood;
+  const zip = unit.ZIP_CODE || unit.zip_code;
+  return zipToCityMap[zip] || null;
+};
+
+const countByLocation = (listings) => {
+  const counts = {};
+  listings.forEach((listing) => {
+    const unit = listing.units?.[0] || listing;
+    const location = extractLocation(unit);
+    if (location) {
+      counts[location] = (counts[location] || 0) + 1;
+    }
+  });
+  return counts;
+};
+
+const listingsCountPerTown = {
+  purchase: countByLocation(ListingsData),
+  rental: countByLocation(RentalsData),
+};
+
+function SearchForm({ mode = "full" }) {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const compact = mode === "compact";
+  const forceAdvanced = mode === "advanced";
+
+  const [formType, setFormType] = useState("purchase");
+  const [advanced, setAdvanced] = useState(forceAdvanced);
+  const [maxPriceTouched, setMaxPriceTouched] = useState(false);
+
+  const [formValues, setFormValues] = useState({
+    town: [],
+    bedrooms: "",
+    bathrooms: "",
+    minBedrooms: 0,
+    maxBedrooms: 5,
+    minBathrooms: 0,
+    maxBathrooms: 5,
+    priceRange: formType === "rental" ? [500, 5000] : [0, 2000000],
+    tags: [],
+  });
+
+  const handleChange = (name, value) => {
+    setFormValues((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleTownSelect = (selectedTown) => {
-    setTown(selectedTown.cityName);
-    setSelectedZipCodes(selectedTown.zipCodes);
-    setSuggestions([]);
+  const handleReset = () => {
+    setFormValues({
+      town: [],
+      bedrooms: "",
+      bathrooms: "",
+      minBedrooms: 0,
+      maxBedrooms: 5,
+      minBathrooms: 0,
+      maxBathrooms: 5,
+      priceRange: formType === "rental" ? [500, 5000] : [0, 2000000],
+      tags: [],
+    });
+    setMaxPriceTouched(false);
+    navigate("/listings");
   };
 
-  // Handle price range changes with validation
-  const handleMinPriceChange = (e) => {
-    const value = Math.min(Number(e.target.value), maxPrice - 100);
-    setMinPrice(value);
-  };
-
-  const handleMaxPriceChange = (e) => {
-    const value = Math.max(Number(e.target.value), minPrice + 100);
-    setMaxPrice(value);
-  };
-
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    const searchParams = {
-      category, // Include category in search parameters
-      town,
-      zipCodes: selectedZipCodes,
-      bedrooms,
-      bathrooms,
-      priceMin: minPrice,
-      priceMax: maxPrice,
-    };
-    onSearch(searchParams);
+    const params = new URLSearchParams();
+    formValues.town.forEach((town) => params.append("town", town.value));
+
+    if (!advanced) {
+      if (formValues.bedrooms) params.set("bedrooms", formValues.bedrooms);
+      if (formValues.bathrooms) params.set("bathrooms", formValues.bathrooms);
+    } else {
+      params.set("minBedrooms", formValues.minBedrooms);
+      params.set("maxBedrooms", formValues.maxBedrooms);
+      params.set("minBathrooms", formValues.minBathrooms);
+      params.set("maxBathrooms", formValues.maxBathrooms);
+      formValues.tags.forEach((tag) => params.append("tags", tag.value));
+    }
+
+    params.set("priceMin", formValues.priceRange[0]);
+    params.set("priceMax", formValues.priceRange[1]);
+    navigate(`/listings?${params.toString()}`);
   };
 
-  // Define available categories
-  const categories = ["SF", "MF", "CC", "Rentals"];
+  const generateTownOptions = () => {
+    const counts = listingsCountPerTown[formType] || {};
+    const bostonSet = new Set(
+      bostonNeighborhoodsList.map((n) => n.toLowerCase())
+    );
+
+    const formatOption = (name) => ({ value: name, label: name });
+
+    const bostonNeighborhoods = [];
+    const otherTowns = [];
+
+    Object.entries(counts).forEach(([name]) => {
+      if (bostonSet.has(name.toLowerCase())) {
+        bostonNeighborhoods.push(formatOption(name));
+      } else {
+        otherTowns.push(formatOption(name));
+      }
+    });
+
+    return [
+      { label: "Boston Neighborhoods", options: bostonNeighborhoods },
+      { label: "Other Towns", options: otherTowns },
+    ];
+  };
+
+  useEffect(() => {
+    const towns = searchParams.getAll("town");
+    const bedrooms = searchParams.get("bedrooms") || "";
+    const bathrooms = searchParams.get("bathrooms") || "";
+    const priceMin = parseInt(searchParams.get("priceMin")) || 0;
+    const priceMax =
+      parseInt(searchParams.get("priceMax")) ||
+      (formType === "rental" ? 5000 : 2000000);
+
+    const allOptions = generateTownOptions().flatMap((group) => group.options);
+    const townOptions = towns
+      .map((t) => allOptions.find((opt) => opt.value === t))
+      .filter(Boolean);
+
+    setFormValues((prev) => ({
+      ...prev,
+      town: townOptions,
+      bedrooms,
+      bathrooms,
+      priceRange: [priceMin, priceMax],
+    }));
+
+    const touched =
+      (formType === "rental" && priceMax < 5000) ||
+      (formType === "purchase" && priceMax < 2000000);
+    setMaxPriceTouched(touched);
+  }, [searchParams, formType]);
+
+  const toggleFormType = () => {
+    const nextType = formType === "purchase" ? "rental" : "purchase";
+    setFormType(nextType);
+    setFormValues({
+      town: [],
+      bedrooms: "",
+      bathrooms: "",
+      minBedrooms: 0,
+      maxBedrooms: 5,
+      minBathrooms: 0,
+      maxBathrooms: 5,
+      priceRange: nextType === "rental" ? [500, 5000] : [0, 2000000],
+      tags: [],
+    });
+    setMaxPriceTouched(false);
+  };
 
   return (
-    <div className='search-form-container'>
-      <form
-        className={`search-form ${formType === "Advanced" ? "advanced" : "basic"}`}
-        onSubmit={handleSubmit}
-      >
-        {/* Tabs for category selection */}
-        <div className="search-form__tabs">
-          {categories.map((cat) => (
-            <button
-              type="button"
-              key={cat}
-              className={`tab-button ${category === cat ? "active" : ""}`}
-              onClick={() => setCategory(cat)}
+    <form
+      className={`search-form-container ${compact ? "compact" : "full"}`}
+      onSubmit={handleSubmit}
+    >
+      <div className="form-toggle-row toggle-switch-wrapper">
+        <label className="switch-label">Search For:</label>
+        <div className="toggle-switch">
+          <input
+            type="checkbox"
+            id="toggleType"
+            checked={formType === "rental"}
+            onChange={toggleFormType}
+          />
+          <label htmlFor="toggleType" className="switch" />
+          <div className="labels">
+            <span
+              className={`label ${formType === "purchase" ? "active" : ""}`}
             >
-              {cat === "SF" ? "Single Family" :
-               cat === "MF" ? "Multi Family" :
-               cat === "CC" ? "Condo" :
-               cat}
-            </button>
-          ))}
+              Buy
+            </span>
+            <span className={`label ${formType === "rental" ? "active" : ""}`}>
+              Rent
+            </span>
+          </div>
+        </div>
+        {!forceAdvanced && (
+          <button
+            type="button"
+            onClick={() => setAdvanced((prev) => !prev)}
+            className="toggle-button advanced-toggle"
+          >
+            {advanced ? "Simple Search" : "Advanced Search"}
+          </button>
+        )}
+      </div>
+
+      <div className="search-form">
+        <div className="form-group full-width">
+          <label className="search-label">Location</label>
+          <Select
+            options={generateTownOptions()}
+            value={formValues.town}
+            onChange={(selected) => handleChange("town", selected)}
+            isMulti
+            placeholder="Select city or neighborhood"
+            classNamePrefix="react-select"
+          />
         </div>
 
-        {/* City input with suggestions */}
-        <input
-          type="text"
-          placeholder="City"
-          value={town}
-          onChange={handleTownChange}
-          className="search-input"
-          list="towns-list"
-        />
-        <datalist id="towns-list">
-          {suggestions.map((suggestion, index) => (
-            <option
-              key={index}
-              value={suggestion.cityName}
-              onClick={() => handleTownSelect(suggestion)}
-            />
-          ))}
-        </datalist>
-
-        {/* Bedrooms and Bathrooms Inputs */}
-        <input
-          type="number"
-          placeholder="Bedrooms"
-          value={bedrooms}
-          onChange={(e) => setBedrooms(e.target.value)}
-          className="search-input"
-        />
-        <input
-          type="number"
-          placeholder="Bathrooms"
-          value={bathrooms}
-          onChange={(e) => setBathrooms(e.target.value)}
-          className="search-input"
-        />
-
-        {/* Advanced Price Range Slider */}
-        {formType === "Advanced" && (
-          <div className="price-range-slider">
-            <label>
-              Price Range: ${minPrice} - ${maxPrice}
-            </label>
-            <div className="slider-container">
+        {!advanced && (
+          <div className="form-row two-column">
+            <div className="form-group">
+              <label className="search-label">Bedrooms</label>
               <input
-                type="range"
+                type="number"
                 min="0"
-                max="10000"
-                step="100"
-                value={minPrice}
-                onChange={handleMinPriceChange}
-                className="price-slider"
-              />
-              <input
-                type="range"
-                min="0"
-                max="10000"
-                step="100"
-                value={maxPrice}
-                onChange={handleMaxPriceChange}
-                className="price-slider"
+                value={formValues.bedrooms}
+                onChange={(e) => handleChange("bedrooms", e.target.value)}
+                placeholder="Any"
               />
             </div>
-            <div className="price-range-values">
-              <span>${minPrice}</span>
-              <span>${maxPrice}</span>
+            <div className="form-group">
+              <label className="search-label">Bathrooms</label>
+              <input
+                type="number"
+                min="0"
+                step="0.5"
+                value={formValues.bathrooms}
+                onChange={(e) => handleChange("bathrooms", e.target.value)}
+                placeholder="Any"
+              />
             </div>
           </div>
         )}
 
-        {/* Submit Button */}
-        <button type="submit" className="search-button">
-          Search
-        </button>
-      </form>
-    </div>
+        {advanced && (
+          <>
+            <div className="range-slider-container">
+              <label className="range-slider-labels">
+                Bedrooms: {formValues.minBedrooms} – {formValues.maxBedrooms}
+              </label>
+              <ReactSlider
+                className="advanced-slider"
+                thumbClassName="thumb"
+                trackClassName="track"
+                min={0}
+                max={5}
+                step={1}
+                value={[formValues.minBedrooms, formValues.maxBedrooms]}
+                onChange={([min, max]) => {
+                  handleChange("minBedrooms", min);
+                  handleChange("maxBedrooms", max);
+                }}
+                pearling
+                minDistance={1}
+              />
+            </div>
+
+            <div className="range-slider-container">
+              <label className="range-slider-labels">
+                Bathrooms: {formValues.minBathrooms} – {formValues.maxBathrooms}
+              </label>
+              <ReactSlider
+                className="advanced-slider"
+                thumbClassName="thumb"
+                trackClassName="track"
+                min={0}
+                max={5}
+                step={0.5}
+                value={[formValues.minBathrooms, formValues.maxBathrooms]}
+                onChange={([min, max]) => {
+                  handleChange("minBathrooms", min);
+                  handleChange("maxBathrooms", max);
+                }}
+                pearling
+                minDistance={0.5}
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="search-label">Tags</label>
+              <Select
+                options={tagOptions.map((tag) => ({ label: tag, value: tag }))}
+                isMulti
+                value={formValues.tags}
+                onChange={(selected) => handleChange("tags", selected)}
+                classNamePrefix="react-select"
+              />
+            </div>
+          </>
+        )}
+
+        <div className="form-group">
+          <label className="search-label">
+            Price Range (${formValues.priceRange[0]} – $
+            {formValues.priceRange[1]})
+          </label>
+          <ReactSlider
+            className="price-slider"
+            thumbClassName="price-thumb"
+            trackClassName="price-track"
+            value={formValues.priceRange}
+            min={formType === "rental" ? 500 : 0}
+            max={formType === "rental" ? 5000 : 2000000}
+            step={formType === "rental" ? 50 : 10000}
+            onChange={(value) => handleChange("priceRange", value)}
+            pearling
+            minDistance={formType === "rental" ? 200 : 20000}
+          />
+        </div>
+
+        <div className="button-row">
+          <button type="submit" className="search-button">
+            Search
+          </button>
+          <button type="button" className="clear-button" onClick={handleReset}>
+            Clear
+          </button>
+        </div>
+
+        <div className="button-row">
+          <button type="button" className="save-button">
+            Save Search
+          </button>
+        </div>
+      </div>
+    </form>
   );
 }
 

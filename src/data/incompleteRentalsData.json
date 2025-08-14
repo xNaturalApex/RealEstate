@@ -1,0 +1,54 @@
+[
+  {
+    "STREET_NO": "S",
+    "STREET_NAME": "P",
+    "UNIT_NO": "D,E,G",
+    "LIST_PRICE": "A,C,D,I",
+    "LIST_NO": "",
+    "TAGS": [],
+    "reason": "Missing: LIST_NO, PHOTO_COUNT, ZIP_CODE, NO_BEDROOMS, NO_FULL_BATHS"
+  },
+  {
+    "STREET_NO": "S",
+    "STREET_NAME": "P",
+    "UNIT_NO": "D,E,G",
+    "LIST_PRICE": "A,C,D,I",
+    "LIST_NO": "9/1/2024",
+    "TAGS": [],
+    "reason": "Missing: PHOTO_COUNT, ZIP_CODE, NO_BEDROOMS, NO_FULL_BATHS"
+  },
+  {
+    "STREET_NO": "A,B,C",
+    "STREET_NAME": "",
+    "UNIT_NO": "D,O",
+    "LIST_PRICE": "A,B,F,K,L,P,S",
+    "LIST_NO": "9/1/2024",
+    "TAGS": [],
+    "reason": "Missing: PHOTO_COUNT, STREET_NAME, ZIP_CODE, NO_BEDROOMS, NO_FULL_BATHS"
+  },
+  {
+    "STREET_NO": "25",
+    "STREET_NAME": "Hopkinton Road",
+    "UNIT_NO": "A",
+    "ZIP_CODE": "01560",
+    "STATE": "",
+    "LIST_PRICE": "2600",
+    "NO_ROOMS": "MA",
+    "NO_BEDROOMS": "D",
+    "NO_FULL_BATHS": "3",
+    "NO_HALF_BATHS": "1",
+    "PARKING_SPACES": "0",
+    "SQUARE_FEET": "2",
+    "LOT_SIZE": "",
+    "LIST_NO": "73282653",
+    "PHOTO_COUNT": "",
+    "DATE_AVAILABLE": "N",
+    "REMARKS": "WATERFRONT",
+    "TOWN_NAME": "South Grafton",
+    "NEIGHBORHOOD": "",
+    "TAGS": [
+      "Waterfront"
+    ],
+    "reason": "Missing: PHOTO_COUNT"
+  }
+]

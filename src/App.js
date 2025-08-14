@@ -3,27 +3,28 @@ import Navbar from "./components/Navbar";
 import Home from "./components/pages/Home";
 import Rentals from "./components/pages/Rentals";
 import About from "./components/pages/About";
-import ListingDetailPage from "./components/ListingDetailPage";
-import RentalDetailPage from "./components/RentalDetailPage";
+import ListingDetail from "./components/ListingDetail";
+import RentalDetail from "./components/RentalDetail";
 import Listings from "./components/pages/Listings";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./utils/ScrollToTop"
-import './App.css'
+import ScrollToTop from "./utils/ScrollToTop";
+
+import "./App.css";
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <ScrollToTop/ >
+      <ScrollToTop />
       <div className="main-content">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/listings/:listingNo" element={<ListingDetailPage />} /> {/* Fixed typo here */}
-        <Route path="/rentals/:listingNo" element={<RentalDetailPage />} />
-        <Route path="/listings" element={<Listings />} />
-        <Route path="/rentals" element={<Rentals />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/listings/:listingNo" element={<ListingDetail />} />
+          <Route path="/rentals/:listingNo" element={<RentalDetail />} />
+          <Route path="/listings" element={<Listings />} />
+          <Route path="/rentals" element={<Rentals />} />
+        </Routes>
       </div>
     </Router>
   );

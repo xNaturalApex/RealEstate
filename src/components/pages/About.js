@@ -3,7 +3,7 @@ import "../../App.css";
 import Footer from "../Footer";
 import AboutSection from "../AboutSection";
 import "../AboutSection.css";
-import Testimonials from "../Testimonial";
+import Testimonials from "../Testimonials";
 
 function About() {
   return (

@@ -1,6 +1,6 @@
 {
-  "short_name": "Natty",
-  "name": "Apex Health",
+  "short_name": "Felipe M Franco",
+  "name": "Be Live In Realty",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "BIR-Logo-simple.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "BIR-Logo-simple.png",
       "type": "image/png",
       "sizes": "512x512"
     }

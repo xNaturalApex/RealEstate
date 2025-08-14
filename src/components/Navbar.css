@@ -89,9 +89,6 @@
   justify-content: center;
 }
 
-.nav-links-button {
-  /* Styles are handled by the Button component */
-}
 
 .dropdown-menu {
   position: absolute;
@@ -172,6 +169,13 @@
     font-size: 1.25rem;
     /* Increased text size */
     background-color: #ffffff;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .nav-links-mobile:hover,
+  .nav-links-mobile:focus {
+    background-color: #f0f0f0;
   }
 
   .dropdown-menu {
@@ -203,10 +207,36 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    color: #333;
   }
 
   /* Hide the desktop dropdown caret on mobile */
-  .dropdown-toggle .fa-caret-down {
-    margin-left: 0;
+  .fa-caret-down {
+    padding-left: 10px;
+  }
+
+  /* Add focus styles for accessibility */
+  .dropdown-toggle:focus,
+  .nav-links:focus,
+  .dropdown-link:focus,
+  .nav-links-mobile:focus {
+    background-color: #e0e0e0;
+  }
+
+  /* Smooth transitions for dropdown */
+  .dropdown-menu {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  .dropdown-menu.active {
+    max-height: 500px;
+    /* Arbitrary large value to accommodate menu items */
   }
 }

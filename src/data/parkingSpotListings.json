@@ -1,0 +1,58 @@
+[
+  {
+    "STREET_NO": "143",
+    "STREET_NAME": "Chipman Rd",
+    "UNIT_NO": "",
+    "ZIP_CODE": "01011",
+    "STATE": "MA",
+    "LIST_PRICE": "1",
+    "NO_ROOMS": "4",
+    "NO_BEDROOMS": "2",
+    "NO_FULL_BATHS": "2",
+    "NO_HALF_BATHS": "0",
+    "SQUARE_FEET": "1486",
+    "LOT_SIZE": "130680",
+    "LIST_NO": "73251370",
+    "PHOTO_COUNT": "5",
+    "REMARKS": "Once in a lifetime chance to own this wonderful custom artist retreat on three wooded acres between Lenox and Northampton. Oversized 2 car detached garage.� A chance to own a home like this does not come often! Close to Glendale Falls, Jacobs Pillow, Northampton, Pittsfield, and Berkshire attractions. The list price is not indicative of seller's final reserve amount. This property is part of an online bidding event; please visit Auction.com to place bids. Inspections of this property and contact with occupants are strictly prohibited. Property is sold \"\"as is\"\" and no for sale sign allowed.",
+    "TOWN_NAME": "Chester",
+    "NEIGHBORHOOD": "",
+    "PHOTO_URLS": [
+      "https://media.mlspin.com/photo.aspx?mls=73251370&n=0&w=1024&h=768",
+      "https://media.mlspin.com/photo.aspx?mls=73251370&n=1&w=1024&h=768",
+      "https://media.mlspin.com/photo.aspx?mls=73251370&n=2&w=1024&h=768",
+      "https://media.mlspin.com/photo.aspx?mls=73251370&n=3&w=1024&h=768",
+      "https://media.mlspin.com/photo.aspx?mls=73251370&n=4&w=1024&h=768"
+    ],
+    "TAGS": []
+  },
+  {
+    "STREET_NO": "25",
+    "STREET_NAME": "Danforth Ave",
+    "UNIT_NO": "",
+    "ZIP_CODE": "01201",
+    "STATE": "MA",
+    "LIST_PRICE": "59900",
+    "NO_ROOMS": "4",
+    "NO_BEDROOMS": "2",
+    "NO_FULL_BATHS": "1",
+    "NO_HALF_BATHS": "0",
+    "SQUARE_FEET": "1260",
+    "LOT_SIZE": "5314",
+    "LIST_NO": "73288430",
+    "PHOTO_COUNT": "5",
+    "REMARKS": "Discover the potential of 25 Danforth Ave, an exceptional investment property nestled in the heart of Pittsfield, MA.This prime real estate offers an exciting opportunity for savvy investors seeking to capitalize on the thriving market dynamics of this vibrant city. Whether you're looking to expand your rental portfolio or embark on a fix-and-flip project, this property caters to a variety of investment strategies. With its flexible layout and potential for customization there is possibility to add 3rd bed and 2nd bath if town permits, must consult with them first. 25 Danforth Ave presents endless possibilities to maximize returns and achieve your investment goals. With the demand for rental properties on the rise, 25 Danforth Ave offers lucrative income potential for investors. The property's spacious interiors, ample parking, and desirable location make it an attractive option for tenants seeking quality housing in Pittsfield's competitive rental market.",
+    "TOWN_NAME": "Pittsfield",
+    "NEIGHBORHOOD": "",
+    "PHOTO_URLS": [
+      "https://media.mlspin.com/photo.aspx?mls=73288430&n=0&w=1024&h=768",
+      "https://media.mlspin.com/photo.aspx?mls=73288430&n=1&w=1024&h=768",
+      "https://media.mlspin.com/photo.aspx?mls=73288430&n=2&w=1024&h=768",
+      "https://media.mlspin.com/photo.aspx?mls=73288430&n=3&w=1024&h=768",
+      "https://media.mlspin.com/photo.aspx?mls=73288430&n=4&w=1024&h=768"
+    ],
+    "TAGS": [
+      "Flipper Opportunity"
+    ]
+  }
+]

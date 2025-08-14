@@ -1,0 +1,92 @@
+/* General body and section styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header and buttons */
+button {
+  background-color: #007bff;
+  /* Use a modern blue tone */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  /* Darken button on hover */
+}
+
+/* Remove gold borders from cards and add subtle shadow */
+.listing-card {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for modern look */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/* Refine text styles for headers */
+h1,
+h2,
+h3,
+h4 {
+  color: #222;
+  margin: 0 0 10px 0;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+/* Improve the look of the listing cards */
+.listing-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.listing-card-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Clean up the image gallery */
+.image-gallery {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.image-gallery img {
+  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Footer clean-up */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}

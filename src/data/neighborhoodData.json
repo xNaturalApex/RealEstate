@@ -1,0 +1,86 @@
+[
+  {
+    "cityName": "Allston",
+    "zipCodes": ["02134"]
+  },
+  {
+    "cityName": "Back Bay",
+    "zipCodes": ["02116", "02199"]
+  },
+  {
+    "cityName": "Bay Village",
+    "zipCodes": ["02116"]
+  },
+  {
+    "cityName": "Beacon Hill",
+    "zipCodes": ["02108", "02114"]
+  },
+  {
+    "cityName": "Brighton",
+    "zipCodes": ["02135"]
+  },
+  {
+    "cityName": "Charlestown",
+    "zipCodes": ["02129"]
+  },
+  {
+    "cityName": "Chinatown–Leather District",
+    "zipCodes": ["02111"]
+  },
+  {
+    "cityName": "Dorchester",
+    "zipCodes": ["02121", "02122", "02124", "02125"]
+  },
+  {
+    "cityName": "East Boston",
+    "zipCodes": ["02128"]
+  },
+  {
+    "cityName": "Fenway–Kenmore",
+    "zipCodes": ["02215"]
+  },
+  {
+    "cityName": "Hyde Park",
+    "zipCodes": ["02136"]
+  },
+  {
+    "cityName": "Jamaica Plain",
+    "zipCodes": ["02130"]
+  },
+  {
+    "cityName": "Mattapan",
+    "zipCodes": ["02126"]
+  },
+  {
+    "cityName": "Mission Hill",
+    "zipCodes": ["02120"]
+  },
+  {
+    "cityName": "North End",
+    "zipCodes": ["02113"]
+  },
+  {
+    "cityName": "Roslindale",
+    "zipCodes": ["02131"]
+  },
+  {
+    "cityName": "Roxbury",
+    "zipCodes": ["02119", "02120"]
+  },
+  {
+    "cityName": "South Boston",
+    "zipCodes": ["02127"]
+  },
+  {
+    "cityName": "South End",
+    "zipCodes": ["02118"]
+  },
+  {
+    "cityName": "West End",
+    "zipCodes": ["02114"]
+  },
+  {
+    "cityName": "West Roxbury",
+    "zipCodes": ["02132"]
+  }
+]

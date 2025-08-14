@@ -1,361 +1,235 @@
 [
   {
     "cityName": "Amherst",
-    "zipCodes": [
-      "01003",
-      "01004"
-    ]
+    "zipCodes": ["01003", "01004"]
   },
   {
     "cityName": "Barre",
-    "zipCodes": [
-      "01005"
-    ]
+    "zipCodes": ["01005"]
   },
   {
     "cityName": "Belchertown",
-    "zipCodes": [
-      "01007"
-    ]
+    "zipCodes": ["01007"]
   },
   {
     "cityName": "Blandford",
-    "zipCodes": [
-      "01008"
-    ]
+    "zipCodes": ["01008"]
   },
   {
     "cityName": "Bondsville",
-    "zipCodes": [
-      "01009"
-    ]
+    "zipCodes": ["01009"]
   },
   {
     "cityName": "Brimfield",
-    "zipCodes": [
-      "01010"
-    ]
+    "zipCodes": ["01010"]
   },
   {
     "cityName": "Chester",
-    "zipCodes": [
-      "01011"
-    ]
+    "zipCodes": ["01011"]
   },
   {
     "cityName": "Chesterfield",
-    "zipCodes": [
-      "01012"
-    ]
+    "zipCodes": ["01012"]
   },
   {
     "cityName": "Chicopee",
-    "zipCodes": [
-      "01013",
-      "01014",
-      "01020",
-      "01021",
-      "01022"
-    ]
+    "zipCodes": ["01013", "01014", "01020", "01021", "01022"]
   },
   {
     "cityName": "Cummington",
-    "zipCodes": [
-      "01026"
-    ]
+    "zipCodes": ["01026"]
   },
   {
     "cityName": "Easthampton",
-    "zipCodes": [
-      "01027"
-    ]
+    "zipCodes": ["01027"]
   },
   {
     "cityName": "East Longmeadow",
-    "zipCodes": [
-      "01028"
-    ]
+    "zipCodes": ["01028"]
   },
   {
     "cityName": "East Otis",
-    "zipCodes": [
-      "01029"
-    ]
+    "zipCodes": ["01029"]
   },
   {
     "cityName": "Feeding Hills",
-    "zipCodes": [
-      "01030"
-    ]
+    "zipCodes": ["01030"]
   },
   {
     "cityName": "Gilbertville",
-    "zipCodes": [
-      "01031"
-    ]
+    "zipCodes": ["01031"]
   },
   {
     "cityName": "Goshen",
-    "zipCodes": [
-      "01032"
-    ]
+    "zipCodes": ["01032"]
   },
   {
     "cityName": "Granby",
-    "zipCodes": [
-      "01033"
-    ]
+    "zipCodes": ["01033"]
   },
   {
     "cityName": "Granville",
-    "zipCodes": [
-      "01034"
-    ]
+    "zipCodes": ["01034"]
   },
   {
     "cityName": "Hadley",
-    "zipCodes": [
-      "01035"
-    ]
+    "zipCodes": ["01035"]
   },
   {
     "cityName": "Hampden",
-    "zipCodes": [
-      "01036"
-    ]
+    "zipCodes": ["01036"]
   },
   {
     "cityName": "Hardwick",
-    "zipCodes": [
-      "01037"
-    ]
+    "zipCodes": ["01037"]
   },
   {
     "cityName": "Hatfield",
-    "zipCodes": [
-      "01038"
-    ]
+    "zipCodes": ["01038"]
   },
   {
     "cityName": "Haydenville",
-    "zipCodes": [
-      "01039"
-    ]
+    "zipCodes": ["01039"]
   },
   {
     "cityName": "Holyoke",
-    "zipCodes": [
-      "01040",
-      "01041"
-    ]
+    "zipCodes": ["01040", "01041"]
   },
   {
     "cityName": "Huntington",
-    "zipCodes": [
-      "01050"
-    ]
+    "zipCodes": ["01050"]
   },
   {
     "cityName": "Leeds",
-    "zipCodes": [
-      "01053"
-    ]
+    "zipCodes": ["01053"]
   },
   {
     "cityName": "Leverett",
-    "zipCodes": [
-      "01054"
-    ]
+    "zipCodes": ["01054"]
   },
   {
     "cityName": "Ludlow",
-    "zipCodes": [
-      "01056"
-    ]
+    "zipCodes": ["01056"]
   },
   {
     "cityName": "Monson",
-    "zipCodes": [
-      "01057"
-    ]
+    "zipCodes": ["01057"]
   },
   {
     "cityName": "North Amherst",
-    "zipCodes": [
-      "01059"
-    ]
+    "zipCodes": ["01059"]
   },
   {
     "cityName": "Northampton",
-    "zipCodes": [
-      "01060",
-      "01061",
-      "01063"
-    ]
+    "zipCodes": ["01060", "01061", "01063"]
   },
   {
     "cityName": "Florence",
-    "zipCodes": [
-      "01062"
-    ]
+    "zipCodes": ["01062"]
   },
   {
     "cityName": "North Hatfield",
-    "zipCodes": [
-      "01066"
-    ]
+    "zipCodes": ["01066"]
   },
   {
     "cityName": "Oakham",
-    "zipCodes": [
-      "01068"
-    ]
+    "zipCodes": ["01068"]
   },
   {
     "cityName": "Palmer",
-    "zipCodes": [
-      "01069"
-    ]
+    "zipCodes": ["01069"]
   },
   {
     "cityName": "Plainfield",
-    "zipCodes": [
-      "01070"
-    ]
+    "zipCodes": ["01070"]
   },
   {
     "cityName": "Russell",
-    "zipCodes": [
-      "01071"
-    ]
+    "zipCodes": ["01071"]
   },
   {
     "cityName": "Shutesbury",
-    "zipCodes": [
-      "01072"
-    ]
+    "zipCodes": ["01072"]
   },
   {
     "cityName": "Southampton",
-    "zipCodes": [
-      "01073"
-    ]
+    "zipCodes": ["01073"]
   },
   {
     "cityName": "South Barre",
-    "zipCodes": [
-      "01074"
-    ]
+    "zipCodes": ["01074"]
   },
   {
     "cityName": "South Hadley",
-    "zipCodes": [
-      "01075"
-    ]
+    "zipCodes": ["01075"]
   },
   {
     "cityName": "Southwick",
-    "zipCodes": [
-      "01077"
-    ]
+    "zipCodes": ["01077"]
   },
   {
     "cityName": "Thorndike",
-    "zipCodes": [
-      "01079"
-    ]
+    "zipCodes": ["01079"]
   },
   {
     "cityName": "Three Rivers",
-    "zipCodes": [
-      "01080"
-    ]
+    "zipCodes": ["01080"]
   },
   {
     "cityName": "Wales",
-    "zipCodes": [
-      "01081"
-    ]
+    "zipCodes": ["01081"]
   },
   {
     "cityName": "Ware",
-    "zipCodes": [
-      "01082"
-    ]
+    "zipCodes": ["01082"]
   },
   {
     "cityName": "Warren",
-    "zipCodes": [
-      "01083"
-    ]
+    "zipCodes": ["01083"]
   },
   {
     "cityName": "West Chesterfield",
-    "zipCodes": [
-      "01084"
-    ]
+    "zipCodes": ["01084"]
   },
   {
     "cityName": "Westfield",
-    "zipCodes": [
-      "01085",
-      "01086"
-    ]
+    "zipCodes": ["01085", "01086"]
   },
   {
     "cityName": "West Hatfield",
-    "zipCodes": [
-      "01088"
-    ]
+    "zipCodes": ["01088"]
   },
   {
     "cityName": "West Springfield",
-    "zipCodes": [
-      "01089",
-      "01090"
-    ]
+    "zipCodes": ["01089", "01090"]
   },
   {
     "cityName": "West Warren",
-    "zipCodes": [
-      "01092"
-    ]
+    "zipCodes": ["01092"]
   },
   {
     "cityName": "Whately",
-    "zipCodes": [
-      "01093"
-    ]
+    "zipCodes": ["01093"]
   },
   {
     "cityName": "Wheelwright",
-    "zipCodes": [
-      "01094"
-    ]
+    "zipCodes": ["01094"]
   },
   {
     "cityName": "Wilbraham",
-    "zipCodes": [
-      "01095"
-    ]
+    "zipCodes": ["01095"]
   },
   {
     "cityName": "Williamsburg",
-    "zipCodes": [
-      "01096"
-    ]
+    "zipCodes": ["01096"]
   },
   {
     "cityName": "Woronoco",
-    "zipCodes": [
-      "01097"
-    ]
+    "zipCodes": ["01097"]
   },
   {
     "cityName": "Worthington",
-    "zipCodes": [
-      "01098"
-    ]
+    "zipCodes": ["01098"]
   },
   {
     "cityName": "Springfield",
@@ -385,855 +259,563 @@
   },
   {
     "cityName": "Longmeadow",
-    "zipCodes": [
-      "01106",
-      "01116"
-    ]
+    "zipCodes": ["01106", "01116"]
   },
   {
     "cityName": "Indian Orchard",
-    "zipCodes": [
-      "01151"
-    ]
+    "zipCodes": ["01151"]
   },
   {
     "cityName": "Pittsfield",
-    "zipCodes": [
-      "01201",
-      "01202",
-      "01203"
-    ]
+    "zipCodes": ["01201", "01202", "01203"]
   },
   {
     "cityName": "Adams",
-    "zipCodes": [
-      "01220"
-    ]
+    "zipCodes": ["01220"]
   },
   {
     "cityName": "Ashley Falls",
-    "zipCodes": [
-      "01222"
-    ]
+    "zipCodes": ["01222"]
   },
   {
     "cityName": "Becket",
-    "zipCodes": [
-      "01223"
-    ]
+    "zipCodes": ["01223"]
   },
   {
     "cityName": "Berkshire",
-    "zipCodes": [
-      "01224"
-    ]
+    "zipCodes": ["01224"]
   },
   {
     "cityName": "Cheshire",
-    "zipCodes": [
-      "01225"
-    ]
+    "zipCodes": ["01225"]
   },
   {
     "cityName": "Dalton",
-    "zipCodes": [
-      "01226",
-      "01227"
-    ]
+    "zipCodes": ["01226", "01227"]
   },
   {
     "cityName": "Glendale",
-    "zipCodes": [
-      "01229"
-    ]
+    "zipCodes": ["01229"]
   },
   {
     "cityName": "Great Barrington",
-    "zipCodes": [
-      "01230"
-    ]
+    "zipCodes": ["01230"]
   },
   {
     "cityName": "Hinsdale",
-    "zipCodes": [
-      "01235"
-    ]
+    "zipCodes": ["01235"]
   },
   {
     "cityName": "Housatonic",
-    "zipCodes": [
-      "01236"
-    ]
+    "zipCodes": ["01236"]
   },
   {
     "cityName": "Lanesborough",
-    "zipCodes": [
-      "01237"
-    ]
+    "zipCodes": ["01237"]
   },
   {
     "cityName": "Lee",
-    "zipCodes": [
-      "01238"
-    ]
+    "zipCodes": ["01238"]
   },
   {
     "cityName": "Lenox",
-    "zipCodes": [
-      "01240"
-    ]
+    "zipCodes": ["01240"]
   },
   {
     "cityName": "Lenox Dale",
-    "zipCodes": [
-      "01242"
-    ]
+    "zipCodes": ["01242"]
   },
   {
     "cityName": "Middlefield",
-    "zipCodes": [
-      "01243"
-    ]
+    "zipCodes": ["01243"]
   },
   {
     "cityName": "Mill River",
-    "zipCodes": [
-      "01244"
-    ]
+    "zipCodes": ["01244"]
   },
   {
     "cityName": "Monterey",
-    "zipCodes": [
-      "01245"
-    ]
+    "zipCodes": ["01245"]
   },
   {
     "cityName": "North Adams",
-    "zipCodes": [
-      "01247"
-    ]
+    "zipCodes": ["01247"]
   },
   {
     "cityName": "North Egremont",
-    "zipCodes": [
-      "01252"
-    ]
+    "zipCodes": ["01252"]
   },
   {
     "cityName": "Otis",
-    "zipCodes": [
-      "01253"
-    ]
+    "zipCodes": ["01253"]
   },
   {
     "cityName": "Richmond",
-    "zipCodes": [
-      "01254"
-    ]
+    "zipCodes": ["01254"]
   },
   {
     "cityName": "Sandisfield",
-    "zipCodes": [
-      "01255"
-    ]
+    "zipCodes": ["01255"]
   },
   {
     "cityName": "Savoy",
-    "zipCodes": [
-      "01256"
-    ]
+    "zipCodes": ["01256"]
   },
   {
     "cityName": "Sheffield",
-    "zipCodes": [
-      "01257"
-    ]
+    "zipCodes": ["01257"]
   },
   {
     "cityName": "South Egremont",
-    "zipCodes": [
-      "01258"
-    ]
+    "zipCodes": ["01258"]
   },
   {
     "cityName": "Southfield",
-    "zipCodes": [
-      "01259"
-    ]
+    "zipCodes": ["01259"]
   },
   {
     "cityName": "South Lee",
-    "zipCodes": [
-      "01260"
-    ]
+    "zipCodes": ["01260"]
   },
   {
     "cityName": "Stockbridge",
-    "zipCodes": [
-      "01262",
-      "01263"
-    ]
+    "zipCodes": ["01262", "01263"]
   },
   {
     "cityName": "Tyringham",
-    "zipCodes": [
-      "01264"
-    ]
+    "zipCodes": ["01264"]
   },
   {
     "cityName": "West Stockbridge",
-    "zipCodes": [
-      "01266"
-    ]
+    "zipCodes": ["01266"]
   },
   {
     "cityName": "Williamstown",
-    "zipCodes": [
-      "01267"
-    ]
+    "zipCodes": ["01267"]
   },
   {
     "cityName": "Windsor",
-    "zipCodes": [
-      "01270"
-    ]
+    "zipCodes": ["01270"]
   },
   {
     "cityName": "Greenfield",
-    "zipCodes": [
-      "01301",
-      "01302"
-    ]
+    "zipCodes": ["01301", "01302"]
   },
   {
     "cityName": "Ashfield",
-    "zipCodes": [
-      "01330"
-    ]
+    "zipCodes": ["01330"]
   },
   {
     "cityName": "Athol",
-    "zipCodes": [
-      "01331"
-    ]
+    "zipCodes": ["01331"]
   },
   {
     "cityName": "Bernardston",
-    "zipCodes": [
-      "01337"
-    ]
+    "zipCodes": ["01337"]
   },
   {
     "cityName": "Buckland",
-    "zipCodes": [
-      "01338"
-    ]
+    "zipCodes": ["01338"]
   },
   {
     "cityName": "Charlemont",
-    "zipCodes": [
-      "01339"
-    ]
+    "zipCodes": ["01339"]
   },
   {
     "cityName": "Colrain",
-    "zipCodes": [
-      "01340"
-    ]
+    "zipCodes": ["01340"]
   },
   {
     "cityName": "Conway",
-    "zipCodes": [
-      "01341"
-    ]
+    "zipCodes": ["01341"]
   },
   {
     "cityName": "Deerfield",
-    "zipCodes": [
-      "01342"
-    ]
+    "zipCodes": ["01342"]
   },
   {
     "cityName": "Drury",
-    "zipCodes": [
-      "01343"
-    ]
+    "zipCodes": ["01343"]
   },
   {
     "cityName": "Erving",
-    "zipCodes": [
-      "01344"
-    ]
+    "zipCodes": ["01344"]
   },
   {
     "cityName": "Heath",
-    "zipCodes": [
-      "01346"
-    ]
+    "zipCodes": ["01346"]
   },
   {
     "cityName": "Lake Pleasant",
-    "zipCodes": [
-      "01347"
-    ]
+    "zipCodes": ["01347"]
   },
   {
     "cityName": "Millers Falls",
-    "zipCodes": [
-      "01349"
-    ]
+    "zipCodes": ["01349"]
   },
   {
     "cityName": "Monroe Bridge",
-    "zipCodes": [
-      "01350"
-    ]
+    "zipCodes": ["01350"]
   },
   {
     "cityName": "Montague",
-    "zipCodes": [
-      "01351"
-    ]
+    "zipCodes": ["01351"]
   },
   {
     "cityName": "Gill",
-    "zipCodes": [
-      "01354"
-    ]
+    "zipCodes": ["01354"]
   },
   {
     "cityName": "New Salem",
-    "zipCodes": [
-      "01355"
-    ]
+    "zipCodes": ["01355"]
   },
   {
     "cityName": "Northfield",
-    "zipCodes": [
-      "01360"
-    ]
+    "zipCodes": ["01360"]
   },
   {
     "cityName": "Orange",
-    "zipCodes": [
-      "01364"
-    ]
+    "zipCodes": ["01364"]
   },
   {
     "cityName": "Petersham",
-    "zipCodes": [
-      "01366"
-    ]
+    "zipCodes": ["01366"]
   },
   {
     "cityName": "Rowe",
-    "zipCodes": [
-      "01367"
-    ]
+    "zipCodes": ["01367"]
   },
   {
     "cityName": "Royalston",
-    "zipCodes": [
-      "01368"
-    ]
+    "zipCodes": ["01368"]
   },
   {
     "cityName": "Shelburne Falls",
-    "zipCodes": [
-      "01370"
-    ]
+    "zipCodes": ["01370"]
   },
   {
     "cityName": "South Deerfield",
-    "zipCodes": [
-      "01373"
-    ]
+    "zipCodes": ["01373"]
   },
   {
     "cityName": "Sunderland",
-    "zipCodes": [
-      "01375"
-    ]
+    "zipCodes": ["01375"]
   },
   {
     "cityName": "Turners Falls",
-    "zipCodes": [
-      "01376"
-    ]
+    "zipCodes": ["01376"]
   },
   {
     "cityName": "Warwick",
-    "zipCodes": [
-      "01378"
-    ]
+    "zipCodes": ["01378"]
   },
   {
     "cityName": "Wendell",
-    "zipCodes": [
-      "01379"
-    ]
+    "zipCodes": ["01379"]
   },
   {
     "cityName": "Wendell Depot",
-    "zipCodes": [
-      "01380"
-    ]
+    "zipCodes": ["01380"]
   },
   {
     "cityName": "Fitchburg",
-    "zipCodes": [
-      "01420"
-    ]
+    "zipCodes": ["01420"]
   },
   {
     "cityName": "Ashburnham",
-    "zipCodes": [
-      "01430"
-    ]
+    "zipCodes": ["01430"]
   },
   {
     "cityName": "Ashby",
-    "zipCodes": [
-      "01431"
-    ]
+    "zipCodes": ["01431"]
   },
   {
     "cityName": "Ayer",
-    "zipCodes": [
-      "01432"
-    ]
+    "zipCodes": ["01432"]
   },
   {
     "cityName": "Devens",
-    "zipCodes": [
-      "01434"
-    ]
+    "zipCodes": ["01434"]
   },
   {
     "cityName": "Baldwinville",
-    "zipCodes": [
-      "01436"
-    ]
+    "zipCodes": ["01436"]
   },
   {
     "cityName": "East Templeton",
-    "zipCodes": [
-      "01438"
-    ]
+    "zipCodes": ["01438"]
   },
   {
     "cityName": "Gardner",
-    "zipCodes": [
-      "01440"
-    ]
+    "zipCodes": ["01440"]
   },
   {
     "cityName": "Westminster",
-    "zipCodes": [
-      "01441",
-      "01473"
-    ]
+    "zipCodes": ["01441", "01473"]
   },
   {
     "cityName": "Groton",
-    "zipCodes": [
-      "01450",
-      "01470",
-      "01471"
-    ]
+    "zipCodes": ["01450", "01470", "01471"]
   },
   {
     "cityName": "Harvard",
-    "zipCodes": [
-      "01451"
-    ]
+    "zipCodes": ["01451"]
   },
   {
     "cityName": "Hubbardston",
-    "zipCodes": [
-      "01452"
-    ]
+    "zipCodes": ["01452"]
   },
   {
     "cityName": "Leominster",
-    "zipCodes": [
-      "01453"
-    ]
+    "zipCodes": ["01453"]
   },
   {
     "cityName": "Littleton",
-    "zipCodes": [
-      "01460"
-    ]
+    "zipCodes": ["01460"]
   },
   {
     "cityName": "Lunenburg",
-    "zipCodes": [
-      "01462"
-    ]
+    "zipCodes": ["01462"]
   },
   {
     "cityName": "Pepperell",
-    "zipCodes": [
-      "01463"
-    ]
+    "zipCodes": ["01463"]
   },
   {
     "cityName": "Shirley",
-    "zipCodes": [
-      "01464"
-    ]
+    "zipCodes": ["01464"]
   },
   {
     "cityName": "Still River",
-    "zipCodes": [
-      "01467"
-    ]
+    "zipCodes": ["01467"]
   },
   {
     "cityName": "Templeton",
-    "zipCodes": [
-      "01468"
-    ]
+    "zipCodes": ["01468"]
   },
   {
     "cityName": "Townsend",
-    "zipCodes": [
-      "01469"
-    ]
+    "zipCodes": ["01469"]
   },
   {
     "cityName": "West Groton",
-    "zipCodes": [
-      "01472"
-    ]
+    "zipCodes": ["01472"]
   },
   {
     "cityName": "West Townsend",
-    "zipCodes": [
-      "01474"
-    ]
+    "zipCodes": ["01474"]
   },
   {
     "cityName": "Winchendon",
-    "zipCodes": [
-      "01475"
-    ]
+    "zipCodes": ["01475"]
   },
   {
     "cityName": "Winchendon Springs",
-    "zipCodes": [
-      "01477"
-    ]
+    "zipCodes": ["01477"]
   },
   {
     "cityName": "Auburn",
-    "zipCodes": [
-      "01501"
-    ]
+    "zipCodes": ["01501"]
   },
   {
     "cityName": "Berlin",
-    "zipCodes": [
-      "01503"
-    ]
+    "zipCodes": ["01503"]
   },
   {
     "cityName": "Blackstone",
-    "zipCodes": [
-      "01504"
-    ]
+    "zipCodes": ["01504"]
   },
   {
     "cityName": "Boylston",
-    "zipCodes": [
-      "01505"
-    ]
+    "zipCodes": ["01505"]
   },
   {
     "cityName": "Brookfield",
-    "zipCodes": [
-      "01506"
-    ]
+    "zipCodes": ["01506"]
   },
   {
     "cityName": "Charlton",
-    "zipCodes": [
-      "01507"
-    ]
+    "zipCodes": ["01507"]
   },
   {
     "cityName": "Charlton City",
-    "zipCodes": [
-      "01508"
-    ]
+    "zipCodes": ["01508"]
   },
   {
     "cityName": "Charlton Depot",
-    "zipCodes": [
-      "01509"
-    ]
+    "zipCodes": ["01509"]
   },
   {
     "cityName": "Clinton",
-    "zipCodes": [
-      "01510"
-    ]
+    "zipCodes": ["01510"]
   },
   {
     "cityName": "East Brookfield",
-    "zipCodes": [
-      "01515"
-    ]
+    "zipCodes": ["01515"]
   },
   {
     "cityName": "Douglas",
-    "zipCodes": [
-      "01516"
-    ]
+    "zipCodes": ["01516"]
   },
   {
     "cityName": "East Princeton",
-    "zipCodes": [
-      "01517"
-    ]
+    "zipCodes": ["01517"]
   },
   {
     "cityName": "Fiskdale",
-    "zipCodes": [
-      "01518"
-    ]
+    "zipCodes": ["01518"]
   },
   {
     "cityName": "Grafton",
-    "zipCodes": [
-      "01519"
-    ]
+    "zipCodes": ["01519"]
   },
   {
     "cityName": "Holden",
-    "zipCodes": [
-      "01520"
-    ]
+    "zipCodes": ["01520"]
   },
   {
     "cityName": "Holland",
-    "zipCodes": [
-      "01521"
-    ]
+    "zipCodes": ["01521"]
   },
   {
     "cityName": "Jefferson",
-    "zipCodes": [
-      "01522"
-    ]
+    "zipCodes": ["01522"]
   },
   {
     "cityName": "Lancaster",
-    "zipCodes": [
-      "01523"
-    ]
+    "zipCodes": ["01523"]
   },
   {
     "cityName": "Leicester",
-    "zipCodes": [
-      "01524"
-    ]
+    "zipCodes": ["01524"]
   },
   {
     "cityName": "Linwood",
-    "zipCodes": [
-      "01525"
-    ]
+    "zipCodes": ["01525"]
   },
   {
     "cityName": "Manchaug",
-    "zipCodes": [
-      "01526"
-    ]
+    "zipCodes": ["01526"]
   },
   {
     "cityName": "Millbury",
-    "zipCodes": [
-      "01527"
-    ]
+    "zipCodes": ["01527"]
   },
   {
     "cityName": "Millville",
-    "zipCodes": [
-      "01529"
-    ]
+    "zipCodes": ["01529"]
   },
   {
     "cityName": "New Braintree",
-    "zipCodes": [
-      "01531"
-    ]
+    "zipCodes": ["01531"]
   },
   {
     "cityName": "Northborough",
-    "zipCodes": [
-      "01532"
-    ]
+    "zipCodes": ["01532"]
   },
   {
     "cityName": "Northbridge",
-    "zipCodes": [
-      "01534"
-    ]
+    "zipCodes": ["01534"]
   },
   {
     "cityName": "North Brookfield",
-    "zipCodes": [
-      "01535"
-    ]
+    "zipCodes": ["01535"]
   },
   {
     "cityName": "North Grafton",
-    "zipCodes": [
-      "01536"
-    ]
+    "zipCodes": ["01536"]
   },
   {
     "cityName": "North Oxford",
-    "zipCodes": [
-      "01537"
-    ]
+    "zipCodes": ["01537"]
   },
   {
     "cityName": "North Uxbridge",
-    "zipCodes": [
-      "01538"
-    ]
+    "zipCodes": ["01538"]
   },
   {
     "cityName": "Oxford",
-    "zipCodes": [
-      "01540"
-    ]
+    "zipCodes": ["01540"]
   },
   {
     "cityName": "Princeton",
-    "zipCodes": [
-      "01541"
-    ]
+    "zipCodes": ["01541"]
   },
   {
     "cityName": "Rochdale",
-    "zipCodes": [
-      "01542"
-    ]
+    "zipCodes": ["01542"]
   },
   {
     "cityName": "Rutland",
-    "zipCodes": [
-      "01543"
-    ]
+    "zipCodes": ["01543"]
   },
   {
     "cityName": "Shrewsbury",
-    "zipCodes": [
-      "01545",
-      "01546"
-    ]
+    "zipCodes": ["01545", "01546"]
   },
   {
     "cityName": "Southbridge",
-    "zipCodes": [
-      "01550"
-    ]
+    "zipCodes": ["01550"]
   },
   {
     "cityName": "South Grafton",
-    "zipCodes": [
-      "01560"
-    ]
+    "zipCodes": ["01560"]
   },
   {
     "cityName": "South Lancaster",
-    "zipCodes": [
-      "01561"
-    ]
+    "zipCodes": ["01561"]
   },
   {
     "cityName": "Spencer",
-    "zipCodes": [
-      "01562"
-    ]
+    "zipCodes": ["01562"]
   },
   {
     "cityName": "Sterling",
-    "zipCodes": [
-      "01564"
-    ]
+    "zipCodes": ["01564"]
   },
   {
     "cityName": "Sturbridge",
-    "zipCodes": [
-      "01566"
-    ]
+    "zipCodes": ["01566"]
   },
   {
     "cityName": "Upton",
-    "zipCodes": [
-      "01568"
-    ]
+    "zipCodes": ["01568"]
   },
   {
     "cityName": "Uxbridge",
-    "zipCodes": [
-      "01569"
-    ]
+    "zipCodes": ["01569"]
   },
   {
     "cityName": "Webster",
-    "zipCodes": [
-      "01570"
-    ]
+    "zipCodes": ["01570"]
   },
   {
     "cityName": "Dudley",
-    "zipCodes": [
-      "01571"
-    ]
+    "zipCodes": ["01571"]
   },
   {
     "cityName": "Westborough",
-    "zipCodes": [
-      "01580",
-      "01581",
-      "01582"
-    ]
+    "zipCodes": ["01580", "01581", "01582"]
   },
   {
     "cityName": "West Boylston",
-    "zipCodes": [
-      "01583"
-    ]
+    "zipCodes": ["01583"]
   },
   {
     "cityName": "West Brookfield",
-    "zipCodes": [
-      "01585"
-    ]
+    "zipCodes": ["01585"]
   },
   {
     "cityName": "West Millbury",
-    "zipCodes": [
-      "01586"
-    ]
+    "zipCodes": ["01586"]
   },
   {
     "cityName": "Whitinsville",
-    "zipCodes": [
-      "01588"
-    ]
+    "zipCodes": ["01588"]
   },
   {
     "cityName": "Sutton",
-    "zipCodes": [
-      "01590"
-    ]
+    "zipCodes": ["01590"]
   },
   {
     "cityName": "Worcester",
@@ -1258,777 +840,495 @@
   },
   {
     "cityName": "Cherry Valley",
-    "zipCodes": [
-      "01611"
-    ]
+    "zipCodes": ["01611"]
   },
   {
     "cityName": "Paxton",
-    "zipCodes": [
-      "01612"
-    ]
+    "zipCodes": ["01612"]
   },
   {
     "cityName": "Framingham",
-    "zipCodes": [
-      "01701",
-      "01702",
-      "01703",
-      "01704",
-      "01705"
-    ]
+    "zipCodes": ["01701", "01702", "01703", "01704", "01705"]
   },
   {
     "cityName": "Acton",
-    "zipCodes": [
-      "01718",
-      "01720"
-    ]
+    "zipCodes": ["01718", "01720"]
   },
   {
     "cityName": "Boxborough",
-    "zipCodes": [
-      "01719"
-    ]
+    "zipCodes": ["01719"]
   },
   {
     "cityName": "Ashland",
-    "zipCodes": [
-      "01721"
-    ]
+    "zipCodes": ["01721"]
   },
   {
     "cityName": "Bedford",
-    "zipCodes": [
-      "01730"
-    ]
+    "zipCodes": ["01730"]
   },
   {
     "cityName": "Hanscom AFB",
-    "zipCodes": [
-      "01731"
-    ]
+    "zipCodes": ["01731"]
   },
   {
     "cityName": "Bolton",
-    "zipCodes": [
-      "01740"
-    ]
+    "zipCodes": ["01740"]
   },
   {
     "cityName": "Carlisle",
-    "zipCodes": [
-      "01741"
-    ]
+    "zipCodes": ["01741"]
   },
   {
     "cityName": "Concord",
-    "zipCodes": [
-      "01742"
-    ]
+    "zipCodes": ["01742"]
   },
   {
     "cityName": "Fayville",
-    "zipCodes": [
-      "01745"
-    ]
+    "zipCodes": ["01745"]
   },
   {
     "cityName": "Holliston",
-    "zipCodes": [
-      "01746"
-    ]
+    "zipCodes": ["01746"]
   },
   {
     "cityName": "Hopedale",
-    "zipCodes": [
-      "01747"
-    ]
+    "zipCodes": ["01747"]
   },
   {
     "cityName": "Hopkinton",
-    "zipCodes": [
-      "01748"
-    ]
+    "zipCodes": ["01748"]
   },
   {
     "cityName": "Hudson",
-    "zipCodes": [
-      "01749"
-    ]
+    "zipCodes": ["01749"]
   },
   {
     "cityName": "Marlborough",
-    "zipCodes": [
-      "01752"
-    ]
+    "zipCodes": ["01752"]
   },
   {
     "cityName": "Maynard",
-    "zipCodes": [
-      "01754"
-    ]
+    "zipCodes": ["01754"]
   },
   {
     "cityName": "Mendon",
-    "zipCodes": [
-      "01756"
-    ]
+    "zipCodes": ["01756"]
   },
   {
     "cityName": "Milford",
-    "zipCodes": [
-      "01757"
-    ]
+    "zipCodes": ["01757"]
   },
   {
     "cityName": "Natick",
-    "zipCodes": [
-      "01760"
-    ]
+    "zipCodes": ["01760"]
   },
   {
     "cityName": "Sherborn",
-    "zipCodes": [
-      "01770"
-    ]
+    "zipCodes": ["01770"]
   },
   {
     "cityName": "Southborough",
-    "zipCodes": [
-      "01772"
-    ]
+    "zipCodes": ["01772"]
   },
   {
     "cityName": "Lincoln",
-    "zipCodes": [
-      "01773"
-    ]
+    "zipCodes": ["01773"]
   },
   {
     "cityName": "Stow",
-    "zipCodes": [
-      "01775"
-    ]
+    "zipCodes": ["01775"]
   },
   {
     "cityName": "Sudbury",
-    "zipCodes": [
-      "01776"
-    ]
+    "zipCodes": ["01776"]
   },
   {
     "cityName": "Wayland",
-    "zipCodes": [
-      "01778"
-    ]
+    "zipCodes": ["01778"]
   },
   {
     "cityName": "Woodville",
-    "zipCodes": [
-      "01784"
-    ]
+    "zipCodes": ["01784"]
   },
   {
     "cityName": "Woburn",
-    "zipCodes": [
-      "01801",
-      "01806",
-      "01807",
-      "01808",
-      "01813",
-      "01815",
-      "01888"
-    ]
+    "zipCodes": ["01801", "01806", "01807", "01808", "01813", "01815", "01888"]
   },
   {
     "cityName": "Burlington",
-    "zipCodes": [
-      "01803",
-      "01805"
-    ]
+    "zipCodes": ["01803", "01805"]
   },
   {
     "cityName": "Andover",
-    "zipCodes": [
-      "01810",
-      "01812",
-      "01899"
-    ]
+    "zipCodes": ["01810", "01812", "01899"]
   },
   {
     "cityName": "Billerica",
-    "zipCodes": [
-      "01821",
-      "01822"
-    ]
+    "zipCodes": ["01821", "01822"]
   },
   {
     "cityName": "Chelmsford",
-    "zipCodes": [
-      "01824"
-    ]
+    "zipCodes": ["01824"]
   },
   {
     "cityName": "Dracut",
-    "zipCodes": [
-      "01826"
-    ]
+    "zipCodes": ["01826"]
   },
   {
     "cityName": "Dunstable",
-    "zipCodes": [
-      "01827"
-    ]
+    "zipCodes": ["01827"]
   },
   {
     "cityName": "Haverhill",
-    "zipCodes": [
-      "01830",
-      "01831",
-      "01832",
-      "01835"
-    ]
+    "zipCodes": ["01830", "01831", "01832", "01835"]
   },
   {
     "cityName": "Georgetown",
-    "zipCodes": [
-      "01833"
-    ]
+    "zipCodes": ["01833"]
   },
   {
     "cityName": "Groveland",
-    "zipCodes": [
-      "01834"
-    ]
+    "zipCodes": ["01834"]
   },
   {
     "cityName": "Lawrence",
-    "zipCodes": [
-      "01840",
-      "01841",
-      "01842",
-      "01843"
-    ]
+    "zipCodes": ["01840", "01841", "01842", "01843"]
   },
   {
     "cityName": "Methuen",
-    "zipCodes": [
-      "01844"
-    ]
+    "zipCodes": ["01844"]
   },
   {
     "cityName": "North Andover",
-    "zipCodes": [
-      "01845"
-    ]
+    "zipCodes": ["01845"]
   },
   {
     "cityName": "Lowell",
-    "zipCodes": [
-      "01850",
-      "01851",
-      "01852",
-      "01853",
-      "01854"
-    ]
+    "zipCodes": ["01850", "01851", "01852", "01853", "01854"]
   },
   {
     "cityName": "Merrimac",
-    "zipCodes": [
-      "01860"
-    ]
+    "zipCodes": ["01860"]
   },
   {
     "cityName": "North Billerica",
-    "zipCodes": [
-      "01862"
-    ]
+    "zipCodes": ["01862"]
   },
   {
     "cityName": "North Chelmsford",
-    "zipCodes": [
-      "01863"
-    ]
+    "zipCodes": ["01863"]
   },
   {
     "cityName": "North Reading",
-    "zipCodes": [
-      "01864",
-      "01889"
-    ]
+    "zipCodes": ["01864", "01889"]
   },
   {
     "cityName": "Nutting Lake",
-    "zipCodes": [
-      "01865"
-    ]
+    "zipCodes": ["01865"]
   },
   {
     "cityName": "Pinehurst",
-    "zipCodes": [
-      "01866"
-    ]
+    "zipCodes": ["01866"]
   },
   {
     "cityName": "Reading",
-    "zipCodes": [
-      "01867"
-    ]
+    "zipCodes": ["01867"]
   },
   {
     "cityName": "Tewksbury",
-    "zipCodes": [
-      "01876"
-    ]
+    "zipCodes": ["01876"]
   },
   {
     "cityName": "Tyngsboro",
-    "zipCodes": [
-      "01879"
-    ]
+    "zipCodes": ["01879"]
   },
   {
     "cityName": "Wakefield",
-    "zipCodes": [
-      "01880"
-    ]
+    "zipCodes": ["01880"]
   },
   {
     "cityName": "West Boxford",
-    "zipCodes": [
-      "01885"
-    ]
+    "zipCodes": ["01885"]
   },
   {
     "cityName": "Westford",
-    "zipCodes": [
-      "01886"
-    ]
+    "zipCodes": ["01886"]
   },
   {
     "cityName": "Wilmington",
-    "zipCodes": [
-      "01887"
-    ]
+    "zipCodes": ["01887"]
   },
   {
     "cityName": "Winchester",
-    "zipCodes": [
-      "01890"
-    ]
+    "zipCodes": ["01890"]
   },
   {
     "cityName": "Lynn",
-    "zipCodes": [
-      "01901",
-      "01902",
-      "01903",
-      "01904",
-      "01905",
-      "01910"
-    ]
+    "zipCodes": ["01901", "01902", "01903", "01904", "01905", "01910"]
   },
   {
     "cityName": "Saugus",
-    "zipCodes": [
-      "01906"
-    ]
+    "zipCodes": ["01906"]
   },
   {
     "cityName": "Swampscott",
-    "zipCodes": [
-      "01907"
-    ]
+    "zipCodes": ["01907"]
   },
   {
     "cityName": "Nahant",
-    "zipCodes": [
-      "01908"
-    ]
+    "zipCodes": ["01908"]
   },
   {
     "cityName": "Amesbury",
-    "zipCodes": [
-      "01913"
-    ]
+    "zipCodes": ["01913"]
   },
   {
     "cityName": "Beverly",
-    "zipCodes": [
-      "01915"
-    ]
+    "zipCodes": ["01915"]
   },
   {
     "cityName": "Boxford",
-    "zipCodes": [
-      "01921"
-    ]
+    "zipCodes": ["01921"]
   },
   {
     "cityName": "Byfield",
-    "zipCodes": [
-      "01922"
-    ]
+    "zipCodes": ["01922"]
   },
   {
     "cityName": "Danvers",
-    "zipCodes": [
-      "01923"
-    ]
+    "zipCodes": ["01923"]
   },
   {
     "cityName": "Essex",
-    "zipCodes": [
-      "01929"
-    ]
+    "zipCodes": ["01929"]
   },
   {
     "cityName": "Gloucester",
-    "zipCodes": [
-      "01930",
-      "01931"
-    ]
+    "zipCodes": ["01930", "01931"]
   },
   {
     "cityName": "Hamilton",
-    "zipCodes": [
-      "01936"
-    ]
+    "zipCodes": ["01936"]
   },
   {
     "cityName": "Hathorne",
-    "zipCodes": [
-      "01937"
-    ]
+    "zipCodes": ["01937"]
   },
   {
     "cityName": "Ipswich",
-    "zipCodes": [
-      "01938"
-    ]
+    "zipCodes": ["01938"]
   },
   {
     "cityName": "Lynnfield",
-    "zipCodes": [
-      "01940"
-    ]
+    "zipCodes": ["01940"]
   },
   {
     "cityName": "Manchester",
-    "zipCodes": [
-      "01944"
-    ]
+    "zipCodes": ["01944"]
   },
   {
     "cityName": "Marblehead",
-    "zipCodes": [
-      "01945"
-    ]
+    "zipCodes": ["01945"]
   },
   {
     "cityName": "Middleton",
-    "zipCodes": [
-      "01949"
-    ]
+    "zipCodes": ["01949"]
   },
   {
     "cityName": "Newburyport",
-    "zipCodes": [
-      "01950"
-    ]
+    "zipCodes": ["01950"]
   },
   {
     "cityName": "Newbury",
-    "zipCodes": [
-      "01951"
-    ]
+    "zipCodes": ["01951"]
   },
   {
     "cityName": "Salisbury",
-    "zipCodes": [
-      "01952"
-    ]
+    "zipCodes": ["01952"]
   },
   {
     "cityName": "Peabody",
-    "zipCodes": [
-      "01960",
-      "01961"
-    ]
+    "zipCodes": ["01960", "01961"]
   },
   {
     "cityName": "Prides Crossing",
-    "zipCodes": [
-      "01965"
-    ]
+    "zipCodes": ["01965"]
   },
   {
     "cityName": "Rockport",
-    "zipCodes": [
-      "01966"
-    ]
+    "zipCodes": ["01966"]
   },
   {
     "cityName": "Rowley",
-    "zipCodes": [
-      "01969"
-    ]
+    "zipCodes": ["01969"]
   },
   {
     "cityName": "Salem",
-    "zipCodes": [
-      "01970",
-      "01971"
-    ]
+    "zipCodes": ["01970", "01971"]
   },
   {
     "cityName": "South Hamilton",
-    "zipCodes": [
-      "01982"
-    ]
+    "zipCodes": ["01982"]
   },
   {
     "cityName": "Topsfield",
-    "zipCodes": [
-      "01983"
-    ]
+    "zipCodes": ["01983"]
   },
   {
     "cityName": "Wenham",
-    "zipCodes": [
-      "01984"
-    ]
+    "zipCodes": ["01984"]
   },
   {
     "cityName": "West Newbury",
-    "zipCodes": [
-      "01985"
-    ]
+    "zipCodes": ["01985"]
   },
   {
     "cityName": "Accord",
-    "zipCodes": [
-      "02018"
-    ]
+    "zipCodes": ["02018"]
   },
   {
     "cityName": "Bellingham",
-    "zipCodes": [
-      "02019"
-    ]
+    "zipCodes": ["02019"]
   },
   {
     "cityName": "Brant Rock",
-    "zipCodes": [
-      "02020"
-    ]
+    "zipCodes": ["02020"]
   },
   {
     "cityName": "Canton",
-    "zipCodes": [
-      "02021"
-    ]
+    "zipCodes": ["02021"]
   },
   {
     "cityName": "Cohasset",
-    "zipCodes": [
-      "02025"
-    ]
+    "zipCodes": ["02025"]
   },
   {
     "cityName": "Dedham",
-    "zipCodes": [
-      "02026",
-      "02027"
-    ]
+    "zipCodes": ["02026", "02027"]
   },
   {
     "cityName": "Dover",
-    "zipCodes": [
-      "02030"
-    ]
+    "zipCodes": ["02030"]
   },
   {
     "cityName": "East Mansfield",
-    "zipCodes": [
-      "02031"
-    ]
+    "zipCodes": ["02031"]
   },
   {
     "cityName": "East Walpole",
-    "zipCodes": [
-      "02032"
-    ]
+    "zipCodes": ["02032"]
   },
   {
     "cityName": "Foxboro",
-    "zipCodes": [
-      "02035"
-    ]
+    "zipCodes": ["02035"]
   },
   {
     "cityName": "Franklin",
-    "zipCodes": [
-      "02038"
-    ]
+    "zipCodes": ["02038"]
   },
   {
     "cityName": "Greenbush",
-    "zipCodes": [
-      "02040"
-    ]
+    "zipCodes": ["02040"]
   },
   {
     "cityName": "Green Harbor",
-    "zipCodes": [
-      "02041"
-    ]
+    "zipCodes": ["02041"]
   },
   {
     "cityName": "Hingham",
-    "zipCodes": [
-      "02043",
-      "02044"
-    ]
+    "zipCodes": ["02043", "02044"]
   },
   {
     "cityName": "Hull",
-    "zipCodes": [
-      "02045"
-    ]
+    "zipCodes": ["02045"]
   },
   {
     "cityName": "Humarock",
-    "zipCodes": [
-      "02047"
-    ]
+    "zipCodes": ["02047"]
   },
   {
     "cityName": "Mansfield",
-    "zipCodes": [
-      "02048"
-    ]
+    "zipCodes": ["02048"]
   },
   {
     "cityName": "Marshfield",
-    "zipCodes": [
-      "02050"
-    ]
+    "zipCodes": ["02050"]
   },
   {
     "cityName": "Marshfield Hills",
-    "zipCodes": [
-      "02051"
-    ]
+    "zipCodes": ["02051"]
   },
   {
     "cityName": "Medfield",
-    "zipCodes": [
-      "02052"
-    ]
+    "zipCodes": ["02052"]
   },
   {
     "cityName": "Medway",
-    "zipCodes": [
-      "02053"
-    ]
+    "zipCodes": ["02053"]
   },
   {
     "cityName": "Millis",
-    "zipCodes": [
-      "02054"
-    ]
+    "zipCodes": ["02054"]
   },
   {
     "cityName": "Minot",
-    "zipCodes": [
-      "02055"
-    ]
+    "zipCodes": ["02055"]
   },
   {
     "cityName": "Norfolk",
-    "zipCodes": [
-      "02056"
-    ]
+    "zipCodes": ["02056"]
   },
   {
     "cityName": "North Marshfield",
-    "zipCodes": [
-      "02059"
-    ]
+    "zipCodes": ["02059"]
   },
   {
     "cityName": "North Scituate",
-    "zipCodes": [
-      "02060"
-    ]
+    "zipCodes": ["02060"]
   },
   {
     "cityName": "Norwell",
-    "zipCodes": [
-      "02061"
-    ]
+    "zipCodes": ["02061"]
   },
   {
     "cityName": "Norwood",
-    "zipCodes": [
-      "02062"
-    ]
+    "zipCodes": ["02062"]
   },
   {
     "cityName": "Ocean Bluff",
-    "zipCodes": [
-      "02065"
-    ]
+    "zipCodes": ["02065"]
   },
   {
     "cityName": "Scituate",
-    "zipCodes": [
-      "02066"
-    ]
+    "zipCodes": ["02066"]
   },
   {
     "cityName": "Sharon",
-    "zipCodes": [
-      "02067"
-    ]
+    "zipCodes": ["02067"]
   },
   {
     "cityName": "Sheldonville",
-    "zipCodes": [
-      "02070"
-    ]
+    "zipCodes": ["02070"]
   },
   {
     "cityName": "South Walpole",
-    "zipCodes": [
-      "02071"
-    ]
+    "zipCodes": ["02071"]
   },
   {
     "cityName": "Stoughton",
-    "zipCodes": [
-      "02072"
-    ]
+    "zipCodes": ["02072"]
   },
   {
     "cityName": "Walpole",
-    "zipCodes": [
-      "02081"
-    ]
+    "zipCodes": ["02081"]
   },
   {
     "cityName": "Westwood",
-    "zipCodes": [
-      "02090"
-    ]
+    "zipCodes": ["02090"]
   },
   {
     "cityName": "Wrentham",
-    "zipCodes": [
-      "02093"
-    ]
+    "zipCodes": ["02093"]
   },
   {
     "cityName": "Boston",
@@ -2074,1208 +1374,770 @@
   },
   {
     "cityName": "Roxbury",
-    "zipCodes": [
-      "02119"
-    ]
+    "zipCodes": ["02119"]
   },
   {
     "cityName": "Roxbury Crossing",
-    "zipCodes": [
-      "02120"
-    ]
+    "zipCodes": ["02120"]
   },
   {
     "cityName": "Dorchester",
-    "zipCodes": [
-      "02121",
-      "02122",
-      "02125"
-    ]
+    "zipCodes": ["02121", "02122", "02125"]
   },
   {
     "cityName": "Dorchester Center",
-    "zipCodes": [
-      "02124"
-    ]
+    "zipCodes": ["02124"]
   },
   {
     "cityName": "Mattapan",
-    "zipCodes": [
-      "02126"
-    ]
+    "zipCodes": ["02126"]
   },
   {
     "cityName": "South Boston",
-    "zipCodes": [
-      "02127"
-    ]
+    "zipCodes": ["02127"]
   },
   {
     "cityName": "East Boston",
-    "zipCodes": [
-      "02128",
-      "02228"
-    ]
+    "zipCodes": ["02128", "02228"]
   },
   {
     "cityName": "Charlestown",
-    "zipCodes": [
-      "02129"
-    ]
+    "zipCodes": ["02129"]
   },
   {
     "cityName": "Jamaica Plain",
-    "zipCodes": [
-      "02130"
-    ]
+    "zipCodes": ["02130"]
   },
   {
     "cityName": "Roslindale",
-    "zipCodes": [
-      "02131"
-    ]
+    "zipCodes": ["02131"]
   },
   {
     "cityName": "West Roxbury",
-    "zipCodes": [
-      "02132"
-    ]
+    "zipCodes": ["02132"]
   },
   {
     "cityName": "Allston",
-    "zipCodes": [
-      "02134"
-    ]
+    "zipCodes": ["02134"]
   },
   {
     "cityName": "Brighton",
-    "zipCodes": [
-      "02135"
-    ]
+    "zipCodes": ["02135"]
   },
   {
     "cityName": "Hyde Park",
-    "zipCodes": [
-      "02136"
-    ]
+    "zipCodes": ["02136"]
   },
   {
     "cityName": "Readville",
-    "zipCodes": [
-      "02137"
-    ]
+    "zipCodes": ["02137"]
   },
   {
     "cityName": "Cambridge",
-    "zipCodes": [
-      "02138",
-      "02139",
-      "02140",
-      "02141",
-      "02142",
-      "02238",
-      "02239"
-    ]
+    "zipCodes": ["02138", "02139", "02140", "02141", "02142", "02238", "02239"]
   },
   {
     "cityName": "Somerville",
-    "zipCodes": [
-      "02143",
-      "02144",
-      "02145"
-    ]
+    "zipCodes": ["02143", "02144", "02145"]
   },
   {
     "cityName": "Malden",
-    "zipCodes": [
-      "02148"
-    ]
+    "zipCodes": ["02148"]
   },
   {
     "cityName": "Everett",
-    "zipCodes": [
-      "02149"
-    ]
+    "zipCodes": ["02149"]
   },
   {
     "cityName": "Chelsea",
-    "zipCodes": [
-      "02150"
-    ]
+    "zipCodes": ["02150"]
   },
   {
     "cityName": "Revere",
-    "zipCodes": [
-      "02151"
-    ]
+    "zipCodes": ["02151"]
   },
   {
     "cityName": "Winthrop",
-    "zipCodes": [
-      "02152"
-    ]
+    "zipCodes": ["02152"]
   },
   {
     "cityName": "Medford",
-    "zipCodes": [
-      "02153",
-      "02155"
-    ]
+    "zipCodes": ["02153", "02155"]
   },
   {
     "cityName": "West Medford",
-    "zipCodes": [
-      "02156"
-    ]
+    "zipCodes": ["02156"]
   },
   {
     "cityName": "Quincy",
-    "zipCodes": [
-      "02169",
-      "02170",
-      "02171",
-      "02269"
-    ]
+    "zipCodes": ["02169", "02170", "02171", "02269"]
   },
   {
     "cityName": "Melrose",
-    "zipCodes": [
-      "02176"
-    ]
+    "zipCodes": ["02176"]
   },
   {
     "cityName": "Stoneham",
-    "zipCodes": [
-      "02180"
-    ]
+    "zipCodes": ["02180"]
   },
   {
     "cityName": "Braintree",
-    "zipCodes": [
-      "02184",
-      "02185"
-    ]
+    "zipCodes": ["02184", "02185"]
   },
   {
     "cityName": "Milton",
-    "zipCodes": [
-      "02186"
-    ]
+    "zipCodes": ["02186"]
   },
   {
     "cityName": "Milton Village",
-    "zipCodes": [
-      "02187"
-    ]
+    "zipCodes": ["02187"]
   },
   {
     "cityName": "Weymouth",
-    "zipCodes": [
-      "02188"
-    ]
+    "zipCodes": ["02188"]
   },
   {
     "cityName": "East Weymouth",
-    "zipCodes": [
-      "02189"
-    ]
+    "zipCodes": ["02189"]
   },
   {
     "cityName": "South Weymouth",
-    "zipCodes": [
-      "02190"
-    ]
+    "zipCodes": ["02190"]
   },
   {
     "cityName": "North Weymouth",
-    "zipCodes": [
-      "02191"
-    ]
+    "zipCodes": ["02191"]
   },
   {
     "cityName": "Brockton",
-    "zipCodes": [
-      "02301",
-      "02302",
-      "02303",
-      "02304",
-      "02305"
-    ]
+    "zipCodes": ["02301", "02302", "02303", "02304", "02305"]
   },
   {
     "cityName": "Avon",
-    "zipCodes": [
-      "02322"
-    ]
+    "zipCodes": ["02322"]
   },
   {
     "cityName": "Bridgewater",
-    "zipCodes": [
-      "02324",
-      "02325"
-    ]
+    "zipCodes": ["02324", "02325"]
   },
   {
     "cityName": "Bryantville",
-    "zipCodes": [
-      "02327"
-    ]
+    "zipCodes": ["02327"]
   },
   {
     "cityName": "Carver",
-    "zipCodes": [
-      "02330"
-    ]
+    "zipCodes": ["02330"]
   },
   {
     "cityName": "Duxbury",
-    "zipCodes": [
-      "02331",
-      "02332"
-    ]
+    "zipCodes": ["02331", "02332"]
   },
   {
     "cityName": "East Bridgewater",
-    "zipCodes": [
-      "02333"
-    ]
+    "zipCodes": ["02333"]
   },
   {
     "cityName": "Easton",
-    "zipCodes": [
-      "02334"
-    ]
+    "zipCodes": ["02334"]
   },
   {
     "cityName": "Elmwood",
-    "zipCodes": [
-      "02337"
-    ]
+    "zipCodes": ["02337"]
   },
   {
     "cityName": "Halifax",
-    "zipCodes": [
-      "02338"
-    ]
+    "zipCodes": ["02338"]
   },
   {
     "cityName": "Hanover",
-    "zipCodes": [
-      "02339",
-      "02340"
-    ]
+    "zipCodes": ["02339", "02340"]
   },
   {
     "cityName": "Hanson",
-    "zipCodes": [
-      "02341"
-    ]
+    "zipCodes": ["02341"]
   },
   {
     "cityName": "Holbrook",
-    "zipCodes": [
-      "02343"
-    ]
+    "zipCodes": ["02343"]
   },
   {
     "cityName": "Middleboro",
-    "zipCodes": [
-      "02344",
-      "02346",
-      "02349"
-    ]
+    "zipCodes": ["02344", "02346", "02349"]
   },
   {
     "cityName": "Manomet",
-    "zipCodes": [
-      "02345"
-    ]
+    "zipCodes": ["02345"]
   },
   {
     "cityName": "Lakeville",
-    "zipCodes": [
-      "02347",
-      "02348"
-    ]
+    "zipCodes": ["02347", "02348"]
   },
   {
     "cityName": "Monponsett",
-    "zipCodes": [
-      "02350"
-    ]
+    "zipCodes": ["02350"]
   },
   {
     "cityName": "Abington",
-    "zipCodes": [
-      "02351"
-    ]
+    "zipCodes": ["02351"]
   },
   {
     "cityName": "North Carver",
-    "zipCodes": [
-      "02355"
-    ]
+    "zipCodes": ["02355"]
   },
   {
     "cityName": "North Easton",
-    "zipCodes": [
-      "02356",
-      "02357"
-    ]
+    "zipCodes": ["02356", "02357"]
   },
   {
     "cityName": "North Pembroke",
-    "zipCodes": [
-      "02358"
-    ]
+    "zipCodes": ["02358"]
   },
   {
     "cityName": "Pembroke",
-    "zipCodes": [
-      "02359"
-    ]
+    "zipCodes": ["02359"]
   },
   {
     "cityName": "Plymouth",
-    "zipCodes": [
-      "02360",
-      "02361",
-      "02362"
-    ]
+    "zipCodes": ["02360", "02361", "02362"]
   },
   {
     "cityName": "Kingston",
-    "zipCodes": [
-      "02364"
-    ]
+    "zipCodes": ["02364"]
   },
   {
     "cityName": "South Carver",
-    "zipCodes": [
-      "02366"
-    ]
+    "zipCodes": ["02366"]
   },
   {
     "cityName": "Plympton",
-    "zipCodes": [
-      "02367"
-    ]
+    "zipCodes": ["02367"]
   },
   {
     "cityName": "Randolph",
-    "zipCodes": [
-      "02368"
-    ]
+    "zipCodes": ["02368"]
   },
   {
     "cityName": "Rockland",
-    "zipCodes": [
-      "02370"
-    ]
+    "zipCodes": ["02370"]
   },
   {
     "cityName": "South Easton",
-    "zipCodes": [
-      "02375"
-    ]
+    "zipCodes": ["02375"]
   },
   {
     "cityName": "West Bridgewater",
-    "zipCodes": [
-      "02379"
-    ]
+    "zipCodes": ["02379"]
   },
   {
     "cityName": "White Horse Beach",
-    "zipCodes": [
-      "02381"
-    ]
+    "zipCodes": ["02381"]
   },
   {
     "cityName": "Whitman",
-    "zipCodes": [
-      "02382"
-    ]
+    "zipCodes": ["02382"]
   },
   {
     "cityName": "Lexington",
-    "zipCodes": [
-      "02420",
-      "02421"
-    ]
+    "zipCodes": ["02420", "02421"]
   },
   {
     "cityName": "Brookline",
-    "zipCodes": [
-      "02445",
-      "02446"
-    ]
+    "zipCodes": ["02445", "02446"]
   },
   {
     "cityName": "Brookline Village",
-    "zipCodes": [
-      "02447"
-    ]
+    "zipCodes": ["02447"]
   },
   {
     "cityName": "Waltham",
-    "zipCodes": [
-      "02451",
-      "02452",
-      "02453",
-      "02454"
-    ]
+    "zipCodes": ["02451", "02452", "02453", "02454"]
   },
   {
     "cityName": "North Waltham",
-    "zipCodes": [
-      "02455"
-    ]
+    "zipCodes": ["02455"]
   },
   {
     "cityName": "New Town",
-    "zipCodes": [
-      "02456"
-    ]
+    "zipCodes": ["02456"]
   },
   {
     "cityName": "Babson Park",
-    "zipCodes": [
-      "02457"
-    ]
+    "zipCodes": ["02457"]
   },
   {
     "cityName": "Newton",
-    "zipCodes": [
-      "02458"
-    ]
+    "zipCodes": ["02458"]
   },
   {
     "cityName": "Newton Center",
-    "zipCodes": [
-      "02459"
-    ]
+    "zipCodes": ["02459"]
   },
   {
     "cityName": "Newtonville",
-    "zipCodes": [
-      "02460"
-    ]
+    "zipCodes": ["02460"]
   },
   {
     "cityName": "Newton Highlands",
-    "zipCodes": [
-      "02461"
-    ]
+    "zipCodes": ["02461"]
   },
   {
     "cityName": "Newton Lower Falls",
-    "zipCodes": [
-      "02462"
-    ]
+    "zipCodes": ["02462"]
   },
   {
     "cityName": "Newton Upper Falls",
-    "zipCodes": [
-      "02464"
-    ]
+    "zipCodes": ["02464"]
   },
   {
     "cityName": "West Newton",
-    "zipCodes": [
-      "02465"
-    ]
+    "zipCodes": ["02465"]
   },
   {
     "cityName": "Auburndale",
-    "zipCodes": [
-      "02466"
-    ]
+    "zipCodes": ["02466"]
   },
   {
     "cityName": "Chestnut Hill",
-    "zipCodes": [
-      "02467"
-    ]
+    "zipCodes": ["02467"]
   },
   {
     "cityName": "Waban",
-    "zipCodes": [
-      "02468"
-    ]
+    "zipCodes": ["02468"]
   },
   {
     "cityName": "Watertown",
-    "zipCodes": [
-      "02471",
-      "02472",
-      "02477"
-    ]
+    "zipCodes": ["02471", "02472", "02477"]
   },
   {
     "cityName": "Arlington",
-    "zipCodes": [
-      "02474",
-      "02476"
-    ]
+    "zipCodes": ["02474", "02476"]
   },
   {
     "cityName": "Arlington Heights",
-    "zipCodes": [
-      "02475"
-    ]
+    "zipCodes": ["02475"]
   },
   {
     "cityName": "Belmont",
-    "zipCodes": [
-      "02478"
-    ]
+    "zipCodes": ["02478"]
   },
   {
     "cityName": "Waverley",
-    "zipCodes": [
-      "02479"
-    ]
+    "zipCodes": ["02479"]
   },
   {
     "cityName": "Wellesley Hills",
-    "zipCodes": [
-      "02481"
-    ]
+    "zipCodes": ["02481"]
   },
   {
     "cityName": "Wellesley",
-    "zipCodes": [
-      "02482"
-    ]
+    "zipCodes": ["02482"]
   },
   {
     "cityName": "Needham",
-    "zipCodes": [
-      "02492"
-    ]
+    "zipCodes": ["02492"]
   },
   {
     "cityName": "Weston",
-    "zipCodes": [
-      "02493"
-    ]
+    "zipCodes": ["02493"]
   },
   {
     "cityName": "Needham Heights",
-    "zipCodes": [
-      "02494"
-    ]
+    "zipCodes": ["02494"]
   },
   {
     "cityName": "Nonantum",
-    "zipCodes": [
-      "02495"
-    ]
+    "zipCodes": ["02495"]
   },
   {
     "cityName": "Buzzards Bay",
-    "zipCodes": [
-      "02532",
-      "02542"
-    ]
+    "zipCodes": ["02532", "02542"]
   },
   {
     "cityName": "Cataumet",
-    "zipCodes": [
-      "02534"
-    ]
+    "zipCodes": ["02534"]
   },
   {
     "cityName": "Chilmark",
-    "zipCodes": [
-      "02535"
-    ]
+    "zipCodes": ["02535"]
   },
   {
     "cityName": "East Falmouth",
-    "zipCodes": [
-      "02536"
-    ]
+    "zipCodes": ["02536"]
   },
   {
     "cityName": "East Sandwich",
-    "zipCodes": [
-      "02537"
-    ]
+    "zipCodes": ["02537"]
   },
   {
     "cityName": "East Wareham",
-    "zipCodes": [
-      "02538"
-    ]
+    "zipCodes": ["02538"]
   },
   {
     "cityName": "Edgartown",
-    "zipCodes": [
-      "02539"
-    ]
+    "zipCodes": ["02539"]
   },
   {
     "cityName": "Falmouth",
-    "zipCodes": [
-      "02540",
-      "02541"
-    ]
+    "zipCodes": ["02540", "02541"]
   },
   {
     "cityName": "Woods Hole",
-    "zipCodes": [
-      "02543"
-    ]
+    "zipCodes": ["02543"]
   },
   {
     "cityName": "Menemsha",
-    "zipCodes": [
-      "02552"
-    ]
+    "zipCodes": ["02552"]
   },
   {
     "cityName": "Monument Beach",
-    "zipCodes": [
-      "02553"
-    ]
+    "zipCodes": ["02553"]
   },
   {
     "cityName": "Nantucket",
-    "zipCodes": [
-      "02554",
-      "02584"
-    ]
+    "zipCodes": ["02554", "02584"]
   },
   {
     "cityName": "North Falmouth",
-    "zipCodes": [
-      "02556"
-    ]
+    "zipCodes": ["02556"]
   },
   {
     "cityName": "Oak Bluffs",
-    "zipCodes": [
-      "02557"
-    ]
+    "zipCodes": ["02557"]
   },
   {
     "cityName": "Onset",
-    "zipCodes": [
-      "02558"
-    ]
+    "zipCodes": ["02558"]
   },
   {
     "cityName": "Pocasset",
-    "zipCodes": [
-      "02559"
-    ]
+    "zipCodes": ["02559"]
   },
   {
     "cityName": "Sagamore",
-    "zipCodes": [
-      "02561"
-    ]
+    "zipCodes": ["02561"]
   },
   {
     "cityName": "Sagamore Beach",
-    "zipCodes": [
-      "02562"
-    ]
+    "zipCodes": ["02562"]
   },
   {
     "cityName": "Sandwich",
-    "zipCodes": [
-      "02563"
-    ]
+    "zipCodes": ["02563"]
   },
   {
     "cityName": "Siasconset",
-    "zipCodes": [
-      "02564"
-    ]
+    "zipCodes": ["02564"]
   },
   {
     "cityName": "Silver Beach",
-    "zipCodes": [
-      "02565"
-    ]
+    "zipCodes": ["02565"]
   },
   {
     "cityName": "Vineyard Haven",
-    "zipCodes": [
-      "02568"
-    ]
+    "zipCodes": ["02568"]
   },
   {
     "cityName": "Wareham",
-    "zipCodes": [
-      "02571"
-    ]
+    "zipCodes": ["02571"]
   },
   {
     "cityName": "West Chop",
-    "zipCodes": [
-      "02573"
-    ]
+    "zipCodes": ["02573"]
   },
   {
     "cityName": "West Falmouth",
-    "zipCodes": [
-      "02574"
-    ]
+    "zipCodes": ["02574"]
   },
   {
     "cityName": "West Tisbury",
-    "zipCodes": [
-      "02575"
-    ]
+    "zipCodes": ["02575"]
   },
   {
     "cityName": "West Wareham",
-    "zipCodes": [
-      "02576"
-    ]
+    "zipCodes": ["02576"]
   },
   {
     "cityName": "Hyannis",
-    "zipCodes": [
-      "02601"
-    ]
+    "zipCodes": ["02601"]
   },
   {
     "cityName": "Barnstable",
-    "zipCodes": [
-      "02630"
-    ]
+    "zipCodes": ["02630"]
   },
   {
     "cityName": "Brewster",
-    "zipCodes": [
-      "02631"
-    ]
+    "zipCodes": ["02631"]
   },
   {
     "cityName": "Centerville",
-    "zipCodes": [
-      "02632",
-      "02634",
-      "02636"
-    ]
+    "zipCodes": ["02632", "02634", "02636"]
   },
   {
     "cityName": "Chatham",
-    "zipCodes": [
-      "02633"
-    ]
+    "zipCodes": ["02633"]
   },
   {
     "cityName": "Cotuit",
-    "zipCodes": [
-      "02635"
-    ]
+    "zipCodes": ["02635"]
   },
   {
     "cityName": "Cummaquid",
-    "zipCodes": [
-      "02637"
-    ]
+    "zipCodes": ["02637"]
   },
   {
     "cityName": "Dennis",
-    "zipCodes": [
-      "02638"
-    ]
+    "zipCodes": ["02638"]
   },
   {
     "cityName": "Dennis Port",
-    "zipCodes": [
-      "02639"
-    ]
+    "zipCodes": ["02639"]
   },
   {
     "cityName": "East Dennis",
-    "zipCodes": [
-      "02641"
-    ]
+    "zipCodes": ["02641"]
   },
   {
     "cityName": "Eastham",
-    "zipCodes": [
-      "02642"
-    ]
+    "zipCodes": ["02642"]
   },
   {
     "cityName": "East Orleans",
-    "zipCodes": [
-      "02643"
-    ]
+    "zipCodes": ["02643"]
   },
   {
     "cityName": "Forestdale",
-    "zipCodes": [
-      "02644"
-    ]
+    "zipCodes": ["02644"]
   },
   {
     "cityName": "Harwich",
-    "zipCodes": [
-      "02645"
-    ]
+    "zipCodes": ["02645"]
   },
   {
     "cityName": "Harwich Port",
-    "zipCodes": [
-      "02646"
-    ]
+    "zipCodes": ["02646"]
   },
   {
     "cityName": "Hyannis Port",
-    "zipCodes": [
-      "02647"
-    ]
+    "zipCodes": ["02647"]
   },
   {
     "cityName": "Marstons Mills",
-    "zipCodes": [
-      "02648"
-    ]
+    "zipCodes": ["02648"]
   },
   {
     "cityName": "Mashpee",
-    "zipCodes": [
-      "02649"
-    ]
+    "zipCodes": ["02649"]
   },
   {
     "cityName": "North Chatham",
-    "zipCodes": [
-      "02650"
-    ]
+    "zipCodes": ["02650"]
   },
   {
     "cityName": "North Eastham",
-    "zipCodes": [
-      "02651"
-    ]
+    "zipCodes": ["02651"]
   },
   {
     "cityName": "North Truro",
-    "zipCodes": [
-      "02652"
-    ]
+    "zipCodes": ["02652"]
   },
   {
     "cityName": "Orleans",
-    "zipCodes": [
-      "02653"
-    ]
+    "zipCodes": ["02653"]
   },
   {
     "cityName": "Osterville",
-    "zipCodes": [
-      "02655"
-    ]
+    "zipCodes": ["02655"]
   },
   {
     "cityName": "Provincetown",
-    "zipCodes": [
-      "02657"
-    ]
+    "zipCodes": ["02657"]
   },
   {
     "cityName": "South Chatham",
-    "zipCodes": [
-      "02659"
-    ]
+    "zipCodes": ["02659"]
   },
   {
     "cityName": "South Dennis",
-    "zipCodes": [
-      "02660"
-    ]
+    "zipCodes": ["02660"]
   },
   {
     "cityName": "South Harwich",
-    "zipCodes": [
-      "02661"
-    ]
+    "zipCodes": ["02661"]
   },
   {
     "cityName": "South Orleans",
-    "zipCodes": [
-      "02662"
-    ]
+    "zipCodes": ["02662"]
   },
   {
     "cityName": "South Wellfleet",
-    "zipCodes": [
-      "02663"
-    ]
+    "zipCodes": ["02663"]
   },
   {
     "cityName": "South Yarmouth",
-    "zipCodes": [
-      "02664"
-    ]
+    "zipCodes": ["02664"]
   },
   {
     "cityName": "Truro",
-    "zipCodes": [
-      "02666"
-    ]
+    "zipCodes": ["02666"]
   },
   {
     "cityName": "Wellfleet",
-    "zipCodes": [
-      "02667"
-    ]
+    "zipCodes": ["02667"]
   },
   {
     "cityName": "West Barnstable",
-    "zipCodes": [
-      "02668"
-    ]
+    "zipCodes": ["02668"]
   },
   {
     "cityName": "West Chatham",
-    "zipCodes": [
-      "02669"
-    ]
+    "zipCodes": ["02669"]
   },
   {
     "cityName": "West Dennis",
-    "zipCodes": [
-      "02670"
-    ]
+    "zipCodes": ["02670"]
   },
   {
     "cityName": "West Harwich",
-    "zipCodes": [
-      "02671"
-    ]
+    "zipCodes": ["02671"]
   },
   {
     "cityName": "West Hyannisport",
-    "zipCodes": [
-      "02672"
-    ]
+    "zipCodes": ["02672"]
   },
   {
     "cityName": "West Yarmouth",
-    "zipCodes": [
-      "02673"
-    ]
+    "zipCodes": ["02673"]
   },
   {
     "cityName": "Yarmouth Port",
-    "zipCodes": [
-      "02675"
-    ]
+    "zipCodes": ["02675"]
   },
   {
     "cityName": "Assonet",
-    "zipCodes": [
-      "02702"
-    ]
+    "zipCodes": ["02702"]
   },
   {
     "cityName": "Attleboro",
-    "zipCodes": [
-      "02703"
-    ]
+    "zipCodes": ["02703"]
   },
   {
     "cityName": "Chartley",
-    "zipCodes": [
-      "02712"
-    ]
+    "zipCodes": ["02712"]
   },
   {
     "cityName": "Cuttyhunk",
-    "zipCodes": [
-      "02713"
-    ]
+    "zipCodes": ["02713"]
   },
   {
     "cityName": "Dartmouth",
-    "zipCodes": [
-      "02714"
-    ]
+    "zipCodes": ["02714"]
   },
   {
     "cityName": "Dighton",
-    "zipCodes": [
-      "02715"
-    ]
+    "zipCodes": ["02715"]
   },
   {
     "cityName": "East Freetown",
-    "zipCodes": [
-      "02717"
-    ]
+    "zipCodes": ["02717"]
   },
   {
     "cityName": "East Taunton",
-    "zipCodes": [
-      "02718"
-    ]
+    "zipCodes": ["02718"]
   },
   {
     "cityName": "Fairhaven",
-    "zipCodes": [
-      "02719"
-    ]
+    "zipCodes": ["02719"]
   },
   {
     "cityName": "Fall River",
-    "zipCodes": [
-      "02720",
-      "02721",
-      "02722",
-      "02723",
-      "02724"
-    ]
+    "zipCodes": ["02720", "02721", "02722", "02723", "02724"]
   },
   {
     "cityName": "Somerset",
-    "zipCodes": [
-      "02725",
-      "02726"
-    ]
+    "zipCodes": ["02725", "02726"]
   },
   {
     "cityName": "Marion",
-    "zipCodes": [
-      "02738"
-    ]
+    "zipCodes": ["02738"]
   },
   {
     "cityName": "Mattapoisett",
-    "zipCodes": [
-      "02739"
-    ]
+    "zipCodes": ["02739"]
   },
   {
     "cityName": "New Bedford",
-    "zipCodes": [
-      "02740",
-      "02741",
-      "02742",
-      "02744",
-      "02745",
-      "02746"
-    ]
+    "zipCodes": ["02740", "02741", "02742", "02744", "02745", "02746"]
   },
   {
     "cityName": "Acushnet",
-    "zipCodes": [
-      "02743"
-    ]
+    "zipCodes": ["02743"]
   },
   {
     "cityName": "North Dartmouth",
-    "zipCodes": [
-      "02747"
-    ]
+    "zipCodes": ["02747"]
   },
   {
     "cityName": "South Dartmouth",
-    "zipCodes": [
-      "02748"
-    ]
+    "zipCodes": ["02748"]
   },
   {
     "cityName": "North Attleboro",
-    "zipCodes": [
-      "02760",
-      "02761"
-    ]
+    "zipCodes": ["02760", "02761"]
   },
   {
     "cityName": "Plainville",
-    "zipCodes": [
-      "02762"
-    ]
+    "zipCodes": ["02762"]
   },
   {
     "cityName": "Attleboro Falls",
-    "zipCodes": [
-      "02763"
-    ]
+    "zipCodes": ["02763"]
   },
   {
     "cityName": "North Dighton",
-    "zipCodes": [
-      "02764"
-    ]
+    "zipCodes": ["02764"]
   },
   {
     "cityName": "Norton",
-    "zipCodes": [
-      "02766"
-    ]
+    "zipCodes": ["02766"]
   },
   {
     "cityName": "Raynham",
-    "zipCodes": [
-      "02767"
-    ]
+    "zipCodes": ["02767"]
   },
   {
     "cityName": "Raynham Center",
-    "zipCodes": [
-      "02768"
-    ]
+    "zipCodes": ["02768"]
   },
   {
     "cityName": "Rehoboth",
-    "zipCodes": [
-      "02769"
-    ]
+    "zipCodes": ["02769"]
   },
   {
     "cityName": "Rochester",
-    "zipCodes": [
-      "02770"
-    ]
+    "zipCodes": ["02770"]
   },
   {
     "cityName": "Seekonk",
-    "zipCodes": [
-      "02771"
-    ]
+    "zipCodes": ["02771"]
   },
   {
     "cityName": "Swansea",
-    "zipCodes": [
-      "02777"
-    ]
+    "zipCodes": ["02777"]
   },
   {
     "cityName": "Berkley",
-    "zipCodes": [
-      "02779"
-    ]
+    "zipCodes": ["02779"]
   },
   {
     "cityName": "Taunton",
-    "zipCodes": [
-      "02780",
-      "02783"
-    ]
+    "zipCodes": ["02780", "02783"]
   },
   {
     "cityName": "Westport",
-    "zipCodes": [
-      "02790"
-    ]
+    "zipCodes": ["02790"]
   },
   {
     "cityName": "Westport Point",
-    "zipCodes": [
-      "02791"
-    ]
+    "zipCodes": ["02791"]
   }
 ]
